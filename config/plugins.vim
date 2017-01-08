@@ -86,5 +86,10 @@ let g:NERDSpaceDelims = 1
 " VINEGAR.VIM - ENHANCED FILE BROWSING
 Plugin 'tpope/vim-vinegar'
 
+" MULTI-FILE SEARCH & REPLACE
+Plugin 'skwp/greplace.vim'
+set grepprg=ag
+let g:grep_cmd_opts = '--line-numbers --noheading'
+
 
 call vundle#end()

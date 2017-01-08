@@ -7,6 +7,12 @@ inoremap jk <ESC>
 " SEARCH HIGHLIGHTING OFF
 nnoremap <LEADER><SPACE> :nohlsearch<CR>
 
+" AG PROJECT SEARCH
+nnoremap <LEADER>ag :Ag<SPACE>
+
+" AG PROJECT SEARCH & REPLACE
+nnoremap <LEADER>agr :Gsearch<SPACE>
+
 " REBUILD TAGS
 nnoremap <LEADER>rt :RebuildTags<CR>
 nnoremap <LEADER>rvt :RebuildVendorTags<CR>
