@@ -83,5 +83,8 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims = 1
 
+" VINEGAR.VIM - ENHANCED FILE BROWSING
+Plugin 'tpope/vim-vinegar'
+
 
 call vundle#end()

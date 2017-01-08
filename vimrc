@@ -16,5 +16,8 @@ source $HOME/.vim/config/autocmd.vim
 " Change swap file location
 set directory=$HOME/.vim/.swapfiles//
 
+" Change backup directory
+set backupdir=$HOME/.vim/.backups//
+
 " Set the tags
 set tags=.tags,.tags.vendor
