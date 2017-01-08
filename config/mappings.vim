@@ -10,8 +10,9 @@ nnoremap <LEADER><SPACE> :nohlsearch<CR>
 " AG PROJECT SEARCH
 nnoremap <LEADER>ag :Ag<SPACE>
 
-" AG PROJECT SEARCH & REPLACE
-nnoremap <LEADER>agr :Gsearch<SPACE>
+" PROJECT SEARCH & REPLACE
+nnoremap <LEADER>gs :Gsearch<SPACE>
+nnoremap <LEADER>gr :Greplace<CR>
 
 " REBUILD TAGS
 nnoremap <LEADER>rt :RebuildTags<CR>
