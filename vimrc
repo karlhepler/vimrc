@@ -1,23 +1,23 @@
-" Use VIM mode instead of VI mode
+" USE VIM MODE INSTEAD OF VI MODE
 set nocompatible
 
-" Use ag instead of grep
+" USE AG INSTEAD OF GREP
 if (executable('ag'))
     set grepprg=ag\ --nogroup\ --nocolor
 endif
 
-" Load config files
+" LOAD CONFIG FILES
 source $HOME/.vim/config/mappings.vim
 source $HOME/.vim/config/plugins.vim
 source $HOME/.vim/config/visuals.vim
 source $HOME/.vim/config/commands.vim
 source $HOME/.vim/config/autocmd.vim
 
-" Change swap file location
+" CHANGE SWAP FILE LOCATION
 set directory=$HOME/.vim/.swapfiles//
 
-" Change backup directory
+" CHANGE BACKUP DIRECTORY
 set backupdir=$HOME/.vim/.backups//
 
-" Set the tags
+" SET THE TAGS
 set tags=.tags,.tags.vendor

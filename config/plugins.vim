@@ -85,6 +85,8 @@ let g:NERDSpaceDelims = 1
 
 " VINEGAR.VIM - ENHANCED FILE BROWSING
 Plugin 'tpope/vim-vinegar'
+" Hide dot files - gh to toggle
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 " MULTI-FILE SEARCH & REPLACE
 Plugin 'skwp/greplace.vim'
