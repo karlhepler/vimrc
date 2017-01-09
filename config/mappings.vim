@@ -97,4 +97,4 @@ let g:UltiSnipsListSnippets="<S-TAB>"
 
 " Insert and find todo(kjh)
 inoremap <LEADER>t TODO(kjh):<SPACE>
-nnoremap <LEADER>t :Ag TODO\\\(kjh\\\)<CR>
+nnoremap <LEADER>t :Ag TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore .git<CR>
