@@ -10,6 +10,7 @@ endif
 source $HOME/.vim/config/mappings.vim
 source $HOME/.vim/config/plugins.vim
 source $HOME/.vim/config/display.vim
+source $HOME/.vim/config/functions.vim
 source $HOME/.vim/config/commands.vim
 source $HOME/.vim/config/autocmd.vim
 

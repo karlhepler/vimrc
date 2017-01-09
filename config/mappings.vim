@@ -56,9 +56,19 @@ nnoremap <LEADER>ed :e ~/.vim/config/display.vim<CR>
 nnoremap <LEADER>ec :e ~/.vim/config/commands.vim<CR>
 nnoremap <LEADER>ea :e ~/.vim/config/autocmd.vim<CR>
 
-" GOTO LINE/PAGE START/END
-nnoremap <C-H> H
-nnoremap <C-L> L
-nnoremap <C-M> M
+" GOTO START/END OF LINE
 nnoremap H ^
 nnoremap L $
+
+" DELETE FROM CURRENT LOCATION TO START/END OF LINE
+nnoremap dH d^
+nnoremap dL d$
+
+" REPEAT LAST COMMAND LINE
+nnoremap ; @:
+
+" REFRESH SCREEN & SYNTAX HIGHLIGHTING
+nnoremap <C-L> :redraw!<CR>:syntax sync fromstart<CR>
+
+" STOP CTRL+K FROM BEING DUMB
+nnoremap K k

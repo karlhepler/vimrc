@@ -93,5 +93,11 @@ Plugin 'skwp/greplace.vim'
 set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
 
+" .VUE SYNTAX HIGHLIGHTING
+Plugin 'posva/vim-vue'
+
+" PERFORM ALL YOUR VIM INSERT MODE COMPLETIONS WITH TAB
+Plugin 'ervandew/supertab'
+
 
 call vundle#end()
