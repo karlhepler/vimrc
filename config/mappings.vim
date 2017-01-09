@@ -58,7 +58,9 @@ nnoremap <LEADER>ea :e ~/.vim/config/autocmd.vim<CR>
 
 " GOTO START/END OF LINE
 nnoremap H ^
+vnoremap H ^
 nnoremap L $
+vnoremap L $
 
 " DELETE FROM CURRENT LOCATION TO START/END OF LINE
 nnoremap dH d^
@@ -90,7 +92,9 @@ autocmd Filetype php inoremap => <ESC>A<SPACE>=><SPACE>
 autocmd Filetype php nnoremap <LEADER>n :call PhpNamespaceInsert()<CR>
 
 " ULTISNIPS MAPPINGS
-" let g:UltiSnipsExpandTrigger="<c-tab>"
-" let g:UltiSnipsListSnippets="<c-s-tab>"
 let g:UltiSnipsExpandTrigger="<TAB>"
 let g:UltiSnipsListSnippets="<S-TAB>"
+
+" Insert and find todo(kjh)
+inoremap <LEADER>t TODO(kjh):<SPACE>
+nnoremap <LEADER>t :Ag TODO\\\(kjh\\\)<CR>
