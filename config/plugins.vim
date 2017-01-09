@@ -34,7 +34,7 @@ let g:rooter_patterns=['.git/']
 Plugin 'craigemery/vim-autotag'
 let g:autotagTagsFile=".tags"
 
-" INSERT SORTED USE STATEMENTS AUTOMATICALLY
+" INSERT STATEMENTS AUTOMATICALLY
 Plugin 'arnaud-lb/vim-php-namespace'
 " Automatically adds the corresponding use statement for the name under the cursor.
 function! IPhpInsertUse()
@@ -46,6 +46,9 @@ function! IPhpExpandClass()
 call PhpExpandClass()
     call feedkeys('a', 'n')
 endfunction
+
+" VIM NAMESPACE - PLUGIN WHICH GUESSES THE NAMESPACE OF THE CURRENT FILE FROM COMPOSER.JSON
+Plugin 'dantleech/vim-phpnamespace'
 
 " ULTISNIPS - THE ULTIMATE SNIPPET SOLUTION FOR VIM.
 Plugin 'SirVer/ultisnips'

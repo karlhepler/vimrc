@@ -32,21 +32,21 @@ autocmd FileType php inoremap <LEADER>i <ESC>:call IPhpExpandClass()<CR>
 autocmd FileType php noremap <LEADER>i :call PhpExpandClass()<CR>
 
 " PHP REFACTORING
-nnoremap <LEADER>rv :call PhpRenameLocalVariable()<CR>
-nnoremap <LEADER>rp :call PhpRenameClassVariable()<CR>
-nnoremap <LEADER>rm :call PhpRenameMethod()<CR>
-nnoremap <LEADER>ep :call PhpExtractClassProperty()<CR>
-vnoremap <LEADER>em :call PhpExtractMethod()<CR>
-nnoremap <LEADER>np :call PhpCreateProperty()<CR>
-nnoremap <LEADER>du :call PhpDetectUnusedUseStatements()<CR>
-vnoremap <LEADER>== :call PhpAlignAssigns()<CR>
+autocmd FileType php nnoremap <LEADER>rv :call PhpRenameLocalVariable()<CR>
+autocmd FileType php nnoremap <LEADER>rp :call PhpRenameClassVariable()<CR>
+autocmd FileType php nnoremap <LEADER>rm :call PhpRenameMethod()<CR>
+autocmd FileType php nnoremap <LEADER>ep :call PhpExtractClassProperty()<CR>
+autocmd FileType php vnoremap <LEADER>em :call PhpExtractMethod()<CR>
+autocmd FileType php nnoremap <LEADER>np :call PhpCreateProperty()<CR>
+autocmd FileType php nnoremap <LEADER>du :call PhpDetectUnusedUseStatements()<CR>
+autocmd FileType php vnoremap <LEADER>== :call PhpAlignAssigns()<CR>
 
 " PHP DOC BLOCKS
-nnoremap <BUFFER> <LEADER>dd :call pdv#DocumentWithSnip()<CR>
-nnoremap <BUFFER> <LEADER>da :call PhpDocAll()<CR>
+autocmd FileType php nnoremap <BUFFER> <LEADER>dd :call pdv#DocumentWithSnip()<CR>
+autocmd FileType php nnoremap <BUFFER> <LEADER>da :call PhpDocAll()<CR>
 
 " SORT USE STATMENTS
-vnoremap <LEADER>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<CR>
+autocmd FileType php vnoremap <LEADER>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<CR>
 
 " EDIT VIMRC FILES
 nnoremap <LEADER>ev :e ~/.vim/vimrc<CR>
@@ -83,5 +83,14 @@ vnoremap <LEADER>cc :call NERDComment(0,"toggle")<CR>
 " PHP $THIS POINTER SHORTCUT
 autocmd Filetype php inoremap $<TAB> $this->
 
-" PHP append =>
+" PHP APPEND =>
 autocmd Filetype php inoremap => <ESC>A<SPACE>=><SPACE>
+
+" PHP INSERT NAMESPACE
+autocmd Filetype php nnoremap <LEADER>n :call PhpNamespaceInsert()<CR>
+
+" ULTISNIPS MAPPINGS
+" let g:UltiSnipsExpandTrigger="<c-tab>"
+" let g:UltiSnipsListSnippets="<c-s-tab>"
+let g:UltiSnipsExpandTrigger="<TAB>"
+let g:UltiSnipsListSnippets="<S-TAB>"
