@@ -26,9 +26,6 @@ endif
 Plugin 'airblade/vim-gitgutter'
 let g:gitgutter_sign_column_always=1
 
-" EMMET
-Plugin 'mattn/emmet-vim'
-
 " ROOTER CHANGES THE WORKING DIRECTORY TO THE PROJECT ROOT WHEN YOU OPEN A FILE OR DIRECTORY.
 Plugin 'airblade/vim-rooter'
 let g:rooter_patterns=['.git/']
