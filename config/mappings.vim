@@ -46,8 +46,19 @@ vnoremap <LEADER>== :call PhpAlignAssigns()<CR>
 nnoremap <LEADER>da :call PhpDocAll()<CR>
 
 " SORT USE STATMENTS
-vmap <LEADER>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<CR>
+vnoremap <LEADER>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<CR>
 
-" REMAP TAG TRAVERSAL
-noremap <LEADER>g <C-]>
-noremap <LEADER>t <C-T>
+" EDIT VIMRC FILES
+nnoremap <LEADER>ev :e ~/.vim/vimrc<CR>
+nnoremap <LEADER>em :e ~/.vim/config/mappings.vim<CR>
+nnoremap <LEADER>ep :e ~/.vim/config/plugins.vim<CR>
+nnoremap <LEADER>ed :e ~/.vim/config/display.vim<CR>
+nnoremap <LEADER>ec :e ~/.vim/config/commands.vim<CR>
+nnoremap <LEADER>ea :e ~/.vim/config/autocmd.vim<CR>
+
+" GOTO LINE/PAGE START/END
+nnoremap <C-H> H
+nnoremap <C-L> L
+nnoremap <C-M> M
+nnoremap H ^
+nnoremap L $
