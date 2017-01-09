@@ -31,9 +31,6 @@ autocmd FileType php noremap <LEADER>u :call PhpInsertUse()<CR>
 autocmd FileType php inoremap <LEADER>i <ESC>:call IPhpExpandClass()<CR>
 autocmd FileType php noremap <LEADER>i :call PhpExpandClass()<CR>
 
-" PHP DOC BLOCKS
-nnoremap <buffer> <LEADER>d :call pdv#DocumentWithSnip()<CR>
-
 " PHP REFACTORING
 nnoremap <LEADER>rv :call PhpRenameLocalVariable()<CR>
 nnoremap <LEADER>rp :call PhpRenameClassVariable()<CR>
@@ -43,7 +40,10 @@ vnoremap <LEADER>em :call PhpExtractMethod()<CR>
 nnoremap <LEADER>np :call PhpCreateProperty()<CR>
 nnoremap <LEADER>du :call PhpDetectUnusedUseStatements()<CR>
 vnoremap <LEADER>== :call PhpAlignAssigns()<CR>
-nnoremap <LEADER>da :call PhpDocAll()<CR>
+
+" PHP DOC BLOCKS
+nnoremap <BUFFER> <LEADER>dd :call pdv#DocumentWithSnip()<CR>
+nnoremap <BUFFER> <LEADER>da :call PhpDocAll()<CR>
 
 " SORT USE STATMENTS
 vnoremap <LEADER>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<CR>

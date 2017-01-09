@@ -70,7 +70,9 @@ let g:vim_php_refactoring_default_property_visibility='protected'
 let g:vim_php_refactoring_default_method_visibility='protected'
 " This requires PhpDoc() to exist, but it doesn't anymore
 func! PhpDoc()
-    call pdv#DocumentWithSnip()
+    let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
+    call pdv#DocumentCurrentLine()
+    let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 endfunc
 
 " PASTING IN VIM WITH INDENTATION ADJUSTED TO DESTINATION CONTEXT.
