@@ -72,3 +72,16 @@ nnoremap <C-L> :redraw!<CR>:syntax sync fromstart<CR>
 
 " STOP CTRL+K FROM BEING DUMB
 nnoremap K k
+
+" COMMA+ENTER GOES TO INSERT MODE
+nnoremap ,<CR> A,<CR>
+
+" TOGGLE COMMENTS
+nnoremap <LEADER>cc :call NERDComment(0,"toggle")<CR>
+vnoremap <LEADER>cc :call NERDComment(0,"toggle")<CR>
+
+" PHP $THIS POINTER SHORTCUT
+autocmd Filetype php inoremap $<TAB> $this->
+
+" PHP append =>
+autocmd Filetype php inoremap => <ESC>A<SPACE>=><SPACE>

@@ -80,7 +80,9 @@ Plugin 'jiangmiao/auto-pairs'
 
 " NERD COMMENTER - COMMENT FUNCTIONS SO POWERFUL—NO COMMENT NECESSARY.
 Plugin 'scrooloose/nerdcommenter'
-let g:NERDSpaceDelims = 1
+let g:NERDSpaceDelims=1
+let g:NERDCommentEmptyLines=1
+let g:NERDCreateDefaultMappings=0
 
 " VINEGAR.VIM - ENHANCED FILE BROWSING
 Plugin 'tpope/vim-vinegar'
