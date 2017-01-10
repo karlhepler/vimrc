@@ -28,8 +28,8 @@ autocmd FileType php inoremap <LEADER>u <ESC>:call IPhpInsertUse()<CR>
 autocmd FileType php noremap <LEADER>u :call PhpInsertUse()<CR>
 
 " NAMESPACE INCLUDE
-autocmd FileType php inoremap <LEADER>i <ESC>:call IPhpExpandClass()<CR>
-autocmd FileType php noremap <LEADER>i :call PhpExpandClass()<CR>
+" autocmd FileType php inoremap <LEADER>i <ESC>:call IPhpExpandClass()<CR>
+" autocmd FileType php noremap <LEADER>i :call PhpExpandClass()<CR>
 
 " PHP REFACTORING
 autocmd FileType php nnoremap <LEADER>rv :call PhpRenameLocalVariable()<CR>
@@ -81,6 +81,7 @@ nnoremap ,<CR> A,<CR>
 " TOGGLE COMMENTS
 nnoremap <LEADER>cc :call NERDComment(0,"toggle")<CR>
 vnoremap <LEADER>cc :call NERDComment(0,"toggle")<CR>
+inoremap <LEADER>cc <ESC>:call NERDComment(0,"toggle")<CR>A
 
 " PHP $THIS POINTER SHORTCUT
 autocmd Filetype php inoremap $<TAB> $this->
@@ -89,7 +90,7 @@ autocmd Filetype php inoremap $<TAB> $this->
 autocmd Filetype php inoremap => <ESC>A<SPACE>=><SPACE>
 
 " PHP INSERT NAMESPACE
-autocmd Filetype php nnoremap <LEADER>n :call PhpNamespaceInsert()<CR>
+autocmd Filetype php nnoremap <LEADER>n :call Psr4NamespaceInsert()<CR>
 
 " ULTISNIPS MAPPINGS
 let g:UltiSnipsExpandTrigger="<TAB>"

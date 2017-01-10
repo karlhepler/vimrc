@@ -47,9 +47,6 @@ call PhpExpandClass()
     call feedkeys('a', 'n')
 endfunction
 
-" VIM NAMESPACE - PLUGIN WHICH GUESSES THE NAMESPACE OF THE CURRENT FILE FROM COMPOSER.JSON
-Plugin 'dantleech/vim-phpnamespace'
-
 " ULTISNIPS - THE ULTIMATE SNIPPET SOLUTION FOR VIM.
 Plugin 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger="<TAB>"
