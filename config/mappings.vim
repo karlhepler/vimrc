@@ -102,10 +102,6 @@ autocmd Filetype php inoremap => <ESC>A<SPACE>=><SPACE>
 " PHP INSERT NAMESPACE
 autocmd Filetype php nnoremap <LEADER>n :call Psr4NamespaceInsert()<CR>
 
-" ULTISNIPS MAPPINGS
-let g:UltiSnipsExpandTrigger="<TAB>"
-let g:UltiSnipsListSnippets="<S-TAB>"
-
 " INSERT AND FIND TODO(KJH)
 inoremap <LEADER>t TODO(kjh):<SPACE>
 nnoremap <LEADER>t :Ag TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore .git<CR>
