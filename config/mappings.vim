@@ -8,7 +8,7 @@ inoremap jk <ESC>
 nnoremap <LEADER><SPACE> :nohlsearch<CR>
 
 " AG PROJECT SEARCH
-nnoremap <LEADER>ag :Ag<SPACE>
+nnoremap <LEADER>ag :Ag -Q --ignore node_modules --ignore bower_components --ignore .git --ignore public --ignore vendor<SPACE>
 
 " PROJECT SEARCH & REPLACE
 nnoremap <LEADER>gs :Gsearch<SPACE>
@@ -28,8 +28,8 @@ autocmd FileType php inoremap <LEADER>u <ESC>:call IPhpInsertUse()<CR>
 autocmd FileType php noremap <LEADER>u :call PhpInsertUse()<CR>
 
 " NAMESPACE INCLUDE
-" autocmd FileType php inoremap <LEADER>i <ESC>:call IPhpExpandClass()<CR>
-" autocmd FileType php noremap <LEADER>i :call PhpExpandClass()<CR>
+autocmd FileType php inoremap <LEADER>i <ESC>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <LEADER>i :call PhpExpandClass()<CR>
 
 " PHP REFACTORING
 autocmd FileType php nnoremap <LEADER>rv :call PhpRenameLocalVariable()<CR>
@@ -42,19 +42,20 @@ autocmd FileType php nnoremap <LEADER>du :call PhpDetectUnusedUseStatements()<CR
 autocmd FileType php vnoremap <LEADER>== :call PhpAlignAssigns()<CR>
 
 " PHP DOC BLOCKS
-autocmd FileType php nnoremap <BUFFER> <LEADER>dd :call pdv#DocumentWithSnip()<CR>
+autocmd FileType php nnoremap <LEADER>dd :call pdv#DocumentWithSnip()<CR>
 autocmd FileType php nnoremap <BUFFER> <LEADER>da :call PhpDocAll()<CR>
 
 " SORT USE STATMENTS
 autocmd FileType php vnoremap <LEADER>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<CR>
 
 " EDIT VIMRC FILES
-nnoremap <LEADER>ev :e ~/.vim/vimrc<CR>
-nnoremap <LEADER>em :e ~/.vim/config/mappings.vim<CR>
-nnoremap <LEADER>ep :e ~/.vim/config/plugins.vim<CR>
-nnoremap <LEADER>ed :e ~/.vim/config/display.vim<CR>
-nnoremap <LEADER>ec :e ~/.vim/config/commands.vim<CR>
-nnoremap <LEADER>ea :e ~/.vim/config/autocmd.vim<CR>
+nnoremap <LEADER>vev :vsp ~/.vim/vimrc<CR>
+nnoremap <LEADER>vem :vsp ~/.vim/config/mappings.vim<CR>
+nnoremap <LEADER>vep :vsp ~/.vim/config/plugins.vim<CR>
+nnoremap <LEADER>ved :vsp ~/.vim/config/display.vim<CR>
+nnoremap <LEADER>vec :vsp ~/.vim/config/commands.vim<CR>
+nnoremap <LEADER>vea :vsp ~/.vim/config/autocmd.vim<CR>
+nnoremap <LEADER>vef :vsp ~/.vim/config/functions.vim<CR>
 
 " GOTO START/END OF LINE
 nnoremap H ^
@@ -66,8 +67,9 @@ vnoremap L $
 nnoremap dH d^
 nnoremap dL d$
 
-" REPEAT LAST COMMAND LINE
-nnoremap ; @:
+" YANK FROM CURRENT LOCATION TO START/END OF LINE
+nnoremap yH y^
+nnoremap yL y$
 
 " REFRESH SCREEN & SYNTAX HIGHLIGHTING
 nnoremap <C-L> :redraw!<CR>:syntax sync fromstart<CR>

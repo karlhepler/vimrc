@@ -6,6 +6,12 @@ function! ResCur()
     endif
 endfunction
 
+" CLEAN, INSTALL, AND UPDATE PLUGINS
+function! PluginCleanInstallUpdate()
+    exe "PluginClean!"
+    exe "PluginInstall!"
+endfunction
+
 " GET THE PSR-4 NAMESPACE OF THE CURRENT FILE
 function! Psr4NamespaceGet()
     " Get the current path
