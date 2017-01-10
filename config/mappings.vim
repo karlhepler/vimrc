@@ -71,8 +71,8 @@ nnoremap dL d$
 nnoremap yH y^
 nnoremap yL y$
 
-" REFRESH SCREEN & SYNTAX HIGHLIGHTING
-nnoremap <C-L> :redraw!<CR>:syntax sync fromstart<CR>
+" REFRESH SCREEN, SYNTAX HIGHLIGHTING, & GIT GUTTER
+nnoremap <C-L> :redraw!<CR>:syntax sync fromstart<CR>:GitGutter<CR>
 
 " STOP CTRL+K FROM BEING DUMB
 nnoremap K k
