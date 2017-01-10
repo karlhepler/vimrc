@@ -112,3 +112,6 @@ nnoremap ( %%
 
 " OPEN TAG IN VERTICAL SPLIT
 noremap <C-W><C-]> <ESC>:vsp<CR>:exec("tag".expand("<CWORD>"))<CR>
+
+" LIST PUBLIC METHODS IN CLASS
+autocmd Filetype php nnoremap <LEADER>r :vimgrep /public function/ %<CR>:copen<CR>
