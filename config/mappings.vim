@@ -8,7 +8,7 @@ inoremap jk <ESC>
 nnoremap <LEADER><SPACE> :nohlsearch<CR>
 
 " AG PROJECT SEARCH
-nnoremap <LEADER>ag :Ag -Q --ignore node_modules --ignore bower_components --ignore .git --ignore public --ignore vendor<SPACE>
+nnoremap <LEADER>ag :Ag -Q --ignore node_modules --ignore bower_components --ignore .git --ignore public --ignore vendor ''<LEFT>
 
 " PROJECT SEARCH & REPLACE
 nnoremap <LEADER>gs :Gsearch<SPACE>
@@ -28,8 +28,8 @@ autocmd FileType php inoremap <LEADER>u <ESC>:call IPhpInsertUse()<CR>
 autocmd FileType php noremap <LEADER>u :call PhpInsertUse()<CR>
 
 " NAMESPACE INCLUDE
-autocmd FileType php inoremap <LEADER>i <ESC>:call IPhpExpandClass()<CR>
-autocmd FileType php noremap <LEADER>i :call PhpExpandClass()<CR>
+autocmd FileType php inoremap <LEADER>i <ESC>viw<ESC>bi\<ESC>l:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <LEADER>i viw<ESC>bi\<ESC>l:call PhpExpandClass()<CR>
 
 " PHP REFACTORING
 autocmd FileType php nnoremap <LEADER>rv :call PhpRenameLocalVariable()<CR>
@@ -84,6 +84,9 @@ nnoremap ,<CR> A,<CR>
 nnoremap <LEADER>cc :call NERDComment(0,"toggle")<CR>
 vnoremap <LEADER>cc :call NERDComment(0,"toggle")<CR>
 inoremap <LEADER>cc <ESC>:call NERDComment(0,"toggle")<CR>A
+
+" make this line a single line comment
+inoremap /<CR> <ESC>:call NERDComment(0,"toggle")<CR>jO
 
 " PHP $THIS POINTER SHORTCUT
 autocmd Filetype php inoremap $<TAB> $this->
