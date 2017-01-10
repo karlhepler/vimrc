@@ -109,3 +109,6 @@ nnoremap <LEADER>t :Ag TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --i
 " MATCH BRACE/BRACKET
 nnoremap ) %
 nnoremap ( %%
+
+" OPEN TAG IN VERTICAL SPLIT
+noremap <C-W><C-]> <ESC>:vsp<CR>:exec("tag".expand("<CWORD>"))<CR>
