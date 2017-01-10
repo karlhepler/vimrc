@@ -43,19 +43,24 @@ autocmd FileType php vnoremap <LEADER>== :call PhpAlignAssigns()<CR>
 
 " PHP DOC BLOCKS
 autocmd FileType php nnoremap <LEADER>dd :call pdv#DocumentWithSnip()<CR>
-autocmd FileType php nnoremap <BUFFER> <LEADER>da :call PhpDocAll()<CR>
+autocmd FileType php nnoremap <LEADER>da :call PhpDocAll()<CR>
 
 " SORT USE STATMENTS
 autocmd FileType php vnoremap <LEADER>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<CR>
 
+" IMPORT CONSTRUCTOR VARIABLES
+autocmd FileType php nnoremap <LEADER>c mcyiwj%O$this->pa = $pa;j%kOprotected $pa;`c
+autocmd FileType php inoremap <LEADER>c mcyiwj%O$this->pa = $pa;j%kOprotected $pa;`ca
+
 " EDIT VIMRC FILES
 nnoremap <LEADER>vev :vsp ~/.vim/vimrc<CR>
 nnoremap <LEADER>vem :vsp ~/.vim/config/mappings.vim<CR>
-nnoremap <LEADER>vep :vsp ~/.vim/config/plugins.vim<CR>
+nnoremap <LEADER>vep :vsp ~/.vim/plugins.vim<CR>
 nnoremap <LEADER>ved :vsp ~/.vim/config/display.vim<CR>
 nnoremap <LEADER>vec :vsp ~/.vim/config/commands.vim<CR>
 nnoremap <LEADER>vea :vsp ~/.vim/config/autocmd.vim<CR>
 nnoremap <LEADER>vef :vsp ~/.vim/config/functions.vim<CR>
+nnoremap <LEADER>ves :vsp ~/.vim/Ultisnips/
 
 " GOTO START/END OF LINE
 nnoremap H ^
