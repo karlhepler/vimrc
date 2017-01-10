@@ -106,6 +106,10 @@ autocmd Filetype php nnoremap <LEADER>n :call Psr4NamespaceInsert()<CR>
 let g:UltiSnipsExpandTrigger="<TAB>"
 let g:UltiSnipsListSnippets="<S-TAB>"
 
-" Insert and find todo(kjh)
+" INSERT AND FIND TODO(KJH)
 inoremap <LEADER>t TODO(kjh):<SPACE>
 nnoremap <LEADER>t :Ag TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore .git<CR>
+
+" MATCH BRACE/BRACKET
+nnoremap ) %
+nnoremap ( %%
