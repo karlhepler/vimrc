@@ -19,35 +19,6 @@ nnoremap <LEADER>rt :RebuildTags<CR>
 nnoremap <LEADER>rvt :RebuildVendorTags<CR>
 nnoremap <LEADER>rat :RebuildAllTags<CR>
 
-" NAMESPACE USE
-autocmd FileType php inoremap <LEADER>u <ESC>:call IPhpInsertUse()<CR>
-autocmd FileType php noremap <LEADER>u :call PhpInsertUse()<CR>
-
-" NAMESPACE INCLUDE
-autocmd FileType php inoremap <LEADER>i <ESC>viw<ESC>bi\<ESC>l:call IPhpExpandClass()<CR>
-autocmd FileType php noremap <LEADER>i viw<ESC>bi\<ESC>l:call PhpExpandClass()<CR>
-
-" PHP REFACTORING
-autocmd FileType php nnoremap <LEADER>rv :call PhpRenameLocalVariable()<CR>
-autocmd FileType php nnoremap <LEADER>rp :call PhpRenameClassVariable()<CR>
-autocmd FileType php nnoremap <LEADER>rm :call PhpRenameMethod()<CR>
-autocmd FileType php nnoremap <LEADER>ep :call PhpExtractClassProperty()<CR>
-autocmd FileType php vnoremap <LEADER>em :call PhpExtractMethod()<CR>
-autocmd FileType php nnoremap <LEADER>np :call PhpCreateProperty()<CR>
-autocmd FileType php nnoremap <LEADER>du :call PhpDetectUnusedUseStatements()<CR>
-autocmd FileType php vnoremap <LEADER>== :call PhpAlignAssigns()<CR>
-
-" PHP DOC BLOCKS
-autocmd FileType php nnoremap <LEADER>dd :call pdv#DocumentWithSnip()<CR>
-autocmd FileType php nnoremap <LEADER>da :call PhpDocAll()<CR>
-
-" SORT USE STATMENTS
-autocmd FileType php vnoremap <LEADER>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<CR>
-
-" IMPORT CONSTRUCTOR VARIABLES
-autocmd FileType php nnoremap <LEADER>c mcyiwj%O$this->pa = $pa;j%kOprotected $pa;`c
-autocmd FileType php inoremap <LEADER>c mcyiwj%O$this->pa = $pa;j%kOprotected $pa;`ca
-
 " EDIT VIMRC FILES
 nnoremap <LEADER>vev :vsp ~/.vim/vimrc<CR>
 nnoremap <LEADER>vem :vsp ~/.vim/config/mappings.vim<CR>
@@ -57,6 +28,8 @@ nnoremap <LEADER>vec :vsp ~/.vim/config/commands.vim<CR>
 nnoremap <LEADER>vea :vsp ~/.vim/config/autocmd.vim<CR>
 nnoremap <LEADER>vef :vsp ~/.vim/config/functions.vim<CR>
 nnoremap <LEADER>ves :vsp ~/.vim/Ultisnips/
+nnoremap <LEADER>vet :vsp ~/.vim/ftplugin/
+nnoremap <LEADER>vsv :source ~/.vim/vimrc<CR>
 
 " GOTO START/END OF LINE
 nnoremap H ^
@@ -86,28 +59,15 @@ nnoremap <LEADER>cc :call NERDComment(0,"toggle")<CR>
 vnoremap <LEADER>cc :call NERDComment(0,"toggle")<CR>
 inoremap <LEADER>cc <ESC>:call NERDComment(0,"toggle")<CR>A
 
-" make this line a single line comment
+" MAKE THIS LINE A SINGLE LINE COMMENT
 inoremap /<CR> <ESC>:call NERDComment(0,"toggle")<CR>jO
-
-" PHP $THIS POINTER SHORTCUT
-autocmd Filetype php inoremap $<TAB> $this->
-
-" PHP APPEND =>
-autocmd Filetype php inoremap => <ESC>A<SPACE>=><SPACE>
-
-" PHP INSERT NAMESPACE
-autocmd Filetype php nnoremap <LEADER>n :call Psr4NamespaceInsert()<CR>
 
 " INSERT AND FIND TODO(KJH)
 inoremap <LEADER>t TODO(kjh):<SPACE>
 nnoremap <LEADER>t :Ag TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore .git<CR>
 
-" MATCH BRACE/BRACKET
-nnoremap ) %
-nnoremap ( %%
-
-" LIST PUBLIC METHODS IN CLASS
-autocmd Filetype php nnoremap <LEADER>r :vimgrep /public function/ %<CR>:copen<CR>
+" TODO(kjh): This is still showing callback functions if there is a space before them
+nnoremap <LEADER>rf :vimgrep /\((\s*\)\@<!function\C/ %<CR>:copen<CR>
 
 " SHOW/EXIT SPECIAL WINDOWS
 nnoremap <LEADER>sq :copen<CR>
@@ -115,3 +75,13 @@ nnoremap <LEADER>xq :cclose<CR>
 nnoremap <LEADER>sb :buffers<CR>
 nnoremap <LEADER>sr :registers<CR>
 nnoremap <LEADER>st :tags<CR>
+nnoremap <LEADER>sm :messages<CR>
+nnoremap <LEADER>sj :jumps<CR>
+
+" * JUST HIGHLIGHTS - DOESN'T GO TO NEXT
+nnoremap * *N
+vnoremap * *N
+
+" CHANGE TAG SPLIT MAPPINGS
+nnoremap <C-W>] :sp <CR>:exec("tag ".expand("<cword>"))<CR>
+nnoremap <C-W><C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>

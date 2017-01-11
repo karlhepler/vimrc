@@ -100,5 +100,11 @@ Plugin 'posva/vim-vue'
 " PERFORM ALL YOUR VIM INSERT MODE COMPLETIONS WITH TAB
 Plugin 'ervandew/supertab'
 
+" QFENTER - OPEN QUICKFIX IN SPLITS ETC
+Plugin 'yssl/QFEnter'
+let g:qfenter_vopen_map = ['<C-v>']
+let g:qfenter_hopen_map = ['<C-CR>', '<C-s>', '<C-x>']
+let g:qfenter_topen_map = ['<C-t>']
+
 
 call vundle#end()
