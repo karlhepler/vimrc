@@ -111,3 +111,10 @@ noremap <C-W><C-]> <ESC>:vsp<CR>:exec("tag".expand("<CWORD>"))<CR>
 
 " LIST PUBLIC METHODS IN CLASS
 autocmd Filetype php nnoremap <LEADER>r :vimgrep /public function/ %<CR>:copen<CR>
+
+" SHOW/EXIT SPECIAL WINDOWS
+nnoremap <LEADER>sq :copen<CR>
+nnoremap <LEADER>xq :cclose<CR>
+nnoremap <LEADER>sb :buffers<CR>
+nnoremap <LEADER>sr :registers<CR>
+nnoremap <LEADER>st :tags<CR>
