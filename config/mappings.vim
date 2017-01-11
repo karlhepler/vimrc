@@ -19,10 +19,6 @@ nnoremap <LEADER>rt :RebuildTags<CR>
 nnoremap <LEADER>rvt :RebuildVendorTags<CR>
 nnoremap <LEADER>rat :RebuildAllTags<CR>
 
-" INDENT & KEEP SELECTION
-vnoremap > >gv
-vnoremap < <gv
-
 " NAMESPACE USE
 autocmd FileType php inoremap <LEADER>u <ESC>:call IPhpInsertUse()<CR>
 autocmd FileType php noremap <LEADER>u :call PhpInsertUse()<CR>
