@@ -85,3 +85,8 @@ vnoremap * *N
 " CHANGE TAG SPLIT MAPPINGS
 nnoremap <C-W>] :sp <CR>:exec("tag ".expand("<cword>"))<CR>
 nnoremap <C-W><C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+" REMAP % TO TAB - I HAVE TO REMAP C-I TO DO THIS
+nnoremap <C-O><C-O> <C-O>
+nnoremap <C-O><C-I> <C-I>
+nnoremap <TAB> %
