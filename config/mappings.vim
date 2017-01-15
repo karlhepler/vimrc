@@ -31,6 +31,14 @@ nnoremap <LEADER>ves :vsp ~/.vim/Ultisnips/
 nnoremap <LEADER>vet :vsp ~/.vim/ftplugin/
 nnoremap <LEADER>vsv :source ~/.vim/vimrc<CR>
 
+" REMAP TOP, MIDDLE, & BOTTOM OF SCREEN
+nnoremap <C-J> L
+vnoremap <C-J> L
+nnoremap <C-K> H
+vnoremap <C-K> H
+nnoremap <C-M> M
+vnoremap <C-M> M
+
 " GOTO START/END OF LINE
 nnoremap H ^
 vnoremap H ^
@@ -77,6 +85,7 @@ nnoremap <LEADER>sr :registers<CR>
 nnoremap <LEADER>st :tags<CR>
 nnoremap <LEADER>sm :messages<CR>
 nnoremap <LEADER>sj :jumps<CR>
+nnoremap <LEADER>sc :changes<CR>
 
 " * JUST HIGHLIGHTS - DOESN'T GO TO NEXT
 nnoremap * *N
@@ -87,6 +96,7 @@ nnoremap <C-W>] :sp <CR>:exec("tag ".expand("<cword>"))<CR>
 nnoremap <C-W><C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " REMAP % TO TAB - I HAVE TO REMAP C-I TO DO THIS
-nnoremap <C-O><C-O> <C-O>
-nnoremap <C-O><C-I> <C-I>
+noremap <C-O><C-O> <C-O>
+noremap <C-O><C-I> <C-I>
 nnoremap <TAB> %
+vnoremap <TAB> %
