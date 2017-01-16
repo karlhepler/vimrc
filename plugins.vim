@@ -110,5 +110,16 @@ let g:qfenter_topen_map = ['<C-t>']
 Plugin 'mattn/emmet-vim'
 " let g:user_emmet_leader_key='<TAB>'
 
+" VIM JAVASCRIPT - JAVASCRIPT BUNDLE FOR VIM, THIS BUNDLE PROVIDES SYNTAX HIGHLIGHTING AND IMPROVED INDENTATION.
+Plugin 'pangloss/vim-javascript'
+let g:javascript_plugin_jsdoc=1
+
+" JSDOC.VIM - GENERATES JSDOC BLOCK COMMENTS BASED ON A FUNCTION SIGNATURE.
+Plugin 'heavenshell/vim-jsdoc'
+let g:jsdoc_enable_es6=1
+let g:jsdoc_allow_input_prompt=1
+let g:jsdoc_input_description=1
+let g:jsdoc_return_description=0
+
 call vundle#end()
 filetype plugin indent on
