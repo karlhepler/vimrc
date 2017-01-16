@@ -106,5 +106,9 @@ let g:qfenter_vopen_map = ['<C-v>']
 let g:qfenter_hopen_map = ['<C-CR>', '<C-s>', '<C-x>']
 let g:qfenter_topen_map = ['<C-t>']
 
+" EMMET FOR HTML
+Plugin 'mattn/emmet-vim'
+" let g:user_emmet_leader_key='<TAB>'
 
 call vundle#end()
+filetype plugin indent on
