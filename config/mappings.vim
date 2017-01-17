@@ -98,5 +98,6 @@ nnoremap <C-W><C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " REMAP % TO TAB - I HAVE TO REMAP C-I TO DO THIS
 noremap <C-O><C-O> <C-O>
 noremap <C-O><C-I> <C-I>
-nnoremap <TAB> %
-vnoremap <TAB> %
+onoremap <TAB> :<C-U>call <SNR>41_Match_wrapper('',1,'o')<CR>
+nnoremap <TAB> :<C-U>call <SNR>41_Match_wrapper('',1,'n')<CR>
+vnoremap <TAB> :<C-U>call <SNR>41_Match_wrapper('',1,'v')<CR>m'gv``

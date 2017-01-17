@@ -108,7 +108,7 @@ let g:qfenter_topen_map = ['<C-t>']
 
 " EMMET FOR HTML
 Plugin 'mattn/emmet-vim'
-" let g:user_emmet_leader_key='<TAB>'
+imap <expr> <leader><tab> emmet#expandAbbrIntelligent("\<leader>\<tab>")
 
 " VIM JAVASCRIPT - JAVASCRIPT BUNDLE FOR VIM, THIS BUNDLE PROVIDES SYNTAX HIGHLIGHTING AND IMPROVED INDENTATION.
 Plugin 'pangloss/vim-javascript'
@@ -120,6 +120,12 @@ let g:jsdoc_enable_es6=1
 let g:jsdoc_allow_input_prompt=1
 let g:jsdoc_input_description=1
 let g:jsdoc_return_description=0
+
+" MATCH MORE THAN JUST A SINGLE CHARACTER
+Plugin 'tmhedberg/matchit'
+
+" REPEAT PLUGIN COMMANDS TOO
+Plugin 'tpope/vim-repeat'
 
 call vundle#end()
 filetype plugin indent on
