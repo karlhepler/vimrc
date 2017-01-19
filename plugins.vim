@@ -127,5 +127,18 @@ Plugin 'tmhedberg/matchit'
 " REPEAT PLUGIN COMMANDS TOO
 Plugin 'tpope/vim-repeat'
 
+"TAG LIST
+Plugin 'vim-scripts/taglist.vim'
+let Tlist_Enable_Fold_Column=0
+let Tlist_GainFocus_On_ToggleOpen=1
+let Tlist_Inc_Winwidth=0
+let Tlist_Show_One_File=1
+let Tlist_Use_Right_Window=1
+let Tlist_WinWidth=50
+let Tlist_Display_Tag_Scope=0
+let Tlist_Display_Prototype=1
+let Tlist_Close_On_Select=1
+let Tlist_Compact_Format=1
+
 call vundle#end()
 filetype plugin indent on

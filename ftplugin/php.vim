@@ -25,16 +25,11 @@ nnoremap <buffer> <LEADER>su mugg/use<CR>V}k! awk '{ print length(), $0 \| "sort
 vnoremap <buffer> <LEADER>! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<CR>
 
 " IMPORT CONSTRUCTOR VARIABLES
-nnoremap <buffer> <LEADER>c mcyiwj%O$this->pa = $pa;j%kOprotected $pa;`c
-inoremap <buffer> <LEADER>c mcyiwj%O$this->pa = $pa;j%kOprotected $pa;`ca
+nnoremap <buffer> <LEADER>c mcyiwj%O$this->pa = pa;j%kOprotected pa;jj%k2f$x`c
+inoremap <buffer> <LEADER>c mcyiwj%O$this->pa = pa;j%kOprotected pa;jj%k2f$x`ca
 
 " PHP $THIS POINTER SHORTCUT
 inoremap <buffer> $<TAB> $this->
 
 " PHP INSERT NAMESPACE
 nnoremap <buffer> <LEADER>n :call Psr4NamespaceInsert()<CR>
-
-" LIST METHODS & FUNCTIONS
-nnoremap <buffer> <LEADER>rp :vimgrep /public function/ %<CR>:copen<CR>
-nnoremap <buffer> <LEADER>rpp :vimgrep /protected function/ %<CR>:copen<CR>
-nnoremap <buffer> <LEADER>rppp :vimgrep /private function/ %<CR>:copen<CR>

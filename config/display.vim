@@ -31,7 +31,7 @@ set noerrorbells
 set visualbell
 
 " Always show at least 3 lines above/below the cursor
-set scrolloff=3
+set scrolloff=1
 
 " No word wrapping, please
 set nowrap
