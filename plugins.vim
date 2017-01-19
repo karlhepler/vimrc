@@ -29,6 +29,7 @@ let g:gitgutter_sign_column_always=1
 " ROOTER CHANGES THE WORKING DIRECTORY TO THE PROJECT ROOT WHEN YOU OPEN A FILE OR DIRECTORY.
 Plugin 'airblade/vim-rooter'
 let g:rooter_patterns=['.git/']
+let g:rooter_silent_chdir=1
 
 " AUTOTAGS - AUTOMATICALLY UPDATE CTAGS THE RIGHT WAY
 Plugin 'craigemery/vim-autotag'
@@ -108,7 +109,7 @@ let g:qfenter_topen_map = ['<C-t>']
 
 " EMMET FOR HTML
 Plugin 'mattn/emmet-vim'
-imap <expr> <leader><tab> emmet#expandAbbrIntelligent("\<leader>\<tab>")
+let g:user_emmet_leader_key='<LEADER><TAB>'
 
 " VIM JAVASCRIPT - JAVASCRIPT BUNDLE FOR VIM, THIS BUNDLE PROVIDES SYNTAX HIGHLIGHTING AND IMPROVED INDENTATION.
 Plugin 'pangloss/vim-javascript'
@@ -139,6 +140,15 @@ let Tlist_Display_Tag_Scope=0
 let Tlist_Display_Prototype=1
 let Tlist_Close_On_Select=1
 let Tlist_Compact_Format=1
+
+" QUICKFIX PREVIEW
+Plugin 'ronakg/quickr-preview.vim'
+let g:quickr_preview_keymaps=0
+
+" QUICKFIX TOGGLE
+Plugin 'milkypostman/vim-togglelist'
+let g:toggle_list_no_mappings=1
+
 
 call vundle#end()
 filetype plugin indent on

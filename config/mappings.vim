@@ -79,16 +79,6 @@ nnoremap <silent> <LEADER>tt :Ag TODO\\\(kjh\\\) --ignore vendor --ignore node_m
 inoremap <LEADER>n NOTE(kjh):<SPACE>
 nnoremap <silent> <LEADER>nn :Ag NOTE\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore .git --ignore builds<CR>
 
-" SHOW/EXIT SPECIAL WINDOWS
-nnoremap <silent> <LEADER>sq :copen<CR>
-nnoremap <silent> <LEADER>xq :cclose<CR>
-nnoremap <silent> <LEADER>sb :buffers<CR>
-nnoremap <silent> <LEADER>sr :registers<CR>
-nnoremap <silent> <LEADER>st :tags<CR>
-nnoremap <silent> <LEADER>sm :messages<CR>
-nnoremap <silent> <LEADER>sj :jumps<CR>
-nnoremap <silent> <LEADER>sc :changes<CR>
-
 " * JUST HIGHLIGHTS - DOESN'T GO TO NEXT
 nnoremap * *N
 vnoremap * *N
@@ -113,3 +103,18 @@ nnoremap [m [mzt
 
 " TOGGLE TAGLIST
 nnoremap <silent> <LEADER>tl :TlistToggle<CR>
+
+" TAME THE HALF-PAGE SCROLLER
+nnoremap <C-D> 5j5<C-E>
+vnoremap <C-D> 5j5<C-E>
+nnoremap <C-U> 5k5<C-Y>
+vnoremap <C-U> 5k5<C-Y>
+
+" TRIGGER EMMET WITHOUT ENDING WITH A COMMA
+inoremap <expr> <LEADER><TAB> emmet#expandAbbrIntelligent("\<LEADER>\<TAB>")
+
+" QUICKFIX PREVIEW MAPPINGS
+nmap <LEADER>p <plug>(quickr_preview)
+
+" TOGGLE QUICKFIX LIST
+nnoremap <script> <silent> <leader>q :call ToggleQuickfixList()<CR>
