@@ -112,4 +112,4 @@ nnoremap ]m ]mzt
 nnoremap [m [mzt
 
 " TOGGLE TAGLIST
-nnoremap <LEADER>tl :TlistToggle<CR>
+nnoremap <silent> <LEADER>tl :TlistToggle<CR>
