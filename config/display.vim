@@ -1,57 +1,60 @@
-" Enable syntax highlighting
+" ENABLE SYNTAX HIGHLIGHTING
 syntax enable
 
-" Enable per-filetype settings
-" This includes syntax, plugin, & indentation settings
+" ENABLE PER-FILETYPE SETTINGS
+" THIS INCLUDES SYNTAX, PLUGIN, & INDENTATION SETTINGS
 filetype plugin indent on
 
-" Set indentation preferences
-set tabstop=4       " Show existing with 4 spaces width
-set shiftwidth=4    " When indenting with '>', use 4 spaces width
-set expandtab       " On pressing tab, insert 4 spaces
-set softtabstop=4   " When pressing backspace, skip 4 spaces
-set shiftround      " Use multiple of shift width with '>' & '<'
+" SET INDENTATION PREFERENCES
+set tabstop=4       " SHOW EXISTING WITH 4 SPACES WIDTH
+set shiftwidth=4    " WHEN INDENTING WITH '>', USE 4 SPACES WIDTH
+set expandtab       " ON PRESSING TAB, INSERT 4 SPACES
+set softtabstop=4   " WHEN PRESSING BACKSPACE, SKIP 4 SPACES
+set shiftround      " USE MULTIPLE OF SHIFT WIDTH WITH '>' & '<'
 
-" Color theme
+" COLOR THEME
 set background=dark
 colorscheme hybrid_material
 
-" Use 256 colors in terminal
+" USE 256 COLORS IN TERMINAL
 set t_Co=256
 
-" Split defaults
+" SPLIT DEFAULTS
 set splitbelow
 set splitright
 
-" Disable code folding
+" DISABLE CODE FOLDING
 set nofoldenable
 
-" No beeping
+" NO BEEPING
 set noerrorbells
 set visualbell
 
-" Always show at least 3 lines above/below the cursor
+" ALWAYS SHOW AT LEAST 3 LINES ABOVE/BELOW THE CURSOR
 set scrolloff=1
 
-" No word wrapping, please
+" NO WORD WRAPPING, PLEASE
 set nowrap
 set textwidth=0
 set wrapmargin=0
 set formatoptions-=t
 
-" Always show the status line
+" ALWAYS SHOW THE STATUS LINE
 set laststatus=2
 
-" Show the ruler
+" SHOW THE RULER
 set ruler
 
-" Enable search highlighting while typing
+" ENABLE SEARCH HIGHLIGHTING WHILE TYPING
 set hlsearch
 set incsearch
 
-" Ignore case when searching in lowercase
+" IGNORE CASE WHEN SEARCHING IN LOWERCASE
 set ignorecase
 set smartcase
 
-" Highlight current line
+" HIGHLIGHT CURRENT LINE
 set cursorline
+
+"GO AHEAD AND ENABLE MOUSE SUPPORT. FINE.
+set mouse=a
