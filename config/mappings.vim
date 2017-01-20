@@ -15,10 +15,10 @@ nnoremap <LEADER>gs :Gsearch<SPACE>
 " TODO(kjh): :Greplace isn't valid??
 nnoremap <LEADER>gr :Greplace<CR>
 
-" REBUILD TAGS
-nnoremap <silent> <LEADER>rt :RebuildTags<CR>
-nnoremap <silent> <LEADER>rvt :RebuildVendorTags<CR>
-nnoremap <silent> <LEADER>rat :RebuildAllTags<CR>
+" REBUILD CTAGS
+nnoremap <silent> <LEADER>ctr :RebuildTags<CR>
+nnoremap <silent> <LEADER>ctrv :RebuildVendorTags<CR>
+nnoremap <silent> <LEADER>ctra :RebuildAllTags<CR>
 
 " EDIT VIMRC FILES
 nnoremap <silent> <LEADER>vev :vsp ~/.vim/vimrc<CR>
@@ -68,16 +68,9 @@ nnoremap <silent> <LEADER>cc :call NERDComment(0,"toggle")<CR>
 vnoremap <silent> <LEADER>cc :call NERDComment(0,"toggle")<CR>
 inoremap <silent> <LEADER>cc <ESC>:call NERDComment(0,"toggle")<CR>A
 
-" MAKE THIS LINE A SINGLE LINE COMMENT
-inoremap <silent> /<CR> <ESC>:call NERDComment(0,"toggle")<CR>jO
-
 " INSERT AND FIND TODO(KJH)
 inoremap <LEADER>t TODO(kjh):<SPACE>
-nnoremap <silent> <LEADER>tt :Ag TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore .git --ignore builds<CR>
-
-" INSERT AND FIND NOTE(KJH)
-inoremap <LEADER>n NOTE(kjh):<SPACE>
-nnoremap <silent> <LEADER>nn :Ag NOTE\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore .git --ignore builds<CR>
+nnoremap <silent> <LEADER>t :Ag TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore .git --ignore builds<CR>
 
 " * JUST HIGHLIGHTS - DOESN'T GO TO NEXT
 nnoremap * *N
@@ -102,7 +95,7 @@ nnoremap ]m ]mzt
 nnoremap [m [mzt
 
 " TOGGLE TAGLIST
-nnoremap <silent> <LEADER>tl :TlistToggle<CR>
+nnoremap <silent> <LEADER>r :TlistToggle<CR>
 
 " TAME THE HALF-PAGE SCROLLER
 nnoremap <C-D> 5j5<C-E>

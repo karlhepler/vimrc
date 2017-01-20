@@ -7,9 +7,6 @@ inoremap <buffer> <LEADER>i <ESC>viw<ESC>bi\<ESC>l:call IPhpExpandClass()<CR>
 noremap <buffer> <LEADER>i viw<ESC>bi\<ESC>l:call PhpExpandClass()<CR>
 
 " PHP REFACTORING
-nnoremap <buffer> <LEADER>rv :call PhpRenameLocalVariable()<CR>
-nnoremap <buffer> <LEADER>rp :call PhpRenameClassVariable()<CR>
-nnoremap <buffer> <LEADER>rm :call PhpRenameMethod()<CR>
 nnoremap <buffer> <LEADER>ep :call PhpExtractClassProperty()<CR>
 vnoremap <buffer> <LEADER>em :call PhpExtractMethod()<CR>
 nnoremap <buffer> <LEADER>np :call PhpCreateProperty()<CR>
@@ -33,3 +30,6 @@ inoremap <buffer> $<TAB> $this->
 
 " PHP INSERT NAMESPACE
 nnoremap <buffer> <LEADER>n :call Psr4NamespaceInsert()<CR>
+
+" FANCY BLOCK COMMENTS
+inoremap <buffer> <LEADER>c<CR> VUI// A //yypyypkkv$r/jjv$r/occ
