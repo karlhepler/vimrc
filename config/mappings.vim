@@ -12,8 +12,6 @@ nnoremap <LEADER>ag :Ag -Q --ignore node_modules --ignore bower_components --ign
 
 " PROJECT SEARCH & REPLACE
 nnoremap <LEADER>gs :Gsearch<SPACE>
-" TODO(kjh): :Greplace isn't valid??
-nnoremap <LEADER>gr :Greplace<CR>
 
 " REBUILD CTAGS
 nnoremap <silent> <LEADER>ctr :RebuildTags<CR>
@@ -88,7 +86,7 @@ nnoremap <silent> <TAB> :<C-U>call <SNR>41_Match_wrapper('',1,'n')<CR>
 vnoremap <silent> <TAB> :<C-U>call <SNR>41_Match_wrapper('',1,'v')<CR>m'gv``
 
 " RELOAD THE CURRENT FILE
-nnoremap <LEADER>l :e!<CR>
+nnoremap <LEADER>lf :e!<CR>
 
 " PUT FUNCTION DECLARATION AT TOP OF SCREEN WHEN JUMPING
 nnoremap ]m ]mzt
@@ -104,10 +102,21 @@ nnoremap <C-U> 5k5<C-Y>
 vnoremap <C-U> 5k5<C-Y>
 
 " TRIGGER EMMET WITHOUT ENDING WITH A COMMA
-inoremap <expr> <LEADER><TAB> emmet#expandAbbrIntelligent("\<LEADER>\<TAB>")
+imap <expr> <LEADER><TAB> emmet#expandAbbrIntelligent("\<LEADER>\<TAB>")
 
 " QUICKFIX PREVIEW MAPPINGS
 nmap <LEADER>p <plug>(quickr_preview)
 
 " TOGGLE QUICKFIX LIST
 nnoremap <script> <silent> <leader>q :call ToggleQuickfixList()<CR>
+
+" OPEN LARAVEL.LOG FILE
+nnoremap <silent> <LEADER>ll :tabe [sS]ource/storage/logs/laravel.log<CR>
+
+" LEADER+P PASTE FROM SYSTEM CLIPBOARD
+nmap <silent> <LEADER>p :set paste<CR>:read !pbpaste<CR>:set nopaste<CR>
+vmap <silent> <LEADER>p c<ESC>:set paste<CR>a<C-R>=system("pbpaste")<CR><ESC>:set nopaste<CR>
+imap <silent> <LEADER>p <ESC>:set paste<CR>a<C-R>=system("pbpaste")<CR><ESC>:set nopaste<CR>a
+
+" LEADER+Y COPY VISUAL SELECTION TO SYSTEM CLIPBOARD
+vnoremap <silent> <LEADER>y :<CR>:let @a=@" \| execute "normal! vgvy" \| let res=system("pbcopy", @") \| let @"=@a<CR>

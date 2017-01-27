@@ -50,7 +50,7 @@ endfunction
 
 " ULTISNIPS - THE ULTIMATE SNIPPET SOLUTION FOR VIM.
 Plugin 'SirVer/ultisnips'
-let g:UltiSnipsExpandTrigger="<TAB>"
+let g:UltiSnipsExpandTrigger="<LEADER>s<TAB>"
 let g:UltiSnipsJumpForwardTrigger="<TAB>"
 let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"
 
@@ -93,7 +93,7 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 " MULTI-FILE SEARCH & REPLACE
 Plugin 'skwp/greplace.vim'
 set grepprg=ag
-let g:grep_cmd_opts = '--line-numbers --noheading'
+let g:grep_cmd_opts = '--line-numbers --noheading --ignore node_modules --ignore bower_components --ignore .git --ignore public --ignore vendor'
 
 " .VUE SYNTAX HIGHLIGHTING
 Plugin 'posva/vim-vue'
@@ -109,7 +109,6 @@ let g:qfenter_topen_map = ['<C-t>']
 
 " EMMET FOR HTML
 Plugin 'mattn/emmet-vim'
-let g:user_emmet_leader_key='<LEADER><TAB>'
 
 " VIM JAVASCRIPT - JAVASCRIPT BUNDLE FOR VIM, THIS BUNDLE PROVIDES SYNTAX HIGHLIGHTING AND IMPROVED INDENTATION.
 Plugin 'pangloss/vim-javascript'
