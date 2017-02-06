@@ -148,6 +148,9 @@ let g:quickr_preview_keymaps=0
 Plugin 'milkypostman/vim-togglelist'
 let g:toggle_list_no_mappings=1
 
+" GIT INSIDE VIM
+Plugin 'tpope/vim-fugitive'
+
 
 call vundle#end()
 filetype plugin indent on

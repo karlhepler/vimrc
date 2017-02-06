@@ -30,7 +30,7 @@ set nofoldenable
 set noerrorbells
 set visualbell
 
-" ALWAYS SHOW AT LEAST 3 LINES ABOVE/BELOW THE CURSOR
+" ALWAYS SHOW AT LEAST 1 LINE ABOVE/BELOW THE CURSOR
 set scrolloff=1
 
 " NO WORD WRAPPING, PLEASE
@@ -40,7 +40,14 @@ set wrapmargin=0
 set formatoptions-=t
 
 " ALWAYS SHOW THE STATUS LINE
-set laststatus=2
+set laststatus=2                            " ALWAYS SHOW THE STATUS LINE
+set statusline=                             " CLEAR THE STATUS LINE
+set statusline+=\ %{fugitive#statusline()}  " GIT BRANCH
+set statusline+=\ %h%w%m%r                  " FILE STATUS
+set statusline+=\ %f                        " FILE NAME
+set statusline+=%=                          " EVERYTHING PAST HERE IS ON THE RIGHT
+set statusline+=%(%l,%c%V\ %=\ %P%)         " LINE, CHAR, FILE POS
+set statusline+=\                           " RIGHT PADDING
 
 " SHOW THE RULER
 set ruler

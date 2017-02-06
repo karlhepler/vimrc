@@ -120,3 +120,6 @@ imap <silent> <LEADER>p <ESC>:set paste<CR>a<C-R>=system("pbpaste")<CR><ESC>:set
 
 " LEADER+Y COPY VISUAL SELECTION TO SYSTEM CLIPBOARD
 vnoremap <silent> <LEADER>y :<CR>:let @a=@" \| execute "normal! vgvy" \| let res=system("pbcopy", @") \| let @"=@a<CR>
+
+" DELETE ALL BUFFERS EXCEPT THIS ONE
+nnoremap <silent> <LEADER>bda :%bd<CR><C-^>
