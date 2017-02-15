@@ -30,33 +30,22 @@ nnoremap <LEADER>ves :vsp ~/.vim/Ultisnips/
 nnoremap <LEADER>vet :vsp ~/.vim/ftplugin/
 nnoremap <silent> <LEADER>vsv :source ~/.vim/vimrc<CR>
 
-" REMAP TOP, MIDDLE, & BOTTOM OF SCREEN
-nnoremap <C-J> L
-vnoremap <C-J> L
-nnoremap <C-K> H
-vnoremap <C-K> H
-nnoremap <C-M> M
-vnoremap <C-M> M
-
 " GOTO START/END OF LINE
-nnoremap H ^
-vnoremap H ^
-nnoremap L $
-vnoremap L $
+nnoremap <C-H> ^
+vnoremap <C-H> ^
+nnoremap <C-L> $
+vnoremap <C-L> $
 
 " DELETE FROM CURRENT LOCATION TO START/END OF LINE
-nnoremap dH d^
-nnoremap dL d$
+nnoremap d<C-H> d^
+nnoremap d<C-L> d$
 
 " YANK FROM CURRENT LOCATION TO START/END OF LINE
-nnoremap yH y^
-nnoremap yL y$
+nnoremap y<C-H> y^
+nnoremap y<C-L> y$
 
 " REFRESH SCREEN, SYNTAX HIGHLIGHTING, & GIT GUTTER
-nnoremap <silent> <C-L> :redraw!<CR>:syntax sync fromstart<CR>:GitGutter<CR>
-
-" STOP CTRL+K FROM BEING DUMB
-nnoremap K k
+nnoremap <silent> <LEADER>lr :redraw!<CR>:syntax sync fromstart<CR>:GitGutter<CR>
 
 " COMMA+ENTER GOES TO INSERT MODE
 nnoremap ,<CR> A,<CR>
@@ -87,10 +76,6 @@ vnoremap <silent> <TAB> :<C-U>call <SNR>41_Match_wrapper('',1,'v')<CR>m'gv``
 
 " RELOAD THE CURRENT FILE
 nnoremap <LEADER>lf :e!<CR>
-
-" PUT FUNCTION DECLARATION AT TOP OF SCREEN WHEN JUMPING
-nnoremap ]m ]mzt
-nnoremap [m [mzt
 
 " TOGGLE TAGLIST
 nnoremap <silent> <LEADER>r :TlistToggle<CR>
@@ -123,3 +108,7 @@ vnoremap <silent> <LEADER>y :<CR>:let @a=@" \| execute "normal! vgvy" \| let res
 
 " DELETE ALL BUFFERS EXCEPT THIS ONE
 nnoremap <silent> <LEADER>bda :%bd<CR><C-^>
+
+" STOP IT, SHIFT+K!!!
+nmap K k
+nnoremap K k
