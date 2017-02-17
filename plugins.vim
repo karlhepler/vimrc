@@ -16,7 +16,7 @@ Plugin 'tpope/vim-surround'
 " CTRL+P FUZZY FILE SEARCH
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_match_window='top,order:ttb'
-let g:ctrlp_custom_ignore={'dir':'\v(node_modules|vendor|bower_components)$'}
+let g:ctrlp_custom_ignore={'dir':'\v(node_modules|vendor|bower_components|builds)$'}
 if executable('ag')
     let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
     let g:ctrlp_use_caching=0
@@ -50,7 +50,7 @@ endfunction
 
 " ULTISNIPS - THE ULTIMATE SNIPPET SOLUTION FOR VIM.
 Plugin 'SirVer/ultisnips'
-let g:UltiSnipsExpandTrigger="<LEADER>s<TAB>"
+let g:UltiSnipsExpandTrigger="<TAB>"
 let g:UltiSnipsJumpForwardTrigger="<TAB>"
 let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"
 
@@ -98,9 +98,6 @@ let g:grep_cmd_opts = '--line-numbers --noheading --ignore node_modules --ignore
 " .VUE SYNTAX HIGHLIGHTING
 Plugin 'posva/vim-vue'
 
-" PERFORM ALL YOUR VIM INSERT MODE COMPLETIONS WITH TAB
-Plugin 'ervandew/supertab'
-
 " QFENTER - OPEN QUICKFIX IN SPLITS ETC
 Plugin 'yssl/QFEnter'
 let g:qfenter_vopen_map = ['<C-v>']
@@ -121,7 +118,7 @@ let g:jsdoc_allow_input_prompt=1
 let g:jsdoc_input_description=1
 let g:jsdoc_return_description=0
 
-" MATCH MORE THAN JUST A SINGLE CHARACTER
+" MATCH MORE THAN JUST A SINGLE CHARACTER WITH %
 Plugin 'tmhedberg/matchit'
 
 " REPEAT PLUGIN COMMANDS TOO
@@ -139,10 +136,6 @@ let Tlist_Display_Tag_Scope=0
 let Tlist_Display_Prototype=1
 let Tlist_Close_On_Select=1
 let Tlist_Compact_Format=1
-
-" QUICKFIX PREVIEW
-Plugin 'ronakg/quickr-preview.vim'
-let g:quickr_preview_keymaps=0
 
 " QUICKFIX TOGGLE
 Plugin 'milkypostman/vim-togglelist'

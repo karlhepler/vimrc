@@ -63,5 +63,8 @@ set smartcase
 " HIGHLIGHT CURRENT LINE
 set cursorline
 
-"GO AHEAD AND ENABLE MOUSE SUPPORT. FINE.
+" GO AHEAD AND ENABLE MOUSE SUPPORT. FINE.
 set mouse=a
+
+" ENABLE OMNIFUNC SYNTAX COMPLETION
+set omnifunc=syntaxcomplete#Complete

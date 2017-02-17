@@ -8,7 +8,7 @@ inoremap jk <ESC>
 nnoremap <silent> <LEADER><SPACE> :nohlsearch<CR>
 
 " AG PROJECT SEARCH
-nnoremap <LEADER>ag :Ag -Q --ignore node_modules --ignore bower_components --ignore .git --ignore public --ignore vendor ''<LEFT>
+nnoremap <LEADER>ag :Ag<SPACE>
 
 " PROJECT SEARCH & REPLACE
 nnoremap <LEADER>gs :Gsearch<SPACE>
@@ -57,7 +57,7 @@ inoremap <silent> <LEADER>cc <ESC>:call NERDComment(0,"toggle")<CR>A
 
 " INSERT AND FIND TODO(KJH)
 inoremap <LEADER>t TODO(kjh):<SPACE>
-nnoremap <silent> <LEADER>t :Ag TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore .git --ignore builds<CR>
+nnoremap <silent> <LEADER>t :Ag TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore builds<CR>
 
 " * JUST HIGHLIGHTS - DOESN'T GO TO NEXT
 nnoremap * *N
@@ -70,9 +70,9 @@ nnoremap <silent> <C-W><C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " REMAP % TO TAB - I HAVE TO REMAP C-I TO DO THIS
 noremap <C-O><C-O> <C-O>
 noremap <C-O><C-I> <C-I>
-onoremap <silent> <TAB> :<C-U>call <SNR>41_Match_wrapper('',1,'o')<CR>
-nnoremap <silent> <TAB> :<C-U>call <SNR>41_Match_wrapper('',1,'n')<CR>
-vnoremap <silent> <TAB> :<C-U>call <SNR>41_Match_wrapper('',1,'v')<CR>m'gv``
+onoremap <silent> <TAB> :<C-U>call <SNR>40_Match_wrapper('',1,'o')<CR>
+nnoremap <silent> <TAB> :<C-U>call <SNR>40_Match_wrapper('',1,'n')<CR>
+vnoremap <silent> <TAB> :<C-U>call <SNR>40_Match_wrapper('',1,'v')<CR>m'gv``
 
 " RELOAD THE CURRENT FILE
 nnoremap <LEADER>lf :e!<CR>
@@ -88,9 +88,6 @@ vnoremap <C-U> 5k5<C-Y>
 
 " TRIGGER EMMET WITHOUT ENDING WITH A COMMA
 imap <expr> <LEADER><TAB> emmet#expandAbbrIntelligent("\<LEADER>\<TAB>")
-
-" QUICKFIX PREVIEW MAPPINGS
-nmap <LEADER>p <plug>(quickr_preview)
 
 " TOGGLE QUICKFIX LIST
 nnoremap <script> <silent> <leader>q :call ToggleQuickfixList()<CR>
@@ -112,3 +109,6 @@ nnoremap <silent> <LEADER>bda :%bd<CR><C-^>
 " STOP IT, SHIFT+K!!!
 nmap K k
 nnoremap K k
+
+" NEXT LINE NO MATTER WHAT INSERT MODE
+inoremap <C-J> <ESC>A<CR><ESC>cc
