@@ -11,5 +11,5 @@ if [ "$1" == "force" ] || [ ! -f .tags.vendor ]; then
              --exclude=node_modules \
              --exclude=bower_components \
              -f .tags.vendor \
-             source/vendor
+             source/vendor src/vendor
 fi
