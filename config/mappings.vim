@@ -19,15 +19,15 @@ nnoremap <silent> <LEADER>ctrv :RebuildVendorTags<CR>
 nnoremap <silent> <LEADER>ctra :RebuildAllTags<CR>
 
 " EDIT VIMRC FILES
-nnoremap <silent> <LEADER>vev :vsp ~/.vim/vimrc<CR>
-nnoremap <silent> <LEADER>vem :vsp ~/.vim/config/mappings.vim<CR>
-nnoremap <silent> <LEADER>vep :vsp ~/.vim/plugins.vim<CR>
-nnoremap <silent> <LEADER>ved :vsp ~/.vim/config/display.vim<CR>
-nnoremap <silent> <LEADER>vec :vsp ~/.vim/config/commands.vim<CR>
-nnoremap <silent> <LEADER>vea :vsp ~/.vim/config/autocmd.vim<CR>
-nnoremap <silent> <LEADER>vef :vsp ~/.vim/config/functions.vim<CR>
-nnoremap <LEADER>ves :vsp ~/.vim/Ultisnips/
-nnoremap <LEADER>vet :vsp ~/.vim/ftplugin/
+nnoremap <silent> <LEADER>vev :e ~/.vim/vimrc<CR>
+nnoremap <silent> <LEADER>vem :e ~/.vim/config/mappings.vim<CR>
+nnoremap <silent> <LEADER>vep :e ~/.vim/plugins.vim<CR>
+nnoremap <silent> <LEADER>ved :e ~/.vim/config/display.vim<CR>
+nnoremap <silent> <LEADER>vec :e ~/.vim/config/commands.vim<CR>
+nnoremap <silent> <LEADER>vea :e ~/.vim/config/autocmd.vim<CR>
+nnoremap <silent> <LEADER>vef :e ~/.vim/config/functions.vim<CR>
+nnoremap <LEADER>ves :e ~/.vim/Ultisnips/
+nnoremap <LEADER>vet :e ~/.vim/ftplugin/
 nnoremap <silent> <LEADER>vsv :source ~/.vim/vimrc<CR>
 
 " GOTO START/END OF LINE
@@ -50,11 +50,6 @@ nnoremap <silent> <LEADER>lr :redraw!<CR>:syntax sync fromstart<CR>:GitGutter<CR
 " COMMA+ENTER GOES TO INSERT MODE
 nnoremap ,<CR> A,<CR>
 
-" TOGGLE COMMENTS
-nnoremap <silent> <LEADER>cc :call NERDComment(0,"toggle")<CR>
-vnoremap <silent> <LEADER>cc :call NERDComment(0,"toggle")<CR>
-inoremap <silent> <LEADER>cc <ESC>:call NERDComment(0,"toggle")<CR>A
-
 " INSERT AND FIND TODO(KJH)
 inoremap <LEADER>t TODO(kjh):<SPACE>
 nnoremap <silent> <LEADER>t :Ag TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore builds<CR>
@@ -67,18 +62,8 @@ vnoremap * *N
 nnoremap <silent> <C-W>] :sp <CR>:exec("tag ".expand("<cword>"))<CR>
 nnoremap <silent> <C-W><C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
-" REMAP % TO TAB - I HAVE TO REMAP C-I TO DO THIS
-noremap <C-O><C-O> <C-O>
-noremap <C-O><C-I> <C-I>
-onoremap <silent> <TAB> :<C-U>call <SNR>40_Match_wrapper('',1,'o')<CR>
-nnoremap <silent> <TAB> :<C-U>call <SNR>40_Match_wrapper('',1,'n')<CR>
-vnoremap <silent> <TAB> :<C-U>call <SNR>40_Match_wrapper('',1,'v')<CR>m'gv``
-
 " RELOAD THE CURRENT FILE
 nnoremap <LEADER>lf :e!<CR>
-
-" TOGGLE TAGLIST
-nnoremap <silent> <LEADER>r :TlistToggle<CR>
 
 " TAME THE HALF-PAGE SCROLLER
 nnoremap <C-D> 5j5<C-E>
@@ -93,7 +78,7 @@ imap <expr> <LEADER><TAB> emmet#expandAbbrIntelligent("\<LEADER>\<TAB>")
 nnoremap <script> <silent> <leader>q :call ToggleQuickfixList()<CR>
 
 " OPEN LARAVEL.LOG FILE
-nnoremap <silent> <LEADER>ll :tabe [sS]ource/storage/logs/laravel.log<CR>
+nnoremap <silent> <LEADER>ll :e [sS]ource/storage/logs/laravel.log<CR>
 
 " LEADER+P PASTE FROM SYSTEM CLIPBOARD
 nmap <silent> <LEADER>p :set paste<CR>:read !pbpaste<CR>:set nopaste<CR>
@@ -110,5 +95,13 @@ nnoremap <silent> <LEADER>bda :%bd<CR><C-^>
 nmap K k
 nnoremap K k
 
-" NEXT LINE NO MATTER WHAT INSERT MODE
+" NEXT LINE NO MATTER WHAT INSERT MODE (FIXES ISSUE WITH COMMENTS)
 inoremap <C-J> <ESC>A<CR><ESC>cc
+
+" VERTIGO.VIM MAPPINGS
+nnoremap <silent> <Space>j :<C-U>VertigoDown n<CR>
+vnoremap <silent> <Space>j :<C-U>VertigoDown v<CR>
+onoremap <silent> <Space>j :<C-U>VertigoDown o<CR>
+nnoremap <silent> <Space>k :<C-U>VertigoUp n<CR>
+vnoremap <silent> <Space>k :<C-U>VertigoUp v<CR>
+onoremap <silent> <Space>k :<C-U>VertigoUp o<CR>

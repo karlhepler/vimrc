@@ -9,7 +9,7 @@ augroup autocommands
     autocmd BufWritePost ~/.vim/plugins.vim silent source $MYVIMRC|call PluginCleanInstallUpdate()
 
     " CREATE A CTAGS FILE IF IT DOESN'T EXIST WHEN ROOTER CHANGES THE CWD
-    autocmd User RooterChDir !~/.vim/ctag_generators/php.sh; ~/.vim/ctag_generators/php__laravel_vendor.sh
+    autocmd User RooterChDir :RebuildAllTags
 
     " JUMP TO LAST CURSOR POSITION ON FILE LOAD
     autocmd BufWinEnter * call ResCur()

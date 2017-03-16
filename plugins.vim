@@ -22,6 +22,14 @@ if executable('ag')
     let g:ctrlp_use_caching=0
 endif
 
+" CTRLP-FUNKY - A SUPER SIMPLE FUNCTION NAVIGATOR FOR CTRLP.VIM.  FOR LAZY PEOPLE WHO CANNOT WAIT UNTIL CTAGS FINISHES.
+Plugin 'tacahiroy/ctrlp-funky'
+let g:ctrlp_funky_matchtype='path'
+let g:ctrlp_funky_syntax_highlight=1
+let g:ctrlp_funky_nolim=1
+let g:ctrlp_funky_nudists=['php']
+nnoremap <C-B> :CtrlPFunky<Cr>
+
 " GIT GUTTER
 Plugin 'airblade/vim-gitgutter'
 let g:gitgutter_sign_column_always=1
@@ -82,8 +90,6 @@ Plugin 'jiangmiao/auto-pairs'
 " NERD COMMENTER - COMMENT FUNCTIONS SO POWERFUL—NO COMMENT NECESSARY.
 Plugin 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims=1
-let g:NERDCommentEmptyLines=1
-let g:NERDCreateDefaultMappings=0
 
 " VINEGAR.VIM - ENHANCED FILE BROWSING
 Plugin 'tpope/vim-vinegar'
@@ -124,25 +130,18 @@ Plugin 'tmhedberg/matchit'
 " REPEAT PLUGIN COMMANDS TOO
 Plugin 'tpope/vim-repeat'
 
-"TAG LIST
-Plugin 'vim-scripts/taglist.vim'
-let Tlist_Enable_Fold_Column=0
-let Tlist_GainFocus_On_ToggleOpen=1
-let Tlist_Inc_Winwidth=0
-let Tlist_Show_One_File=1
-let Tlist_Use_Right_Window=1
-let Tlist_WinWidth=50
-let Tlist_Display_Tag_Scope=0
-let Tlist_Display_Prototype=1
-let Tlist_Close_On_Select=1
-let Tlist_Compact_Format=1
-
 " QUICKFIX TOGGLE
 Plugin 'milkypostman/vim-togglelist'
 let g:toggle_list_no_mappings=1
 
 " GIT INSIDE VIM
 Plugin 'tpope/vim-fugitive'
+
+" SNEAK.VIM - JUMPS TO ANY LOCATION SPECIFIED BY TWO CHARACTERS
+Plugin 'justinmk/vim-sneak'
+
+" VERTIGO.VIM - A BETTER WAY TO MOVE VERTICALLY IN VIM
+Plugin 'prendradjaja/vim-vertigo'
 
 
 call vundle#end()
