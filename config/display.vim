@@ -16,8 +16,12 @@ set shiftround      " USE MULTIPLE OF SHIFT WIDTH WITH '>' & '<'
 set background=dark
 colorscheme hybrid_material
 
-" USE 256 COLORS IN TERMINAL
-set t_Co=256
+" USE 256/TRUE COLORS IN TERMINAL
+if (has("nvim"))
+    set termguicolors
+else
+    set t_Co=256
+endif
 
 " SPLIT DEFAULTS
 set splitbelow

@@ -5,6 +5,9 @@ augroup autocommands
     autocmd BufWritePost ~/.vim/vimrc source %
     autocmd BufWritePost ~/.vim/config/*.vim source ~/.vim/vimrc
 
+    " FIX GUTTER ON SAVE
+    autocmd BufWritePost call gitgutter#highlight#define_sign_column_highlight()
+
     " INSTALL PLUGINS WHEN SAVED
     autocmd BufWritePost ~/.vim/plugins.vim silent source $MYVIMRC|call PluginCleanInstallUpdate()
 

@@ -15,71 +15,33 @@ Plugin 'tpope/vim-surround'
 
 " CTRL+P FUZZY FILE SEARCH
 Plugin 'kien/ctrlp.vim'
-let g:ctrlp_match_window='top,order:ttb'
-let g:ctrlp_custom_ignore={'dir':'\v(node_modules|vendor|bower_components|builds)$'}
-if executable('ag')
-    let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
-    let g:ctrlp_use_caching=0
-endif
 
 " CTRLP-FUNKY - A SUPER SIMPLE FUNCTION NAVIGATOR FOR CTRLP.VIM.  FOR LAZY PEOPLE WHO CANNOT WAIT UNTIL CTAGS FINISHES.
 Plugin 'tacahiroy/ctrlp-funky'
-let g:ctrlp_funky_matchtype='path'
-let g:ctrlp_funky_syntax_highlight=1
-let g:ctrlp_funky_nolim=1
-let g:ctrlp_funky_nudists=['php']
-nnoremap <C-B> :CtrlPFunky<Cr>
 
 " GIT GUTTER
 Plugin 'airblade/vim-gitgutter'
-let g:gitgutter_sign_column_always=1
 
 " ROOTER CHANGES THE WORKING DIRECTORY TO THE PROJECT ROOT WHEN YOU OPEN A FILE OR DIRECTORY.
 Plugin 'airblade/vim-rooter'
-let g:rooter_patterns=['.git/']
-let g:rooter_silent_chdir=1
 
 " AUTOTAGS - AUTOMATICALLY UPDATE CTAGS THE RIGHT WAY
 Plugin 'craigemery/vim-autotag'
-let g:autotagTagsFile=".tags"
 
 " INSERT STATEMENTS AUTOMATICALLY
 Plugin 'arnaud-lb/vim-php-namespace'
-" Automatically adds the corresponding use statement for the name under the cursor.
-function! IPhpInsertUse()
-call PhpInsertUse()
-    call feedkeys('a',  'n')
-endfunction
-" Expands the name under the cursor to its fully qualified name.
-function! IPhpExpandClass()
-call PhpExpandClass()
-    call feedkeys('a', 'n')
-endfunction
 
 " ULTISNIPS - THE ULTIMATE SNIPPET SOLUTION FOR VIM.
 Plugin 'SirVer/ultisnips'
-let g:UltiSnipsExpandTrigger="<TAB>"
-let g:UltiSnipsJumpForwardTrigger="<TAB>"
-let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"
 
 " MUSTACHE TEMPLATE SYSTEM FOR VIMSCRIPT
 Plugin 'tobyS/vmustache'
 
 " PDV - PHP Documentor for VIM - 2
 Plugin 'tobyS/pdv'
-let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 
 " VIM PHP REFACTORING TOOLBOX
 Plugin 'adoy/vim-php-refactoring-toolbox'
-let g:vim_php_refactoring_use_default_mapping=0
-let g:vim_php_refactoring_default_property_visibility='protected'
-let g:vim_php_refactoring_default_method_visibility='protected'
-" This requires PhpDoc() to exist, but it doesn't anymore
-func! PhpDoc()
-    let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
-    call pdv#DocumentCurrentLine()
-    let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
-endfunc
 
 " PASTING IN VIM WITH INDENTATION ADJUSTED TO DESTINATION CONTEXT.
 Plugin 'sickill/vim-pasta'
@@ -89,40 +51,27 @@ Plugin 'jiangmiao/auto-pairs'
 
 " NERD COMMENTER - COMMENT FUNCTIONS SO POWERFUL—NO COMMENT NECESSARY.
 Plugin 'scrooloose/nerdcommenter'
-let g:NERDSpaceDelims=1
 
 " VINEGAR.VIM - ENHANCED FILE BROWSING
 Plugin 'tpope/vim-vinegar'
-" Hide dot files - gh to toggle
-let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 " MULTI-FILE SEARCH & REPLACE
 Plugin 'skwp/greplace.vim'
-set grepprg=ag
-let g:grep_cmd_opts = '--line-numbers --noheading --ignore node_modules --ignore bower_components --ignore .git --ignore public --ignore vendor'
 
 " .VUE SYNTAX HIGHLIGHTING
 Plugin 'posva/vim-vue'
 
 " QFENTER - OPEN QUICKFIX IN SPLITS ETC
 Plugin 'yssl/QFEnter'
-let g:qfenter_vopen_map = ['<C-v>']
-let g:qfenter_hopen_map = ['<C-CR>', '<C-s>', '<C-x>']
-let g:qfenter_topen_map = ['<C-t>']
 
 " EMMET FOR HTML
 Plugin 'mattn/emmet-vim'
 
 " VIM JAVASCRIPT - JAVASCRIPT BUNDLE FOR VIM, THIS BUNDLE PROVIDES SYNTAX HIGHLIGHTING AND IMPROVED INDENTATION.
 Plugin 'pangloss/vim-javascript'
-let g:javascript_plugin_jsdoc=1
 
 " JSDOC.VIM - GENERATES JSDOC BLOCK COMMENTS BASED ON A FUNCTION SIGNATURE.
 Plugin 'heavenshell/vim-jsdoc'
-let g:jsdoc_enable_es6=1
-let g:jsdoc_allow_input_prompt=1
-let g:jsdoc_input_description=1
-let g:jsdoc_return_description=0
 
 " MATCH MORE THAN JUST A SINGLE CHARACTER WITH %
 Plugin 'tmhedberg/matchit'
@@ -132,7 +81,6 @@ Plugin 'tpope/vim-repeat'
 
 " QUICKFIX TOGGLE
 Plugin 'milkypostman/vim-togglelist'
-let g:toggle_list_no_mappings=1
 
 " GIT INSIDE VIM
 Plugin 'tpope/vim-fugitive'
