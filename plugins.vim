@@ -85,11 +85,17 @@ Plugin 'milkypostman/vim-togglelist'
 " GIT INSIDE VIM
 Plugin 'tpope/vim-fugitive'
 
-" SNEAK.VIM - JUMPS TO ANY LOCATION SPECIFIED BY TWO CHARACTERS
-Plugin 'justinmk/vim-sneak'
-
 " VERTIGO.VIM - A BETTER WAY TO MOVE VERTICALLY IN VIM
 Plugin 'prendradjaja/vim-vertigo'
+
+" PREVIEW COLOURS IN SOURCE CODE WHILE EDITING
+Plugin 'ap/vim-css-color'
+
+" TYPESCRIPT SYNTAX FILES FOR VIM
+Plugin 'leafgarland/typescript-vim'
+
+" HIGHLIGHTS JAVASCRIPT'S TEMPLATE STRINGS IN OTHER FILETYPE SYNTAX RULE
+Plugin 'Quramy/vim-js-pretty-template'
 
 
 call vundle#end()

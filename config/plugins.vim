@@ -83,7 +83,6 @@ let g:jsdoc_return_description=0
 let g:toggle_list_no_mappings=1
 
 " VERTIGO.VIM MAPPINGS
-" TODO(kjh): set rnu / set nornu
 nnoremap <silent> <Space>j :<C-U>VertigoDown n<CR>
 vnoremap <silent> <Space>j :<C-U>VertigoDown v<CR>
 onoremap <silent> <Space>j :<C-U>VertigoDown o<CR>

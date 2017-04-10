@@ -17,4 +17,8 @@ augroup autocommands
     " JUMP TO LAST CURSOR POSITION ON FILE LOAD
     autocmd BufWinEnter * call ResCur()
 
+    " HIGHLIGHTS JAVASCRIPT'S TEMPLATE STRINGS IN OTHER FILETYPE SYNTAX RULE
+    autocmd FileType typescript,javascript JsPreTmpl html
+    autocmd FileType typescript,javascript syn clear foldBraces
+
 augroup END

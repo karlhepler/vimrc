@@ -44,6 +44,7 @@ nnoremap d) d$
 " YANK FROM CURRENT LOCATION TO START/END OF LINE
 nnoremap y( y^
 nnoremap y) y$
+nnoremap Y y$
 
 " REFRESH SCREEN, SYNTAX HIGHLIGHTING, & GIT GUTTER
 nnoremap <silent> <C-L> :redraw!<CR>:syntax sync fromstart<CR>:GitGutter<CR>:call gitgutter#highlight#define_sign_column_highlight()<CR>
