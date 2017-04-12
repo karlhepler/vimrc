@@ -15,10 +15,10 @@ augroup autocommands
     autocmd User RooterChDir :RebuildAllTags
 
     " JUMP TO LAST CURSOR POSITION ON FILE LOAD
-    autocmd BufWinEnter * call ResCur()
+    autocmd BufWinEnter * silent! call ResCur()
 
     " HIGHLIGHTS JAVASCRIPT'S TEMPLATE STRINGS IN OTHER FILETYPE SYNTAX RULE
     autocmd FileType typescript,javascript JsPreTmpl html
-    autocmd FileType typescript,javascript syn clear foldBraces
+    autocmd FileType typescript syn clear foldBraces
 
 augroup END

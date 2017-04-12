@@ -18,8 +18,7 @@ nnoremap <buffer> <LEADER>dd :call pdv#DocumentWithSnip()<CR>
 nnoremap <buffer> <LEADER>da :call PhpDocAll()<CR>
 
 " SORT USE STATMENTS
-nnoremap <buffer> <LEADER>su mugg/use<CR>V}k! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<CR>:nohl<CR>`u
-vnoremap <buffer> <LEADER>! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<CR>
+nnoremap <buffer> <LEADER>su mugg?use<CR>NV}k! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<CR>:nohl<CR>`u
 
 " IMPORT CONSTRUCTOR VARIABLES
 nnoremap <buffer> <LEADER>c mcyiwj%O$this->pa = pa;j%kOprotected pa;jj%k2f$x`c
