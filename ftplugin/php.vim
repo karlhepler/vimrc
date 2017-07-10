@@ -31,4 +31,4 @@ inoremap <buffer> $<TAB> $this->
 nnoremap <buffer> <LEADER>n :call Psr4NamespaceInsert()<CR>
 
 " FANCY BLOCK COMMENTS
-inoremap <buffer> <LEADER>c<CR> VUI// A //yypyypkkv$r/jjv$r/occ
+inoremap <buffer> <LEADER>c<CR> ^v$Uv$hc4i/hi50i-44hR " i

@@ -57,7 +57,7 @@ nnoremap ,<CR> A,<CR>
 
 " INSERT AND FIND TODO(KJH)
 inoremap <LEADER>t TODO(kjh):<SPACE>
-nnoremap <silent> <LEADER>t :Ag TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore builds<CR>
+nnoremap <silent> <LEADER>t :Ag TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore builds --ignore public<CR>
 
 " <C-8> HIGHLIGHTS WORD
 nnoremap <C-W><C-W> *N

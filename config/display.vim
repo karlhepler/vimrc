@@ -17,11 +17,7 @@ set background=dark
 colorscheme hybrid_material
 
 " USE 256/TRUE COLORS IN TERMINAL
-if (has("nvim"))
-    set termguicolors
-else
-    set t_Co=256
-endif
+set termguicolors
 
 " SPLIT DEFAULTS
 set splitbelow
@@ -72,3 +68,8 @@ set mouse=a
 
 " ENABLE OMNIFUNC SYNTAX COMPLETION
 set omnifunc=syntaxcomplete#Complete
+
+" DISABLE NEOVIM FANCY CURSOR
+if (has("nvim"))
+    set guicursor=
+endif
