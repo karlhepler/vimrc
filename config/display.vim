@@ -60,8 +60,8 @@ set incsearch
 set ignorecase
 set smartcase
 
-" HIGHLIGHT CURRENT LINE
-set cursorline
+" DON'T HIGHLIGHT CURRENT LINE (SPEED IMPROVEMENT)
+set nocursorline
 
 " GO AHEAD AND ENABLE MOUSE SUPPORT. FINE.
 set mouse=a
@@ -73,3 +73,6 @@ set omnifunc=syntaxcomplete#Complete
 if (has("nvim"))
     set guicursor=
 endif
+
+" MAKE BACKSPACE WORK
+set backspace=2
