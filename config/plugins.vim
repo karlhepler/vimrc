@@ -6,13 +6,6 @@ if executable('ag')
     let g:ctrlp_use_caching=0
 endif
 
-" CTRLP-FUNKY - A SUPER SIMPLE FUNCTION NAVIGATOR FOR CTRLP.VIM.  FOR LAZY PEOPLE WHO CANNOT WAIT UNTIL CTAGS FINISHES.
-let g:ctrlp_funky_matchtype='path'
-let g:ctrlp_funky_syntax_highlight=1
-let g:ctrlp_funky_nolim=1
-let g:ctrlp_funky_nudists=['php']
-nnoremap <C-B> :CtrlPFunky<Cr>
-
 " GIT GUTTER
 let g:gitgutter_sign_column_always=1
 
@@ -61,15 +54,6 @@ let g:NERDSpaceDelims=1
 " Hide dot files - gh to toggle
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
-" MULTI-FILE SEARCH & REPLACE
-set grepprg=ag
-let g:grep_cmd_opts = '--line-numbers --noheading --ignore node_modules --ignore bower_components --ignore .git --ignore public --ignore vendor'
-
-" QFENTER - OPEN QUICKFIX IN SPLITS ETC
-let g:qfenter_vopen_map = ['<C-v>']
-let g:qfenter_hopen_map = ['<C-CR>', '<C-s>', '<C-x>']
-let g:qfenter_topen_map = ['<C-t>']
-
 " VIM JAVASCRIPT - JAVASCRIPT BUNDLE FOR VIM, THIS BUNDLE PROVIDES SYNTAX HIGHLIGHTING AND IMPROVED INDENTATION.
 let g:javascript_plugin_jsdoc=1
 
@@ -78,9 +62,6 @@ let g:jsdoc_enable_es6=1
 let g:jsdoc_allow_input_prompt=1
 let g:jsdoc_input_description=1
 let g:jsdoc_return_description=0
-
-" QUICKFIX TOGGLE
-let g:toggle_list_no_mappings=1
 
 " VERTIGO.VIM MAPPINGS
 nnoremap <silent> <Space>j :<C-U>VertigoDown n<CR>

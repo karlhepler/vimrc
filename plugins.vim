@@ -16,9 +16,6 @@ Plugin 'tpope/vim-surround'
 " CTRL+P FUZZY FILE SEARCH
 Plugin 'kien/ctrlp.vim'
 
-" CTRLP-FUNKY - A SUPER SIMPLE FUNCTION NAVIGATOR FOR CTRLP.VIM.  FOR LAZY PEOPLE WHO CANNOT WAIT UNTIL CTAGS FINISHES.
-Plugin 'tacahiroy/ctrlp-funky'
-
 " GIT GUTTER
 Plugin 'airblade/vim-gitgutter'
 
@@ -55,14 +52,8 @@ Plugin 'scrooloose/nerdcommenter'
 " VINEGAR.VIM - ENHANCED FILE BROWSING
 Plugin 'tpope/vim-vinegar'
 
-" MULTI-FILE SEARCH & REPLACE
-Plugin 'skwp/greplace.vim'
-
 " .VUE SYNTAX HIGHLIGHTING
 Plugin 'posva/vim-vue'
-
-" QFENTER - OPEN QUICKFIX IN SPLITS ETC
-Plugin 'yssl/QFEnter'
 
 " EMMET FOR HTML
 Plugin 'mattn/emmet-vim'
@@ -79,14 +70,11 @@ Plugin 'tmhedberg/matchit'
 " REPEAT PLUGIN COMMANDS TOO
 Plugin 'tpope/vim-repeat'
 
-" QUICKFIX TOGGLE
-Plugin 'milkypostman/vim-togglelist'
-
 " GIT INSIDE VIM
 Plugin 'tpope/vim-fugitive'
 
 " VERTIGO.VIM - A BETTER WAY TO MOVE VERTICALLY IN VIM
-Plugin 'prendradjaja/vim-vertigo'
+Plugin 'oldtimeguitarguy/vim-vertigo'
 
 " PREVIEW COLOURS IN SOURCE CODE WHILE EDITING
 Plugin 'ap/vim-css-color'
@@ -96,6 +84,9 @@ Plugin 'leafgarland/typescript-vim'
 
 " HIGHLIGHTS JAVASCRIPT'S TEMPLATE STRINGS IN OTHER FILETYPE SYNTAX RULE
 Plugin 'Quramy/vim-js-pretty-template'
+
+" ENHANCED MULTI-FILE SEARCH FOR VIM
+Plugin 'wincent/ferret'
 
 
 call vundle#end()

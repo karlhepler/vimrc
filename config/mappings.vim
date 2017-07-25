@@ -10,9 +10,6 @@ nnoremap <silent> <LEADER><SPACE> :nohlsearch<CR>
 " AG PROJECT SEARCH
 nnoremap <LEADER>ag :Ag<SPACE>
 
-" PROJECT SEARCH & REPLACE
-nnoremap <LEADER>gs :Gsearch<SPACE>
-
 " REBUILD CTAGS
 nnoremap <silent> <LEADER>ctr :RebuildTags<CR>
 nnoremap <silent> <LEADER>ctrv :RebuildVendorTags<CR>
@@ -50,7 +47,7 @@ nnoremap Y y$
 nnoremap <silent> <C-L> :redraw!<CR>:syntax sync fromstart<CR>:GitGutter<CR>:call gitgutter#highlight#define_sign_column_highlight()<CR>
 
 " RELOAD THE CURRENT FILE
-nnoremap <silent> <C-L><C-L> :e!<CR>:call gitgutter#highlight#define_sign_column_highlight()<CR>
+nnoremap <silent> <C-F> :e!<CR>:call gitgutter#highlight#define_sign_column_highlight()<CR>
 
 " COMMA+ENTER GOES TO INSERT MODE
 nnoremap ,<CR> A,<CR>
@@ -76,9 +73,6 @@ vnoremap <C-U> 5k5<C-Y>
 " TRIGGER EMMET WITHOUT ENDING WITH A COMMA
 imap <expr> <LEADER><TAB> emmet#expandAbbrIntelligent("\<C-Y>")
 
-" TOGGLE QUICKFIX LIST
-nnoremap <script> <silent> <leader>q :call ToggleQuickfixList()<CR>
-
 " OPEN LARAVEL.LOG FILE
 nnoremap <silent> <LEADER>ll :e [sS]ource/storage/logs/laravel.log<CR>
 
@@ -95,6 +89,3 @@ nnoremap <silent> <LEADER>bda :%bd<CR><C-^>
 
 " NEXT LINE NO MATTER WHAT INSERT MODE (FIXES ISSUE WITH COMMENTS)
 inoremap <C-J> <ESC>A<CR><ESC>cc
-
-" CENTER HORIZONTALLY ON CURSOR
-nnoremap \| zszH
