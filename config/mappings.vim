@@ -51,7 +51,7 @@ nnoremap ,<CR> A,<CR>
 
 " INSERT AND FIND TODO(KJH)
 inoremap <LEADER>t TODO(kjh):<SPACE>
-nnoremap <silent> <LEADER>t :Ack TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore builds --ignore public<CR>
+nnoremap <silent> <LEADER>t :Ack TODO\(kjh\)<CR>
 
 " <C-8> HIGHLIGHTS WORD
 nnoremap <C-W><C-W> *N
@@ -69,9 +69,6 @@ vnoremap <C-U> 5k5<C-Y>
 
 " TRIGGER EMMET WITHOUT ENDING WITH A COMMA
 imap <expr> <LEADER><TAB> emmet#expandAbbrIntelligent("\<C-Y>")
-
-" OPEN LARAVEL.LOG FILE
-nnoremap <silent> <LEADER>ll :e [sS]ource/storage/logs/laravel.log<CR>
 
 " LEADER+P PASTE FROM SYSTEM CLIPBOARD
 nmap <silent> <LEADER>p :set paste<CR>:read !pbpaste<CR>:set nopaste<CR>
