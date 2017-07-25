@@ -7,9 +7,6 @@ inoremap jk <ESC>
 " SEARCH HIGHLIGHTING OFF
 nnoremap <silent> <LEADER><SPACE> :nohlsearch<CR>
 
-" AG PROJECT SEARCH
-nnoremap <LEADER>ag :Ag<SPACE>
-
 " REBUILD CTAGS
 nnoremap <silent> <LEADER>ctr :RebuildTags<CR>
 nnoremap <silent> <LEADER>ctrv :RebuildVendorTags<CR>
@@ -54,7 +51,7 @@ nnoremap ,<CR> A,<CR>
 
 " INSERT AND FIND TODO(KJH)
 inoremap <LEADER>t TODO(kjh):<SPACE>
-nnoremap <silent> <LEADER>t :Ag TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore builds --ignore public<CR>
+nnoremap <silent> <LEADER>t :Ack TODO\\\(kjh\\\) --ignore vendor --ignore node_modules --ignore bower_components --ignore builds --ignore public<CR>
 
 " <C-8> HIGHLIGHTS WORD
 nnoremap <C-W><C-W> *N
