@@ -83,3 +83,9 @@ nnoremap <silent> <LEADER>bda :%bd<CR><C-^>
 
 " NEXT LINE NO MATTER WHAT INSERT MODE (FIXES ISSUE WITH COMMENTS)
 inoremap <C-J> <ESC>A<CR><ESC>cc
+
+" QUICKFIX MAPPINGS
+map <LEADER>qc :cclose<CR>
+map <LEADER>qo :copen<CR>
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
