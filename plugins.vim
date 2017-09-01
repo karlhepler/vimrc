@@ -85,7 +85,7 @@ Plugin 'leafgarland/typescript-vim'
 " HIGHLIGHTS JAVASCRIPT'S TEMPLATE STRINGS IN OTHER FILETYPE SYNTAX RULE
 Plugin 'Quramy/vim-js-pretty-template'
 
-" ENHANCED MULTI-FILE SEARCH FOR VIM
+" FERRET - ENHANCED MULTI-FILE SEARCH FOR VIM
 Plugin 'wincent/ferret'
 
 

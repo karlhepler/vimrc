@@ -6,9 +6,10 @@ if executable('rg')
     let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
     let g:ctrlp_use_caching = 0
 endif
+noremap <c-b> <esc>:CtrlPBufTag<cr>
 
 " GIT GUTTER
-let g:gitgutter_sign_column_always=1
+set signcolumn=yes
 
 " ROOTER CHANGES THE WORKING DIRECTORY TO THE PROJECT ROOT WHEN YOU OPEN A FILE OR DIRECTORY.
 let g:rooter_patterns=['.git/']
@@ -71,3 +72,6 @@ onoremap <silent> <Space>j :<C-U>VertigoDown o<CR>
 nnoremap <silent> <Space>k :<C-U>VertigoUp n<CR>
 vnoremap <silent> <Space>k :<C-U>VertigoUp v<CR>
 onoremap <silent> <Space>k :<C-U>VertigoUp o<CR>
+
+" FERRET - ENHANCED MULTI-FILE SEARCH FOR VIM
+let g:FerretAutojump=2
