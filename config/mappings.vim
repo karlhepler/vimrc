@@ -89,3 +89,6 @@ map <LEADER>qc :cclose<CR>
 map <LEADER>qo :copen<CR>
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
+
+" A BETTER Y
+nmap Y y$

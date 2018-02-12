@@ -88,6 +88,9 @@ Plugin 'Quramy/vim-js-pretty-template'
 " FERRET - ENHANCED MULTI-FILE SEARCH FOR VIM
 Plugin 'wincent/ferret'
 
+" VIM-JSX
+Plugin 'mxw/vim-jsx'
+
 
 call vundle#end()
 filetype plugin indent on

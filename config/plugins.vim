@@ -75,3 +75,6 @@ onoremap <silent> <Space>k :<C-U>VertigoUp o<CR>
 
 " FERRET - ENHANCED MULTI-FILE SEARCH FOR VIM
 let g:FerretAutojump=2
+
+" VIM-JSX
+let g:jsx_ext_required = 0
