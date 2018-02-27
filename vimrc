@@ -2,8 +2,8 @@
 set nocompatible
 
 " USE AG INSTEAD OF GREP
-if (executable('ag'))
-    set grepprg=ag\ --nogroup\ --nocolor
+if (executable('rg'))
+    set grepprg=rg\ --nogroup\ --nocolor
 endif
 
 " LOAD CONFIG FILES
@@ -12,7 +12,6 @@ source $HOME/.vim/plugins.vim
 source $HOME/.vim/config/plugins.vim
 source $HOME/.vim/config/display.vim
 source $HOME/.vim/config/functions.vim
-source $HOME/.vim/config/commands.vim
 source $HOME/.vim/config/autocmd.vim
 
 " CHANGE SWAP FILE LOCATION
@@ -22,4 +21,4 @@ set directory=$HOME/.vim/.swapfiles//
 set backupdir=$HOME/.vim/.backups//
 
 " SET THE TAGS
-set tags=.tags,.tags.vendor
+set tags=.tags

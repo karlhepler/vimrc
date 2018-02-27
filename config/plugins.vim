@@ -15,9 +15,6 @@ set signcolumn=yes
 let g:rooter_patterns=['.git/']
 let g:rooter_silent_chdir=1
 
-" AUTOTAGS - AUTOMATICALLY UPDATE CTAGS THE RIGHT WAY
-let g:autotagTagsFile=".tags"
-
 " INSERT STATEMENTS AUTOMATICALLY
 " Automatically adds the corresponding use statement for the name under the cursor.
 function! IPhpInsertUse()
@@ -37,17 +34,6 @@ let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"
 
 " PDV - PHP Documentor for VIM - 2
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
-
-" VIM PHP REFACTORING TOOLBOX
-let g:vim_php_refactoring_use_default_mapping=0
-let g:vim_php_refactoring_default_property_visibility='protected'
-let g:vim_php_refactoring_default_method_visibility='protected'
-" This requires PhpDoc() to exist, but it doesn't anymore
-func! PhpDoc()
-    let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
-    call pdv#DocumentCurrentLine()
-    let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
-endfunc
 
 " NERD COMMENTER - COMMENT FUNCTIONS SO POWERFUL—NO COMMENT NECESSARY.
 let g:NERDSpaceDelims=1
@@ -76,5 +62,9 @@ onoremap <silent> <Space>k :<C-U>VertigoUp o<CR>
 " FERRET - ENHANCED MULTI-FILE SEARCH FOR VIM
 let g:FerretAutojump=2
 
-" VIM-JSX
-let g:jsx_ext_required = 0
+" TRIGGER EMMET WITHOUT ENDING WITH A COMMA
+let g:user_emmet_expandabbr_key='<Tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+" GUTENTAGS
+let g:gutentags_ctags_tagfile='.tags'

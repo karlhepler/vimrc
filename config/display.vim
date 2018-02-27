@@ -69,10 +69,5 @@ set mouse=a
 " ENABLE OMNIFUNC SYNTAX COMPLETION
 set omnifunc=syntaxcomplete#Complete
 
-" DISABLE NEOVIM FANCY CURSOR
-if (has("nvim"))
-    set guicursor=
-endif
-
 " MAKE BACKSPACE WORK
 set backspace=2

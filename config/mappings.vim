@@ -7,37 +7,13 @@ inoremap jk <ESC>
 " SEARCH HIGHLIGHTING OFF
 nnoremap <silent> <LEADER><SPACE> :nohlsearch<CR>
 
-" REBUILD CTAGS
-nnoremap <silent> <LEADER>ctr :RebuildTags<CR>
-nnoremap <silent> <LEADER>ctrv :RebuildVendorTags<CR>
-nnoremap <silent> <LEADER>ctra :RebuildAllTags<CR>
-
-" EDIT VIMRC FILES
-nnoremap <silent> <LEADER>vev :e ~/.vim/vimrc<CR>
-nnoremap <silent> <LEADER>vem :e ~/.vim/config/mappings.vim<CR>
-nnoremap <silent> <LEADER>vep :e ~/.vim/plugins.vim<CR>
-nnoremap <silent> <LEADER>veP :e ~/.vim/config/plugins.vim<CR>
-nnoremap <silent> <LEADER>ved :e ~/.vim/config/display.vim<CR>
-nnoremap <silent> <LEADER>vec :e ~/.vim/config/commands.vim<CR>
-nnoremap <silent> <LEADER>vea :e ~/.vim/config/autocmd.vim<CR>
-nnoremap <silent> <LEADER>vef :e ~/.vim/config/functions.vim<CR>
-nnoremap <LEADER>ves :e ~/.vim/Ultisnips/
-nnoremap <LEADER>vet :e ~/.vim/ftplugin/
-nnoremap <silent> <LEADER>vsv :source ~/.vim/vimrc<CR>
-
 " GOTO START/END OF LINE
 nnoremap ( ^
 vnoremap ( ^
 nnoremap ) $
 vnoremap ) $
 
-" DELETE FROM CURRENT LOCATION TO START/END OF LINE
-nnoremap d( d^
-nnoremap d) d$
-
-" YANK FROM CURRENT LOCATION TO START/END OF LINE
-nnoremap y( y^
-nnoremap y) y$
+" YANK FROM CURRENT LOCATION TO END OF LINE
 nnoremap Y y$
 
 " REFRESH SCREEN, SYNTAX HIGHLIGHTING, & GIT GUTTER
@@ -67,10 +43,8 @@ vnoremap <C-D> 5j5<C-E>
 nnoremap <C-U> 5k5<C-Y>
 vnoremap <C-U> 5k5<C-Y>
 
-" TRIGGER EMMET WITHOUT ENDING WITH A COMMA
-imap <expr> <LEADER><TAB> emmet#expandAbbrIntelligent("\<C-Y>")
-
 " LEADER+P PASTE FROM SYSTEM CLIPBOARD
+nmap <silent> <LEADER>P O<ESC>:set paste<CR>a<C-R>=system("pbpaste")<CR><ESC>:set nopaste<CR>
 nmap <silent> <LEADER>p :set paste<CR>:read !pbpaste<CR>:set nopaste<CR>
 vmap <silent> <LEADER>p c<ESC>:set paste<CR>a<C-R>=system("pbpaste")<CR><ESC>:set nopaste<CR>
 imap <silent> <LEADER>p <ESC>:set paste<CR>a<C-R>=system("pbpaste")<CR><ESC>:set nopaste<CR>a
@@ -89,6 +63,3 @@ map <LEADER>qc :cclose<CR>
 map <LEADER>qo :copen<CR>
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
-
-" A BETTER Y
-nmap Y y$

@@ -8,8 +8,8 @@ endfunction
 
 " CLEAN, INSTALL, AND UPDATE PLUGINS
 function! PluginCleanInstallUpdate()
-    exe "PluginClean!"
-    exe "PluginInstall!"
+    exe "PlugClean!"
+    exe "PlugUpdate!"
 endfunction
 
 " GET THE PSR-4 NAMESPACE OF THE CURRENT FILE
