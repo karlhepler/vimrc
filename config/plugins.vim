@@ -33,7 +33,7 @@ let g:UltiSnipsJumpForwardTrigger="<TAB>"
 let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"
 
 " PDV - PHP Documentor for VIM - 2
-let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+let g:pdv_template_dir = $HOME ."/.vim/plugged/pdv/templates_snip"
 
 " NERD COMMENTER - COMMENT FUNCTIONS SO POWERFUL—NO COMMENT NECESSARY.
 let g:NERDSpaceDelims=1
@@ -49,7 +49,7 @@ let g:javascript_plugin_jsdoc=1
 let g:jsdoc_enable_es6=1
 let g:jsdoc_allow_input_prompt=1
 let g:jsdoc_input_description=1
-let g:jsdoc_return_description=0
+let g:jsdoc_return_description=1
 
 " VERTIGO.VIM MAPPINGS
 nnoremap <silent> <Space>j :<C-U>VertigoDown n<CR>
