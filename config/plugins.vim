@@ -62,9 +62,5 @@ onoremap <silent> <Space>k :<C-U>VertigoUp o<CR>
 " FERRET - ENHANCED MULTI-FILE SEARCH FOR VIM
 let g:FerretAutojump=2
 
-" TRIGGER EMMET WITHOUT ENDING WITH A COMMA
-let g:user_emmet_expandabbr_key='<Tab>'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-
 " GUTENTAGS
 let g:gutentags_ctags_tagfile='.tags'
