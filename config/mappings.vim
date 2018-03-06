@@ -52,9 +52,6 @@ imap <silent> <LEADER>p <ESC>:set paste<CR>a<C-R>=system("pbpaste")<CR><ESC>:set
 " LEADER+Y COPY VISUAL SELECTION TO SYSTEM CLIPBOARD
 vnoremap <silent> <LEADER>y :<CR>:let @a=@" \| execute "normal! vgvy" \| let res=system("pbcopy", @") \| let @"=@a<CR>
 
-" DELETE ALL BUFFERS EXCEPT THIS ONE
-nnoremap <silent> <LEADER>bda :%bd<CR><C-^>
-
 " NEXT LINE NO MATTER WHAT INSERT MODE (FIXES ISSUE WITH COMMENTS)
 inoremap <C-J> <ESC>A<CR><ESC>cc
 
@@ -63,3 +60,11 @@ map <LEADER>qc :cclose<CR>
 map <LEADER>qo :copen<CR>
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
+
+" DUDE DEPLOYMENTS
+nnoremap <LEADER>dsA :AsyncRun dude-sync-all<CR>
+nnoremap <LEADER>dsa :AsyncRun dude-sync-assets<CR>
+nnoremap <LEADER>dsm :AsyncRun dude-sync-mail_app<CR>
+nnoremap <LEADER>dsp :AsyncRun dude-sync-platform<CR>
+nnoremap <LEADER>dsr :AsyncRun dude-sync-root<CR>
+nnoremap <LEADER>dsv :AsyncRun dude-sync-vendor<CR>
