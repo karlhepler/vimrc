@@ -62,9 +62,9 @@ map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 
 " DUDE DEPLOYMENTS
-nnoremap <LEADER>dsA :AsyncRun dude-sync-all<CR>
-nnoremap <LEADER>dsa :AsyncRun dude-sync-assets<CR>
-nnoremap <LEADER>dsm :AsyncRun dude-sync-mail_app<CR>
-nnoremap <LEADER>dsp :AsyncRun dude-sync-platform<CR>
-nnoremap <LEADER>dsr :AsyncRun dude-sync-root<CR>
-nnoremap <LEADER>dsv :AsyncRun dude-sync-vendor<CR>
+nnoremap <LEADER>dsA :AsyncRun ~/scripts/dude-sync-all<CR>
+nnoremap <LEADER>dsa :AsyncRun ~/scripts/dude-sync-assets<CR>
+nnoremap <LEADER>dsm :AsyncRun ~/scripts/dude-sync-mail_app<CR>
+nnoremap <LEADER>dsp :AsyncRun ~/scripts/dude-sync-platform<CR>
+nnoremap <LEADER>dsr :AsyncRun ~/scripts/dude-sync-root<CR>
+nnoremap <LEADER>dsv :AsyncRun ~/scripts/dude-sync-vendor<CR>
