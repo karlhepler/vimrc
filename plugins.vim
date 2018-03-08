@@ -83,6 +83,9 @@ Plug 'ludovicchabant/vim-gutentags'
 " ASYNCRUN - RUN SHELL COMMANDS IN BACKGROUND AND READ OUTPUT IN THE QUICKFIX WINDOW IN REALTIME
 Plug 'skywind3000/asyncrun.vim'
 
+" VIM-JSX - SYNTAX HIGHLIGHTING AND INDENTING FOR JSX
+Plug 'mxw/vim-jsx'
+
 
 " Initialze the plugin system
 call plug#end()
