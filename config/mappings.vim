@@ -56,10 +56,10 @@ vnoremap <silent> <LEADER>y :<CR>:let @a=@" \| execute "normal! vgvy" \| let res
 inoremap <C-J> <ESC>A<CR><ESC>cc
 
 " QUICKFIX MAPPINGS
-nnoremap <C-o> :copen<CR>
-nnoremap <C-c> :cclose<CR>
-nnoremap <C-n> :cnext<CR>
-nnoremap <C-j> :cprevious<CR>
+nnoremap <Up> :copen<CR>
+nnoremap <Down> :cclose<CR>
+nnoremap <Left> :cprevious<CR>
+nnoremap <Right> :cnext<CR>
 
 " DUDE DEPLOYMENTS
 nnoremap <LEADER>dsA :AsyncRun ~/scripts/dude-sync-all<CR>
@@ -83,3 +83,5 @@ nnoremap <LEADER>gd :Gdiff<CR>
 nnoremap <LEADER>gl :Glog<CR>
 nnoremap <LEADER>gb :Gblame<CR>
 nnoremap <LEADER>ge :Gedit<CR>
+nnoremap <LEADER>gf :Gfetch<CR>
+nnoremap <LEADER>gp :Gpull<CR>

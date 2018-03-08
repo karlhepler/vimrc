@@ -56,3 +56,6 @@ let g:FerretAutojump=2
 
 " GUTENTAGS
 let g:gutentags_ctags_tagfile='.tags'
+
+" VIM FUGITIVE - MAKE ASYNC
+command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
