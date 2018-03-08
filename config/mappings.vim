@@ -59,7 +59,7 @@ inoremap <C-J> <ESC>A<CR><ESC>cc
 nnoremap <C-o> :copen<CR>
 nnoremap <C-c> :cclose<CR>
 nnoremap <C-n> :cnext<CR>
-nnoremap <C-p> :cprevious<CR>
+nnoremap <C-j> :cprevious<CR>
 
 " DUDE DEPLOYMENTS
 nnoremap <LEADER>dsA :AsyncRun ~/scripts/dude-sync-all<CR>
