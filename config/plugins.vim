@@ -51,14 +51,6 @@ let g:jsdoc_allow_input_prompt=1
 let g:jsdoc_input_description=1
 let g:jsdoc_return_description=1
 
-" VERTIGO.VIM MAPPINGS
-nnoremap <silent> <Space>j :<C-U>VertigoDown n<CR>
-vnoremap <silent> <Space>j :<C-U>VertigoDown v<CR>
-onoremap <silent> <Space>j :<C-U>VertigoDown o<CR>
-nnoremap <silent> <Space>k :<C-U>VertigoUp n<CR>
-vnoremap <silent> <Space>k :<C-U>VertigoUp v<CR>
-onoremap <silent> <Space>k :<C-U>VertigoUp o<CR>
-
 " FERRET - ENHANCED MULTI-FILE SEARCH FOR VIM
 let g:FerretAutojump=2
 

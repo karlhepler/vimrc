@@ -68,3 +68,18 @@ nnoremap <LEADER>dsm :AsyncRun ~/scripts/dude-sync-mail_app<CR>
 nnoremap <LEADER>dsp :AsyncRun ~/scripts/dude-sync-platform<CR>
 nnoremap <LEADER>dsr :AsyncRun ~/scripts/dude-sync-root<CR>
 nnoremap <LEADER>dsv :AsyncRun ~/scripts/dude-sync-vendor<CR>
+
+" VERTIGO.VIM MAPPINGS
+nnoremap <silent> <Space>j :<C-U>VertigoDown n<CR>
+vnoremap <silent> <Space>j :<C-U>VertigoDown v<CR>
+onoremap <silent> <Space>j :<C-U>VertigoDown o<CR>
+nnoremap <silent> <Space>k :<C-U>VertigoUp n<CR>
+vnoremap <silent> <Space>k :<C-U>VertigoUp v<CR>
+onoremap <silent> <Space>k :<C-U>VertigoUp o<CR>
+
+" VIM FUGITIVE - GIT
+nnoremap <LEADER>gs :Gstatus<CR>
+nnoremap <LEADER>gd :Gdiff<CR>
+nnoremap <LEADER>gl :Glog<CR>
+nnoremap <LEADER>gb :Gblame<CR>
+nnoremap <LEADER>ge :Gedit<CR>
