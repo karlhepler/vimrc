@@ -17,4 +17,7 @@ augroup autocommands
     " FORCE QUICKFIX TO ALWAYS OPEN FULL WIDTH
     au FileType qf wincmd J
 
+    " DETECT INDENT FOR ALL PHP FILES
+    autocmd BufReadPost *.php :DetectIndent 
+
 augroup END

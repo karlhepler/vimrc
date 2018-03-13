@@ -89,6 +89,9 @@ Plug 'mxw/vim-jsx'
 " VDEBUG - MULTILANGUAGE DEBUGGER CLIENT (SUPPORTS XDEBUG)
 Plug 'vim-vdebug/vdebug'
 
+" DETECTINDENT - A VIM PLUGIN, FOR AUTOMATICALLY DETECTING INDENT SETTINGS
+Plug 'ciaranm/detectindent'
+
 
 " Initialze the plugin system
 call plug#end()
