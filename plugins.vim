@@ -86,6 +86,9 @@ Plug 'skywind3000/asyncrun.vim'
 " VIM-JSX - SYNTAX HIGHLIGHTING AND INDENTING FOR JSX
 Plug 'mxw/vim-jsx'
 
+" VDEBUG - MULTILANGUAGE DEBUGGER CLIENT (SUPPORTS XDEBUG)
+Plug 'vim-vdebug/vdebug'
+
 
 " Initialze the plugin system
 call plug#end()

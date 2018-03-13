@@ -59,3 +59,21 @@ let g:gutentags_ctags_tagfile='.tags'
 
 " VIM FUGITIVE - MAKE ASYNC
 command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
+
+" VDEBUG - MULTILANGUAGE DEBUGGER CLIENT (SUPPORTS XDEBUG)
+let g:vdebug_options= {
+\    "port" : 9000,
+\    "server" : '127.0.0.1',
+\    "timeout" : 20,
+\    "on_close" : 'detach',
+\    "break_on_open" : 1,
+\    "ide_key" : 'karl.hepler',
+\    "path_maps" : {"/usr/local/bronto/repos/mail_app": "/Users/karl.hepler/bronto/mail_app"},
+\    "debug_window_level" : 0,
+\    "debug_file_level" : 0,
+\    "debug_file" : "",
+\    "watch_window_style" : 'expanded',
+\    "marker_default" : '⬦',
+\    "marker_closed_tree" : '▸',
+\    "marker_open_tree" : '▾'
+\}

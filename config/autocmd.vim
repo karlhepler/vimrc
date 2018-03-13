@@ -14,4 +14,7 @@ augroup autocommands
     " JUMP TO LAST CURSOR POSITION ON FILE LOAD
     autocmd BufWinEnter * silent! call ResCur()
 
+    " FORCE QUICKFIX TO ALWAYS OPEN FULL WIDTH
+    au FileType qf wincmd J
+
 augroup END
