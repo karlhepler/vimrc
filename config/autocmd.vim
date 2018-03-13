@@ -15,9 +15,9 @@ augroup autocommands
     autocmd BufWinEnter * silent! call ResCur()
 
     " FORCE QUICKFIX TO ALWAYS OPEN FULL WIDTH
-    au FileType qf wincmd J
+    autocmd FileType qf wincmd J
 
-    " DETECT INDENT FOR ALL PHP FILES
-    autocmd BufReadPost ~/bronto/**/* :DetectIndent 
+    " FIX INDENTATION FOR BRONTO PHP FILES
+    autocmd BufReadPost ~/bronto/**/*.php,~/bronto/**/*.phtml setlocal ts=4 noet
 
 augroup END

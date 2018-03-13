@@ -77,7 +77,3 @@ let g:vdebug_options= {
 \    "marker_closed_tree" : '▸',
 \    "marker_open_tree" : '▾'
 \}
-
-" DETECTINDENT - A VIM PLUGIN, FOR AUTOMATICALLY DETECTING INDENT SETTINGS
-let g:detectindent_preferred_expandtab=1
-let g:detectindent_preferred_indent=4
