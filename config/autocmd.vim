@@ -18,6 +18,6 @@ augroup autocommands
     au FileType qf wincmd J
 
     " DETECT INDENT FOR ALL PHP FILES
-    autocmd BufReadPost *.php :DetectIndent 
+    autocmd BufReadPost ~/bronto/**/* :DetectIndent 
 
 augroup END
