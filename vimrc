@@ -1,7 +1,11 @@
 " USE VIM MODE INSTEAD OF VI MODE
 set nocompatible
 
-" USE AG INSTEAD OF GREP
+" SET THE SHELL TO ZSH.
+" NOTE: ~/.zshrc MUST BE SYMLINKED INTO ~/.zshenv
+set shell=zsh
+
+" USE RIPGREP INSTEAD OF GREP
 if (executable('rg'))
     set grepprg=rg\ --nogroup\ --nocolor
 endif
