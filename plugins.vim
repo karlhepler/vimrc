@@ -89,6 +89,9 @@ Plug 'mxw/vim-jsx'
 " VDEBUG - MULTILANGUAGE DEBUGGER CLIENT (SUPPORTS XDEBUG)
 Plug 'vim-vdebug/vdebug'
 
+" TYPESCRIPT SYNTAX FOR VIM
+Plug 'leafgarland/typescript-vim'
+
 
 " Initialze the plugin system
 call plug#end()
