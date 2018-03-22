@@ -42,12 +42,12 @@ set formatoptions-=t
 " ALWAYS SHOW THE STATUS LINE
 set laststatus=2                            " ALWAYS SHOW THE STATUS LINE
 set statusline=                             " CLEAR THE STATUS LINE
-set statusline+=\ %{g:asyncrun_status=='running'?'↹':g:asyncrun_status=='success'?'✓':'✕'}    " ASYNCRUN STATUS
 set statusline+=\ %{substitute(fugitive#statusline(),'\[Git\\(.*\\)\\]','\\\=submatch(1)','')}  " GIT BRANCH
 set statusline+=\ %h%w%m%r                  " FILE STATUS
 set statusline+=\ %f                        " FILE NAME
 set statusline+=%=                          " EVERYTHING PAST HERE IS ON THE RIGHT
 set statusline+=%(%l,%c%V\ %=%P%)           " LINE, CHAR, FILE POS
+set statusline+=\ %{g:asyncrun_status=='running'?'↹':g:asyncrun_status=='success'?'✓':'✕'}    " ASYNCRUN STATUS
 set statusline+=\                           " RIGHT PADDING
 
 " SHOW THE RULER
