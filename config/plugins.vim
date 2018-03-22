@@ -77,3 +77,7 @@ let g:vdebug_options= {
 \    "marker_closed_tree" : '▸',
 \    "marker_open_tree" : '▾'
 \}
+
+" EMMET FOR HTML
+" Complete tags with <leader><tab>
+imap <expr> <LEADER><TAB> emmet#expandAbbrIntelligent("\<C-Y>")
