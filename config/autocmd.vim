@@ -17,7 +17,4 @@ augroup autocommands
     " FORCE QUICKFIX TO ALWAYS OPEN FULL WIDTH
     autocmd FileType qf wincmd J
 
-    " FIX INDENTATION FOR BRONTO PHP FILES
-    autocmd BufReadPost ~/bronto/**/*.php,~/bronto/**/*.phtml setlocal ts=4 noet
-
 augroup END
