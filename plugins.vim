@@ -14,9 +14,6 @@ Plug 'kristijanhusak/vim-hybrid-material'
 " VIM SURROUND
 Plug 'tpope/vim-surround'
 
-" CTRL+P FUZZY FILE SEARCH
-Plug 'kien/ctrlp.vim'
-
 " GIT GUTTER
 Plug 'airblade/vim-gitgutter'
 
@@ -92,6 +89,9 @@ Plug 'vim-vdebug/vdebug'
 " TYPESCRIPT SYNTAX FOR VIM
 Plug 'leafgarland/typescript-vim'
 
+" FZF - FUZZY FILE SEARCH
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Initialze the plugin system
 call plug#end()

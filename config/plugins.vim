@@ -1,13 +1,3 @@
-" CTRL+P FUZZY FILE SEARCH
-let g:ctrlp_match_window='top,order:ttb'
-let g:ctrlp_custom_ignore={'dir':'\v(node_modules|vendor|bower_components|builds)$'}
-if executable('rg')
-    set grepprg=rg\ --color=never
-    let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-    let g:ctrlp_use_caching = 0
-endif
-noremap <c-b> <esc>:CtrlPBufTag<cr>
-
 " GIT GUTTER
 set signcolumn=yes
 

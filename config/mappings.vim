@@ -20,7 +20,7 @@ nnoremap Y y$
 nnoremap <silent> <C-L> :redraw!<CR>:syntax sync fromstart<CR>:GitGutter<CR>:call gitgutter#highlight#define_sign_column_highlight()<CR>
 
 " RELOAD THE CURRENT FILE
-nnoremap <silent> <C-F> :e!<CR>:call gitgutter#highlight#define_sign_column_highlight()<CR>
+nnoremap <silent> <LEADER>f :e!<CR>:call gitgutter#highlight#define_sign_column_highlight()<CR>
 
 " COMMA+ENTER GOES TO INSERT MODE
 nnoremap ,<CR> A,<CR>
@@ -85,3 +85,17 @@ nnoremap <LEADER>gb :Gblame<CR>
 nnoremap <LEADER>ge :Gedit<CR>
 nnoremap <LEADER>gf :Gfetch<CR>
 nnoremap <LEADER>gp :Gpull<CR>
+
+" FZF
+nnoremap <C-P> :Files<CR>
+inoremap <C-P> <ESC>:Files<CR>
+vnoremap <C-P> <ESC>:Files<CR>
+nnoremap <C-B> :Buffers<CR>
+inoremap <C-B> <ESC>:Buffers<CR>
+vnoremap <C-B> <ESC>:Buffers<CR>
+nnoremap <C-F> :Rg<CR>
+inoremap <C-F> <ESC>:Rg<CR>
+vnoremap <C-F> <ESC>:Rg<CR>
+nnoremap <C-T> :BTags<CR>
+inoremap <C-T> <ESC>:BTags<CR>
+vnoremap <C-T> <ESC>:BTags<CR>
