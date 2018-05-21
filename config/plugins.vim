@@ -41,9 +41,6 @@ let g:jsdoc_allow_input_prompt=1
 let g:jsdoc_input_description=1
 let g:jsdoc_return_description=1
 
-" FERRET - ENHANCED MULTI-FILE SEARCH FOR VIM
-let g:FerretAutojump=2
-
 " GUTENTAGS
 let g:gutentags_ctags_tagfile='.tags'
 

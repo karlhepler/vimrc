@@ -71,9 +71,6 @@ Plug 'oldtimeguitarguy/vim-vertigo'
 " PREVIEW COLOURS IN SOURCE CODE WHILE EDITING
 Plug 'ap/vim-css-color'
 
-" FERRET - ENHANCED MULTI-FILE SEARCH FOR VIM
-Plug 'wincent/ferret'
-
 " GUTENTAGS - REGENERATE TAG FILES AS YOU WORK WHILE STAYING COMPLETELY OUT OF YOUR WAY.
 Plug 'ludovicchabant/vim-gutentags'
 

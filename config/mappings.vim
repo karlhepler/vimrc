@@ -27,7 +27,7 @@ nnoremap ,<CR> A,<CR>
 
 " INSERT AND FIND TODO(KJH)
 inoremap <LEADER>t TODO(kjh):<SPACE>
-nnoremap <silent> <LEADER>t :Ack TODO\(kjh\)<CR>
+nnoremap <LEADER>t :Rg TODO(kjh)<CR>
 
 " <C-8> HIGHLIGHTS WORD
 nnoremap <C-W><C-W> *N
@@ -86,16 +86,26 @@ nnoremap <LEADER>ge :Gedit<CR>
 nnoremap <LEADER>gf :Gfetch<CR>
 nnoremap <LEADER>gp :Gpull<CR>
 
-" FZF
+" FZF - FILES
 nnoremap <C-P> :Files<CR>
 inoremap <C-P> <ESC>:Files<CR>
 vnoremap <C-P> <ESC>:Files<CR>
+
+" FZF - BUFFERS
 nnoremap <C-B> :Buffers<CR>
 inoremap <C-B> <ESC>:Buffers<CR>
 vnoremap <C-B> <ESC>:Buffers<CR>
+
+" FZF - SEARCH
 nnoremap <C-F> :Rg<CR>
 inoremap <C-F> <ESC>:Rg<CR>
-vnoremap <C-F> <ESC>:Rg<CR>
+vnoremap <C-F> y:exe ':Rg ' . @0<CR>
+
+" FZF - BUFFER TAGS
 nnoremap <C-T> :BTags<CR>
 inoremap <C-T> <ESC>:BTags<CR>
 vnoremap <C-T> <ESC>:BTags<CR>
+
+" FZF - GLOBAL TAGS
+nnoremap g] yiw:exe ':Tags ' . @0<CR>
+vnoremap g] y:exe ':Tags ' . @0<CR>
