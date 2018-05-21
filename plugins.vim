@@ -4,7 +4,6 @@ filetype off
 " - Make sure you use single quotes!!!
 call plug#begin('~/.vim/plugged')
 
-
 " LET VUNDLE MANAGE ITSELF
 Plug 'VundleVim/Vundle.vim'
 
@@ -92,9 +91,6 @@ Plug 'junegunn/fzf.vim'
 
 " LIGHTLINE
 Plug 'itchyny/lightline.vim'
-
-" TAGBAR
-Plug 'majutsushi/tagbar'
 
 " Initialze the plugin system
 call plug#end()

@@ -101,16 +101,16 @@ nnoremap <C-F> :Rg<CR>
 inoremap <C-F> <ESC>:Rg<CR>
 vnoremap <C-F> y:exe ':Rg ' . @0<CR>
 
-" FZF - BUFFER TAGS
+" FZF - BUFFER TAG LIST
 nnoremap <C-T> :BTags<CR>
 inoremap <C-T> <ESC>:BTags<CR>
 vnoremap <C-T> <ESC>:BTags<CR>
 
-" FZF - GLOBAL TAGS
+" FZF - GLOBAL TAG LIST
 nnoremap g] yiw:exe ':Tags ' . @0<CR>
 vnoremap g] y:exe ':Tags ' . @0<CR>
 
-" TAGBAR
-nnoremap <C-\> :TagbarToggle<CR>
-vnoremap <C-\> <ESC>:TagbarToggle<CR>
-inoremap <C-\> <ESC>:TagbarToggle<CR>
+" TAG JUMPING
+nnoremap <silent><C-[> :po<CR>
+vnoremap <silent><C-[> <ESC>:po<CR>
+inoremap <silent><C-[> <ESC>:po<CR>
