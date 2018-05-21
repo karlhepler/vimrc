@@ -27,7 +27,7 @@ nnoremap ,<CR> A,<CR>
 
 " INSERT AND FIND TODO(KJH)
 inoremap <LEADER>t TODO(kjh):<SPACE>
-nnoremap <LEADER>t :Rg TODO(kjh)<CR>
+nnoremap <LEADER>t :Rg 'TODO(kjh)<CR>
 
 " <C-8> HIGHLIGHTS WORD
 nnoremap <C-W><C-W> *N
@@ -77,15 +77,6 @@ nnoremap <silent> <Space>k :<C-U>VertigoUp n<CR>
 vnoremap <silent> <Space>k :<C-U>VertigoUp v<CR>
 onoremap <silent> <Space>k :<C-U>VertigoUp o<CR>
 
-" VIM FUGITIVE - GIT
-nnoremap <LEADER>gs :Gstatus<CR>
-nnoremap <LEADER>gd :Gdiff<CR>
-nnoremap <LEADER>gl :Glog<CR>
-nnoremap <LEADER>gb :Gblame<CR>
-nnoremap <LEADER>ge :Gedit<CR>
-nnoremap <LEADER>gf :Gfetch<CR>
-nnoremap <LEADER>gp :Gpull<CR>
-
 " FZF - FILES
 nnoremap <C-P> :Files<CR>
 inoremap <C-P> <ESC>:Files<CR>
@@ -107,5 +98,5 @@ inoremap <C-B> <ESC>:BTags<CR>
 vnoremap <C-B> <ESC>:BTags<CR>
 
 " FZF - GLOBAL TAG LIST
-nnoremap g] yiw:exe ':Tags ' . @0<CR>
-vnoremap g] y:exe ':Tags ' . @0<CR>
+nnoremap g] yiw:exe ":Tags " . @0 . ' .' . expand('%:e') . '$'<CR>
+vnoremap g] y:exe ":Tags " . @0 .  ' .' . expand('%:e') . '$'<CR>
