@@ -92,9 +92,9 @@ inoremap <C-P> <ESC>:Files<CR>
 vnoremap <C-P> <ESC>:Files<CR>
 
 " FZF - BUFFERS
-nnoremap <C-B> :Buffers<CR>
-inoremap <C-B> <ESC>:Buffers<CR>
-vnoremap <C-B> <ESC>:Buffers<CR>
+nnoremap <LEADER>b :Buffers<CR>
+inoremap <LEADER>b <ESC>:Buffers<CR>
+vnoremap <LEADER>b <ESC>:Buffers<CR>
 
 " FZF - SEARCH
 nnoremap <C-F> :Rg<CR>
@@ -102,15 +102,10 @@ inoremap <C-F> <ESC>:Rg<CR>
 vnoremap <C-F> y:exe ':Rg ' . @0<CR>
 
 " FZF - BUFFER TAG LIST
-nnoremap <C-T> :BTags<CR>
-inoremap <C-T> <ESC>:BTags<CR>
-vnoremap <C-T> <ESC>:BTags<CR>
+nnoremap <C-B> :BTags<CR>
+inoremap <C-B> <ESC>:BTags<CR>
+vnoremap <C-B> <ESC>:BTags<CR>
 
 " FZF - GLOBAL TAG LIST
 nnoremap g] yiw:exe ':Tags ' . @0<CR>
 vnoremap g] y:exe ':Tags ' . @0<CR>
-
-" TAG JUMPING
-nnoremap <silent><C-[> :po<CR>
-vnoremap <silent><C-[> <ESC>:po<CR>
-inoremap <silent><C-[> <ESC>:po<CR>
