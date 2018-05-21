@@ -109,3 +109,8 @@ vnoremap <C-T> <ESC>:BTags<CR>
 " FZF - GLOBAL TAGS
 nnoremap g] yiw:exe ':Tags ' . @0<CR>
 vnoremap g] y:exe ':Tags ' . @0<CR>
+
+" TAGBAR
+nnoremap <C-\> :TagbarToggle<CR>
+vnoremap <C-\> <ESC>:TagbarToggle<CR>
+inoremap <C-\> <ESC>:TagbarToggle<CR>

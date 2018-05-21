@@ -68,3 +68,46 @@ let g:vdebug_options= {
 " EMMET FOR HTML
 " Complete tags with <leader><tab>
 imap <expr> <LEADER><TAB> emmet#expandAbbrIntelligent("\<C-Y>")
+
+" LIGHTLINE
+set laststatus=2    " Always show status line
+set noshowmode      " Hide -- INSERT --
+let g:lightline = {
+\   'colorscheme': 'powerline',
+\   'active': {
+\       'left': [
+\           ['mode'],
+\           ['gitbranch'],
+\           ['filename']
+\       ],
+\       'right': [
+\           ['lineinfo'],
+\           ['percent'],
+\           ['async']
+\       ]
+\   },
+\   'component_function': {
+\       'gitbranch': 'fugitive#head',
+\       'filename': 'LightlineFilename',
+\       'async': 'LightlineAsyncStatus',
+\   }
+\}
+
+function! LightlineFilename()
+    let cmd = winwidth(0) > 70 ? '%:f' : '%:t'
+    let filename = expand(cmd) !=# '' ? expand(cmd) : '[No Name]'
+    let modified = &modified ? '+ ' : ''
+    return modified . filename
+endfunction
+
+function! LightlineAsyncStatus()
+    let status = '*'
+    if g:asyncrun_status == 'running'
+        status = '↹''
+    elseif g:asyncrun_status == 'success'
+        status = '✓'
+    elseif g:asyncrun_status == 'failure'
+        status = '✕'
+    endif
+    return status
+endfunction

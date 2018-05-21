@@ -90,6 +90,12 @@ Plug 'leafgarland/typescript-vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
+" LIGHTLINE
+Plug 'itchyny/lightline.vim'
+
+" TAGBAR
+Plug 'majutsushi/tagbar'
+
 " Initialze the plugin system
 call plug#end()
 filetype plugin indent on
