@@ -101,6 +101,9 @@ Plug 'wincent/ferret'
 " CLOSETAG - AUTOMATICALLY CLOSE HTML TAGS
 Plug 'alvan/vim-closetag'
 
+" VIM-MULTIPLE-CURSORS
+Plug 'terryma/vim-multiple-cursors'
+
 " Initialze the plugin system
 call plug#end()
 filetype plugin indent on
