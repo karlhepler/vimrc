@@ -95,6 +95,9 @@ Plug 'itchyny/lightline.vim'
 " GO LANG
 Plug 'fatih/vim-go'
 
+" FERRET SEARCHING
+Plug 'wincent/ferret'
+
 " Initialze the plugin system
 call plug#end()
 filetype plugin indent on
