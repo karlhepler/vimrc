@@ -98,6 +98,9 @@ Plug 'fatih/vim-go'
 " FERRET SEARCHING
 Plug 'wincent/ferret'
 
+" CLOSETAG - AUTOMATICALLY CLOSE HTML TAGS
+Plug 'alvan/vim-closetag'
+
 " Initialze the plugin system
 call plug#end()
 filetype plugin indent on

@@ -69,10 +69,14 @@ let g:vdebug_options= {
 " Complete tags with <leader><tab>
 imap <expr> <LEADER><TAB> emmet#expandAbbrIntelligent("\<C-Y>")
 
+" FERRET
+" Automatically jump to the first result
+let g:FerretAutojump=2
+
 " LIGHTLINE
 set laststatus=2    " Always show status line
 set noshowmode      " Hide -- INSERT --
-let g:lightline = {
+let g:lightline={
 \   'colorscheme': 'powerline',
 \   'active': {
 \       'left': [
