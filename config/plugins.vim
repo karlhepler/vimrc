@@ -105,13 +105,15 @@ function! LightlineFilename()
 endfunction
 
 function! LightlineAsyncStatus()
-    let status = '*'
     if g:asyncrun_status == 'running'
-        status = '↹''
+        let status = "↹'"
     elseif g:asyncrun_status == 'success'
-        status = '✓'
+        let status = "✓"
     elseif g:asyncrun_status == 'failure'
-        status = '✕'
+        let status = "✕"
+    else
+        let status = "*"
     endif
+
     return status
 endfunction
