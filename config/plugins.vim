@@ -73,6 +73,10 @@ imap <expr> <LEADER><TAB> emmet#expandAbbrIntelligent("\<C-Y>")
 " Automatically jump to the first result
 let g:FerretAutojump=2
 
+" VIM-GO
+" Run goimports on save
+let g:go_fmt_command = "goimports"
+
 " LIGHTLINE
 set laststatus=2    " Always show status line
 set noshowmode      " Hide -- INSERT --
