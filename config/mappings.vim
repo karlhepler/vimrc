@@ -61,22 +61,6 @@ nnoremap <Down> :cclose<CR>
 nnoremap <Left> :cprevious<CR>
 nnoremap <Right> :cnext<CR>
 
-" DUDE DEPLOYMENTS
-nnoremap <LEADER>dsA :AsyncRun ~/scripts/dude-sync-all<CR>
-nnoremap <LEADER>dsa :AsyncRun ~/scripts/dude-sync-assets<CR>
-nnoremap <LEADER>dsm :AsyncRun ~/scripts/dude-sync-mail_app<CR>
-nnoremap <LEADER>dsp :AsyncRun ~/scripts/dude-sync-platform<CR>
-nnoremap <LEADER>dsr :AsyncRun ~/scripts/dude-sync-root<CR>
-nnoremap <LEADER>dsv :AsyncRun ~/scripts/dude-sync-vendor<CR>
-
-" VERTIGO.VIM MAPPINGS
-nnoremap <silent> <Space>j :<C-U>VertigoDown n<CR>
-vnoremap <silent> <Space>j :<C-U>VertigoDown v<CR>
-onoremap <silent> <Space>j :<C-U>VertigoDown o<CR>
-nnoremap <silent> <Space>k :<C-U>VertigoUp n<CR>
-vnoremap <silent> <Space>k :<C-U>VertigoUp v<CR>
-onoremap <silent> <Space>k :<C-U>VertigoUp o<CR>
-
 " FZF - FILES
 nnoremap <C-P> :Files<CR>
 inoremap <C-P> <ESC>:Files<CR>

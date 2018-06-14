@@ -1,22 +1,6 @@
 " GIT GUTTER
 set signcolumn=yes
 
-" ROOTER CHANGES THE WORKING DIRECTORY TO THE PROJECT ROOT WHEN YOU OPEN A FILE OR DIRECTORY.
-let g:rooter_patterns=['.git/']
-let g:rooter_silent_chdir=1
-
-" INSERT STATEMENTS AUTOMATICALLY
-" Automatically adds the corresponding use statement for the name under the cursor.
-function! IPhpInsertUse()
-call PhpInsertUse()
-    call feedkeys('a',  'n')
-endfunction
-" Expands the name under the cursor to its fully qualified name.
-function! IPhpExpandClass()
-call PhpExpandClass()
-    call feedkeys('a', 'n')
-endfunction
-
 " ULTISNIPS - THE ULTIMATE SNIPPET SOLUTION FOR VIM.
 let g:UltiSnipsExpandTrigger="<TAB>"
 let g:UltiSnipsJumpForwardTrigger="<TAB>"
@@ -123,3 +107,6 @@ endfunction
 let g:go_fmt_command = "goimports"
 " Automatically transform json tags to camelcase
 let g:go_addtags_transform = "camelcase"
+
+" VIM-EASYMOTION
+nmap s <Plug>(easymotion-s)

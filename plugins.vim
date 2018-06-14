@@ -4,9 +4,6 @@ filetype off
 " - Make sure you use single quotes!!!
 call plug#begin('~/.vim/plugged')
 
-" LET VUNDLE MANAGE ITSELF
-Plug 'VundleVim/Vundle.vim'
-
 " MATERIAL THEME
 Plug 'kristijanhusak/vim-hybrid-material'
 
@@ -15,12 +12,6 @@ Plug 'tpope/vim-surround'
 
 " GIT GUTTER
 Plug 'airblade/vim-gitgutter'
-
-" ROOTER CHANGES THE WORKING DIRECTORY TO THE PROJECT ROOT WHEN YOU OPEN A FILE OR DIRECTORY.
-Plug 'airblade/vim-rooter'
-
-" AUTOTAGS - AUTOMATICALLY UPDATE CTAGS THE RIGHT WAY
-Plug 'craigemery/vim-autotag'
 
 " INSERT STATEMENTS AUTOMATICALLY
 Plug 'arnaud-lb/vim-php-namespace'
@@ -64,9 +55,6 @@ Plug 'tpope/vim-repeat'
 " GIT INSIDE VIM
 Plug 'tpope/vim-fugitive'
 
-" VERTIGO.VIM - A BETTER WAY TO MOVE VERTICALLY IN VIM
-Plug 'oldtimeguitarguy/vim-vertigo'
-
 " PREVIEW COLOURS IN SOURCE CODE WHILE EDITING
 Plug 'ap/vim-css-color'
 
@@ -101,8 +89,8 @@ Plug 'wincent/ferret'
 " CLOSETAG - AUTOMATICALLY CLOSE HTML TAGS
 Plug 'alvan/vim-closetag'
 
-" VIM-MULTIPLE-CURSORS
-Plug 'terryma/vim-multiple-cursors'
+" VIM-EASYMOTION
+Plug 'easymotion/vim-easymotion'
 
 " Initialze the plugin system
 call plug#end()
