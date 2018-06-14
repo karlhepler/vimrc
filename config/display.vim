@@ -61,3 +61,6 @@ set omnifunc=syntaxcomplete#Complete
 
 " MAKE BACKSPACE WORK
 set backspace=2
+
+" DISABLE SEARCHING TAGS WITH AUTOCOMPLETE
+set cpt-=t
