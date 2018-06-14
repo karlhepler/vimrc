@@ -115,3 +115,7 @@ function! LightlineAsyncStatus()
     endif
     return status
 endfunction
+
+" VIM-GO GOLANG
+let g:go_fmt_command = "goimports"
+let g:go_addtags_transform = "camelcase"

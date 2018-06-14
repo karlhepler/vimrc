@@ -93,7 +93,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 
 " GO LANG
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " FERRET SEARCHING
 Plug 'wincent/ferret'
