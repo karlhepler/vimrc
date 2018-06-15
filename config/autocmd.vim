@@ -20,4 +20,7 @@ augroup autocommands
     " FZF RG
     command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --smart-case --no-ignore --hidden --follow --color=always '.shellescape(<q-args>).' --glob "!{.git/*,.tags}"', 1, <bang>0)
 
+    " SCP MAIL_APP FILES ON SAVE
+    autocmd BufWritePost $HOME/bronto/mail_app/* silent! call CopyToDude()
+
 augroup END
