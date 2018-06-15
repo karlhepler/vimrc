@@ -8,10 +8,10 @@ inoremap jk <ESC>
 nnoremap <silent> <LEADER><SPACE> :nohlsearch<CR>
 
 " GOTO START/END OF LINE
-nnoremap ( ^
-vnoremap ( ^
-nnoremap ) $
-vnoremap ) $
+nnoremap H ^
+vnoremap H ^
+nnoremap L $
+vnoremap L $
 
 " YANK FROM CURRENT LOCATION TO END OF LINE
 nnoremap Y y$
