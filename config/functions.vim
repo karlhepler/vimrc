@@ -18,3 +18,10 @@ function! CopyToDude()
     let l:remote_path = '/usr/local/bronto/repos/mail_app/' . l:relative_path
     execute 'AsyncRun scp ' . l:local_path . ' hepler.brontolabs.local:' . l:remote_path
 endfunction
+
+function! RefreshDisplay()
+    call gitgutter#highlight#define_sign_column_highlight()
+    call lightline#init()
+    call lightline#colorscheme()
+    call lightline#update()
+endfunction

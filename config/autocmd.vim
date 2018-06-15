@@ -2,11 +2,11 @@ augroup autocommands
     autocmd!
 
     " INSTALL PLUGINS WHEN SAVED
-    autocmd BufWritePost ~/.vim/plugins.vim silent source $MYVIMRC|call PluginCleanInstallUpdate()|call gitgutter#highlight#define_sign_column_highlight()
+    autocmd BufWritePost ~/.vim/plugins.vim silent source $MYVIMRC|call PluginCleanInstallUpdate()|call RefreshDisplay()
 
     " SOURCE VIMRC WHEN SAVED
-    autocmd BufWritePost ~/.vim/vimrc source %|call gitgutter#highlight#define_sign_column_highlight()
-    autocmd BufWritePost ~/.vim/config/*.vim source ~/.vim/vimrc|call gitgutter#highlight#define_sign_column_highlight()
+    autocmd BufWritePost ~/.vim/vimrc source %|call RefreshDisplay()
+    autocmd BufWritePost ~/.vim/config/*.vim source ~/.vim/vimrc|call RefreshDisplay()
 
     " FIX GUTTER ON SAVE
     autocmd BufWritePost call gitgutter#highlight#define_sign_column_highlight()
