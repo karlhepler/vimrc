@@ -92,6 +92,9 @@ Plug 'alvan/vim-closetag'
 " VIM-EASYMOTION
 Plug 'easymotion/vim-easymotion'
 
+" VIM PRETTIER
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
 " Initialze the plugin system
 call plug#end()
 filetype plugin indent on
