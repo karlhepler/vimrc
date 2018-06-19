@@ -110,8 +110,3 @@ let g:go_addtags_transform = "camelcase"
 
 " VIM-EASYMOTION
 nmap s <Plug>(easymotion-s)
-
-" VIM PRETTIER
-" Disable auto formatting of files that have "@format" tag
-let g:prettier#autoformat = 0
-

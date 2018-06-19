@@ -23,7 +23,4 @@ augroup autocommands
     " SCP MAIL_APP FILES ON SAVE
     autocmd BufWritePost $HOME/bronto/mail_app/* silent! call CopyToDude()
 
-    " VIM PRETTIER
-    autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
-
 augroup END
