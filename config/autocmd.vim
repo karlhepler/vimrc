@@ -23,4 +23,7 @@ augroup autocommands
     " SCP MAIL_APP FILES ON SAVE
     autocmd BufWritePost $HOME/bronto/mail_app/* silent! call CopyToDude()
 
+    " RUN PRETTIER ON SAVE FOR EMERALD LAYOUT STUFF
+    autocmd BufWritePost $HOME/bronto/emerald-layout/*.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
+
 augroup END

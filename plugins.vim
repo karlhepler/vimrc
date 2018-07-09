@@ -92,6 +92,12 @@ Plug 'alvan/vim-closetag'
 " VIM-EASYMOTION
 Plug 'easymotion/vim-easymotion'
 
+" VIM-JSX
+Plug 'mxw/vim-jsx'
+
+" ALE - ASYNCHRONOUS LINT ENGINE
+Plug 'w0rp/ale'
+
 " Initialze the plugin system
 call plug#end()
 filetype plugin indent on

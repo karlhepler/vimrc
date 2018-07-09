@@ -49,9 +49,14 @@ let g:vdebug_options= {
 \    "marker_open_tree" : '▾'
 \}
 
-" EMMET FOR HTML
-" Complete tags with <leader><tab>
+" EMMET FOR HTML & JSX
 imap <expr> <LEADER><TAB> emmet#expandAbbrIntelligent("\<C-Y>")
+let g:user_emmet_settings = {
+\    'javascript.jsx' : {
+\        'extends' : 'jsx',
+\    },
+\}
+let g:jsx_ext_required = 0
 
 " FERRET
 " Automatically jump to the first result
@@ -110,3 +115,11 @@ let g:go_addtags_transform = "camelcase"
 
 " VIM-EASYMOTION
 nmap s <Plug>(easymotion-s)
+
+" ALE - ASYNCHRONOUS LINT ENGINE
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+let g:ale_linters = {
+\    'javascript': ['eslint'],
+\}
