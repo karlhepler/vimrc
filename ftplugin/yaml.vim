@@ -1,0 +1,3 @@
+set tabstop=2       " SHOW EXISTING WITH 2 SPACES WIDTH
+set shiftwidth=2    " WHEN INDENTING WITH '>', USE 2 SPACES WIDTH
+set softtabstop=2   " WHEN PRESSING BACKSPACE, SKIP 2 SPACES

@@ -27,7 +27,7 @@ nnoremap ,<CR> A,<CR>
 
 " INSERT AND FIND TODO(KJH)
 inoremap <LEADER>t TODO(kjh):<SPACE>
-nnoremap <LEADER>t :Rg 'TODO(kjh)<CR>
+nnoremap <silent> <LEADER>t :Ack TODO\(kjh\)<CR>
 
 " <C-8> HIGHLIGHTS WORD
 nnoremap <C-W><C-W> *N
