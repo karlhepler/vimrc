@@ -71,7 +71,7 @@ Plug 'mxw/vim-jsx'
 Plug 'vim-vdebug/vdebug'
 
 " TYPESCRIPT SYNTAX FOR VIM
-Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 
 " FZF - FUZZY FILE SEARCH
 Plug '/usr/local/opt/fzf'
