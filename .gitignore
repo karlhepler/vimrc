@@ -3,3 +3,4 @@
 .backups
 .netrwhist
 /plugged
+.session.vim

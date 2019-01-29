@@ -13,17 +13,8 @@ Plug 'tpope/vim-surround'
 " GIT GUTTER
 Plug 'airblade/vim-gitgutter'
 
-" INSERT STATEMENTS AUTOMATICALLY
-Plug 'arnaud-lb/vim-php-namespace'
-
 " ULTISNIPS - THE ULTIMATE SNIPPET SOLUTION FOR VIM.
 Plug 'SirVer/ultisnips'
-
-" MUSTACHE TEMPLATE SYSTEM FOR VIMSCRIPT
-Plug 'tobyS/vmustache'
-
-" PDV - PHP Documentor for VIM - 2
-Plug 'tobyS/pdv'
 
 " PASTING IN VIM WITH INDENTATION ADJUSTED TO DESTINATION CONTEXT.
 Plug 'sickill/vim-pasta'
@@ -43,9 +34,6 @@ Plug 'mattn/emmet-vim'
 " VIM JAVASCRIPT - JAVASCRIPT BUNDLE FOR VIM, THIS BUNDLE PROVIDES SYNTAX HIGHLIGHTING AND IMPROVED INDENTATION.
 Plug 'pangloss/vim-javascript'
 
-" JSDOC.VIM - GENERATES JSDOC BLOCK COMMENTS BASED ON A FUNCTION SIGNATURE.
-Plug 'heavenshell/vim-jsdoc'
-
 " MATCH MORE THAN JUST A SINGLE CHARACTER WITH %
 Plug 'tmhedberg/matchit'
 
@@ -55,9 +43,6 @@ Plug 'tpope/vim-repeat'
 " GIT INSIDE VIM
 Plug 'tpope/vim-fugitive'
 
-" PREVIEW COLOURS IN SOURCE CODE WHILE EDITING
-Plug 'ap/vim-css-color'
-
 " GUTENTAGS - REGENERATE TAG FILES AS YOU WORK WHILE STAYING COMPLETELY OUT OF YOUR WAY.
 Plug 'ludovicchabant/vim-gutentags'
 
@@ -66,12 +51,6 @@ Plug 'skywind3000/asyncrun.vim'
 
 " VIM-JSX - SYNTAX HIGHLIGHTING AND INDENTING FOR JSX
 Plug 'mxw/vim-jsx'
-
-" VDEBUG - MULTILANGUAGE DEBUGGER CLIENT (SUPPORTS XDEBUG)
-Plug 'vim-vdebug/vdebug'
-
-" TYPESCRIPT SYNTAX FOR VIM
-Plug 'HerringtonDarkholme/yats.vim'
 
 " FZF - FUZZY FILE SEARCH
 Plug '/usr/local/opt/fzf'
@@ -88,12 +67,6 @@ Plug 'wincent/ferret'
 
 " CLOSETAG - AUTOMATICALLY CLOSE HTML TAGS
 Plug 'alvan/vim-closetag'
-
-" VIM-EASYMOTION
-Plug 'easymotion/vim-easymotion'
-
-" VIM-JSX
-Plug 'mxw/vim-jsx'
 
 " ALE - ASYNCHRONOUS LINT ENGINE
 Plug 'w0rp/ale'

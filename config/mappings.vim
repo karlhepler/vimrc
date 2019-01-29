@@ -84,3 +84,8 @@ vnoremap <C-B> <ESC>:BTags<CR>
 " FZF - GLOBAL TAG LIST
 nnoremap g] yiw:exe ":Tags " . @0 . ' .' . expand('%:e') . '$'<CR>
 vnoremap g] y:exe ":Tags " . @0 .  ' .' . expand('%:e') . '$'<CR>
+
+" SAVE SESSION
+noremap <silent> <LEADER>ss <ESC>:mks! $HOME/.vim/.session.vim<CR>
+" LOAD SESSION
+noremap <silent> <LEADER>sl <ESC>:source $HOME/.vim/.session.vim<CR>
