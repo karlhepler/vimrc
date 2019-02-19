@@ -19,11 +19,21 @@ augroup autocommands
 
     " FZF RG
     command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --smart-case --no-ignore --hidden --follow --color=always '.shellescape(<q-args>).' --glob "!{.git/*,.tags}"', 1, <bang>0)
+augroup END
 
-    " SCP MAIL_APP FILES ON SAVE
-    autocmd BufWritePost $HOME/bronto/mail_app/* silent! call CopyToDude()
+augroup emeraldlayout
+  autocmd!
 
-    " RUN PRETTIER ON SAVE FOR EMERALD LAYOUT STUFF
-    autocmd BufWritePost $HOME/bronto/emerald-layout/*.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
+  " RUN PRETTIER ON SAVE FOR EMERALD LAYOUT STUFF
+  autocmd BufWritePost $HOME/bronto/emerald-layout/*.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
+augroup END
 
+augroup mailapp
+  autocmd!
+
+  " TAB WIDTH FOR JS FILES
+  autocmd BufNewFile,BufRead $HOME/bronto/mail_app/**/*.js setlocal tabstop=4 shiftwidth=4 softtabstop=4
+
+  " SCP MAIL_APP FILES ON SAVE
+  autocmd BufWritePost $HOME/bronto/mail_app/* silent! call CopyToDude()
 augroup END
