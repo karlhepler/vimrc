@@ -59,7 +59,7 @@ set mouse=a
 " ENABLE OMNIFUNC SYNTAX COMPLETION
 set omnifunc=syntaxcomplete#Complete
 
-" MAKE BACKSPACE WORK
+" MAKE BACKSPACE WORK... WHY?
 set backspace=2
 
 " DISABLE SEARCHING TAGS WITH AUTOCOMPLETE

@@ -25,3 +25,15 @@ function! RefreshDisplay()
     call lightline#colorscheme()
     call lightline#update()
 endfunction
+
+" MAKE THE CURSOR JUMP TO A RELATIVE POSITION IN A PARTICULAR DIRECTION.
+function! RelativeJump(direction)
+    let l:map = {'a':1, 's':2, 'd':3, 'f':4, 'g':5, 'h':6, 'j':7, 'k':8, 'l':9, ';':0}
+    let l:num = l:map[nr2char(getchar())]*10 + l:map[nr2char(getchar())]
+    if a:direction == "up"
+        call cursor(line(".") - l:num, 0)
+    elseif a:direction == "down"
+        call cursor(l:num + line("."), 0)
+    endif
+    setlocal nonu nornu
+endfunction

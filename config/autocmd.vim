@@ -24,7 +24,7 @@ augroup END
 augroup emeraldlayout
   autocmd!
 
-  " RUN PRETTIER ON SAVE FOR EMERALD LAYOUT STUFF
+  " RUN ESLINT ON SAVE FOR EMERALD LAYOUT STUFF
   autocmd BufWritePost $HOME/bronto/emerald-layout/*.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
 augroup END
 
@@ -36,4 +36,11 @@ augroup mailapp
 
   " SCP MAIL_APP FILES ON SAVE
   autocmd BufWritePost $HOME/bronto/mail_app/* silent! call CopyToDude()
+augroup END
+
+augroup messageeditor
+  autocmd!
+
+  " TAB WIDTH FOR JS FILES
+  autocmd BufNewFile,BufRead $HOME/bronto/mail_app/**/*.js setlocal tabstop=4 shiftwidth=4 softtabstop=4
 augroup END

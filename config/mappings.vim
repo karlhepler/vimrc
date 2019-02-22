@@ -90,26 +90,13 @@ noremap <silent> <LEADER>ss <ESC>:mks! $HOME/.vim/.session.vim<CR>
 " LOAD SESSION
 noremap <silent> <LEADER>sl <ESC>:source $HOME/.vim/.session.vim<CR>
 
-" SHOW RELATIVE AND ABSOLUTE LINE NUMBERS
-nnoremap <silent> <SPACE><SPACE> :setlocal nu! rnu!<CR>
 " RELATIVE JUMP UP/DOWN
-" space+j;d will jump down 3 lines
-" space+ksl will jump up 29 lines
 nnoremap <silent> <SPACE>k :setlocal nu rnu<CR>:call RelativeJump("up")<CR>
 nnoremap <silent> <SPACE>j :setlocal nu rnu<CR>:call RelativeJump("down")<CR>
-function! RelativeJump(direction)
-    let l:map = {'a':1, 's':2, 'd':3, 'f':4, 'g':5, 'h':6, 'j':7, 'k':8, 'l':9, ';':0}
-    let l:num = l:map[nr2char(getchar())]*10 + l:map[nr2char(getchar())]
-    if a:direction == "up"
-        call cursor(line(".") - l:num, 0)
-    elseif a:direction == "down"
-        call cursor(l:num + line("."), 0)
-    endif
-    setlocal nonu nornu
-endfunction
 
 " JUMP WITH K
 nnoremap K %
+vnoremap K %
 
 " HORIZONTAL JUMP TO CURSOR
 nnoremap <C-j> zs20zh
