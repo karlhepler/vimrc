@@ -4,8 +4,8 @@ filetype off
 " - Make sure you use single quotes!!!
 call plug#begin('~/.vim/plugged')
 
-" MATERIAL THEME
-Plug 'kristijanhusak/vim-hybrid-material'
+" PALENIGHT THEME
+Plug 'drewtempelmeyer/palenight.vim'
 
 " VIM SURROUND
 Plug 'tpope/vim-surround'

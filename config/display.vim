@@ -14,7 +14,7 @@ set shiftround      " USE MULTIPLE OF SHIFT WIDTH WITH '>' & '<'
 
 " COLOR THEME
 set background=dark
-colorscheme hybrid_material
+colorscheme palenight
 
 " USE 256/TRUE COLORS IN TERMINAL
 set termguicolors

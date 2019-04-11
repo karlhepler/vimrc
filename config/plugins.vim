@@ -66,7 +66,7 @@ let g:FerretAutojump=2
 set laststatus=2    " Always show status line
 set noshowmode      " Hide -- INSERT --
 let g:lightline={
-\   'colorscheme': 'powerline',
+\   'colorscheme': 'palenight',
 \   'active': {
 \       'left': [
 \           ['mode'],
