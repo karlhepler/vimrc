@@ -7,6 +7,14 @@ inoremap jk <ESC>
 " SEARCH HIGHLIGHTING OFF
 nnoremap <silent> <LEADER><SPACE> :nohlsearch<CR>
 
+" REMAP TOP, MIDDLE, AND BOTTOM OF WINDOW
+nnoremap <C-J> J
+vnoremap <C-J> J
+nnoremap J L
+vnoremap J L
+nnoremap K H
+vnoremap K H
+
 " GOTO START/END OF LINE
 nnoremap H ^
 vnoremap H ^
@@ -90,13 +98,9 @@ noremap <silent> <LEADER>ss <ESC>:mks! $HOME/.vim/.session.vim<CR>
 " LOAD SESSION
 noremap <silent> <LEADER>sl <ESC>:source $HOME/.vim/.session.vim<CR>
 
-" RELATIVE JUMP UP/DOWN
-nnoremap <silent> <SPACE>k :setlocal nu rnu<CR>:call RelativeJump("up")<CR>
-nnoremap <silent> <SPACE>j :setlocal nu rnu<CR>:call RelativeJump("down")<CR>
+" SHOW RELATIVE LINES NUMBERS
+nnoremap <silent> <SPACE> :setlocal nu! rnu!<CR>
 
 " JUMP WITH K
-nnoremap K %
-vnoremap K %
-
-" HORIZONTAL JUMP TO CURSOR
-nnoremap <C-j> zs20zh
+nnoremap <TAB> %
+vnoremap <TAB> %

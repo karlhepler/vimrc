@@ -24,7 +24,7 @@ augroup END
 augroup emeraldlayout
   autocmd!
 
-  " RUN ESLINT ON SAVE FOR EMERALD LAYOUT STUFF
+  " RUN ESLINT ON SAVE
   autocmd BufWritePost $HOME/bronto/emerald-layout/*.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
 augroup END
 
@@ -43,4 +43,14 @@ augroup messageeditor
 
   " TAB WIDTH FOR JS FILES
   autocmd BufNewFile,BufRead $HOME/bronto/mail_app/**/*.js setlocal tabstop=4 shiftwidth=4 softtabstop=4
+augroup END
+
+augroup reportingapp
+  autocmd!
+
+  " TAB WIDTH FOR JS FILES
+  autocmd BufNewFile,BufRead $HOME/bronto/reporting-app/**/*.js setlocal tabstop=4 shiftwidth=4 softtabstop=4
+
+  " RUN ESLINT ON SAVE
+  autocmd BufWritePost $HOME/bronto/reporting-app/*.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
 augroup END
