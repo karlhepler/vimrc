@@ -100,7 +100,3 @@ noremap <silent> <LEADER>sl <ESC>:source $HOME/.vim/.session.vim<CR>
 
 " SHOW RELATIVE LINES NUMBERS
 nnoremap <silent> <SPACE> :setlocal nu! rnu!<CR>
-
-" JUMP WITH K
-nnoremap <TAB> %
-vnoremap <TAB> %

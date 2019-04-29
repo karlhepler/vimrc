@@ -71,6 +71,6 @@ Plug 'alvan/vim-closetag'
 " ALE - ASYNCHRONOUS LINT ENGINE
 Plug 'w0rp/ale'
 
-" Initialze the plugin system
+" Initialize the plugin system
 call plug#end()
 filetype plugin indent on
