@@ -18,11 +18,9 @@ source $HOME/.vim/config/display.vim
 source $HOME/.vim/config/functions.vim
 source $HOME/.vim/config/autocmd.vim
 
-" CHANGE SWAP FILE LOCATION
-set directory=$HOME/.vim/.swapfiles//
-
-" CHANGE BACKUP DIRECTORY
-set backupdir=$HOME/.vim/.backups//
+" No swap files or backup files
+set noswapfile
+set nobackup
 
 " SET THE TAGS
 set tags=.tags

@@ -68,3 +68,6 @@ set cpt-=t
 " When a file has been detected to have been changed outside of Vim
 " and it has not been changed inside of Vim, automatically read it again.
 set autoread
+
+" more characters will be sent to the screen for redrawing
+set ttyfast
