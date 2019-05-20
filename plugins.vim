@@ -31,11 +31,8 @@ Plug 'tpope/vim-vinegar'
 " EMMET FOR HTML
 Plug 'mattn/emmet-vim'
 
-" VIM JAVASCRIPT - JAVASCRIPT BUNDLE FOR VIM, THIS BUNDLE PROVIDES SYNTAX HIGHLIGHTING AND IMPROVED INDENTATION.
-Plug 'pangloss/vim-javascript'
-
 " MATCH MORE THAN JUST A SINGLE CHARACTER WITH %
-Plug 'tmhedberg/matchit'
+Plug 'andymass/vim-matchup'
 
 " REPEAT PLUGIN COMMANDS TOO
 Plug 'tpope/vim-repeat'
@@ -48,9 +45,6 @@ Plug 'ludovicchabant/vim-gutentags'
 
 " ASYNCRUN - RUN SHELL COMMANDS IN BACKGROUND AND READ OUTPUT IN THE QUICKFIX WINDOW IN REALTIME
 Plug 'skywind3000/asyncrun.vim'
-
-" VIM-JSX - SYNTAX HIGHLIGHTING AND INDENTING FOR JSX
-Plug 'mxw/vim-jsx'
 
 " FZF - FUZZY FILE SEARCH
 Plug '/usr/local/opt/fzf'
@@ -70,6 +64,9 @@ Plug 'alvan/vim-closetag'
 
 " ALE - ASYNCHRONOUS LINT ENGINE
 Plug 'w0rp/ale'
+
+" VIM-POLYGLOT - A solid language pack for Vim.
+Plug 'sheerun/vim-polyglot'
 
 " Initialize the plugin system
 call plug#end()
