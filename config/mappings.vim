@@ -28,7 +28,7 @@ nnoremap Y y$
 nnoremap <silent> <C-L> :redraw!<CR>:syntax sync fromstart<CR>
 
 " RELOAD THE CURRENT FILE
-nnoremap <silent> <LEADER>f :e!
+nnoremap <silent> <LEADER>f :e!<CR>
 
 " COMMA+ENTER GOES TO INSERT MODE
 nnoremap ,<CR> A,<CR>
