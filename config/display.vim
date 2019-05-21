@@ -71,3 +71,18 @@ set autoread
 
 " more characters will be sent to the screen for redrawing
 set ttyfast
+
+"time waited for key press(es) to complete. It makes for a faster key response
+set ttimeout
+set ttimeoutlen=50
+
+"a better menu in command mode
+set wildmenu
+set wildmode=longest:full,full
+
+" Hide buffers instead of closing them,
+" even if they contain unwritten changes
+set hidden
+
+" Better insert mode completions
+set completeopt=longest,menuone,preview

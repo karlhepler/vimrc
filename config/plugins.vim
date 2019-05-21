@@ -15,6 +15,8 @@ let g:NERDSpaceDelims=1
 " VINEGAR.VIM - ENHANCED FILE BROWSING
 " Hide dot files - gh to toggle
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+" Remove directories with stuff in them
+let g:netrw_localrmdir='rm -r'
 
 " VIM JAVASCRIPT - JAVASCRIPT BUNDLE FOR VIM, THIS BUNDLE PROVIDES SYNTAX HIGHLIGHTING AND IMPROVED INDENTATION.
 let g:javascript_plugin_jsdoc=1

@@ -22,8 +22,8 @@ Plug 'sickill/vim-pasta'
 " AUTO PAIRS - INSERT OR DELETE BRACKETS, PARENS, QUOTES IN PAIR.
 Plug 'jiangmiao/auto-pairs'
 
-" NERD COMMENTER - COMMENT FUNCTIONS SO POWERFUL—NO COMMENT NECESSARY.
-Plug 'scrooloose/nerdcommenter'
+" Comment stuff out
+Plug 'tpope/vim-commentary'
 
 " VINEGAR.VIM - ENHANCED FILE BROWSING
 Plug 'tpope/vim-vinegar'
@@ -47,7 +47,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/asyncrun.vim'
 
 " FZF - FUZZY FILE SEARCH
-Plug '/usr/local/opt/fzf'
+Plug '/usr/local/opt/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " LIGHTLINE
@@ -58,9 +58,6 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " FERRET SEARCHING
 Plug 'wincent/ferret'
-
-" CLOSETAG - AUTOMATICALLY CLOSE HTML TAGS
-Plug 'alvan/vim-closetag'
 
 " ALE - ASYNCHRONOUS LINT ENGINE
 Plug 'w0rp/ale'
