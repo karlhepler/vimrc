@@ -25,3 +25,6 @@ set nowritebackup
 
 " SET THE TAGS
 set tags=.tags
+
+" Use matchit
+packadd! matchit
