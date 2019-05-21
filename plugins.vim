@@ -11,7 +11,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'tpope/vim-surround'
 
 " GIT GUTTER
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 
 " ULTISNIPS - THE ULTIMATE SNIPPET SOLUTION FOR VIM.
 Plug 'SirVer/ultisnips'
