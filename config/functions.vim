@@ -20,7 +20,6 @@ function! CopyToDude()
 endfunction
 
 function! RefreshDisplay()
-    call gitgutter#highlight#define_sign_column_highlight()
     call lightline#init()
     call lightline#colorscheme()
     call lightline#update()

@@ -8,9 +8,6 @@ augroup autocommands
     autocmd BufWritePost ~/.vim/vimrc source %|call RefreshDisplay()
     autocmd BufWritePost ~/.vim/config/*.vim source ~/.vim/vimrc|call RefreshDisplay()
 
-    " FIX GUTTER ON SAVE
-    autocmd BufWritePost call gitgutter#highlight#define_sign_column_highlight()
-
     " JUMP TO LAST CURSOR POSITION ON FILE LOAD
     autocmd BufWinEnter * silent! call ResCur()
 

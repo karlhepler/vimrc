@@ -86,3 +86,6 @@ set hidden
 
 " Better insert mode completions
 set completeopt=longest,menuone,preview
+
+" Always show sign column
+set signcolumn=yes

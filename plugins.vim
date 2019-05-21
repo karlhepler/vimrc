@@ -31,9 +31,6 @@ Plug 'tpope/vim-vinegar'
 " EMMET FOR HTML
 Plug 'mattn/emmet-vim'
 
-" MATCH MORE THAN JUST A SINGLE CHARACTER WITH %
-Plug 'andymass/vim-matchup'
-
 " REPEAT PLUGIN COMMANDS TOO
 Plug 'tpope/vim-repeat'
 
@@ -47,7 +44,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/asyncrun.vim'
 
 " FZF - FUZZY FILE SEARCH
-Plug '/usr/local/opt/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 " LIGHTLINE

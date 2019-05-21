@@ -1,6 +1,3 @@
-" GIT GUTTER
-set signcolumn=yes
-
 " ULTISNIPS - THE ULTIMATE SNIPPET SOLUTION FOR VIM.
 let g:UltiSnipsExpandTrigger="<TAB>"
 let g:UltiSnipsJumpForwardTrigger="<TAB>"

@@ -24,11 +24,11 @@ vnoremap L $
 " YANK FROM CURRENT LOCATION TO END OF LINE
 nnoremap Y y$
 
-" REFRESH SCREEN, SYNTAX HIGHLIGHTING, & GIT GUTTER
-nnoremap <silent> <C-L> :redraw!<CR>:syntax sync fromstart<CR>:GitGutter<CR>:call gitgutter#highlight#define_sign_column_highlight()<CR>
+" REFRESH SCREEN & SYNTAX HIGHLIGHTING
+nnoremap <silent> <C-L> :redraw!<CR>:syntax sync fromstart<CR>
 
 " RELOAD THE CURRENT FILE
-nnoremap <silent> <LEADER>f :e!<CR>:call gitgutter#highlight#define_sign_column_highlight()<CR>
+nnoremap <silent> <LEADER>f :e!
 
 " COMMA+ENTER GOES TO INSERT MODE
 nnoremap ,<CR> A,<CR>
