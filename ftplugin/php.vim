@@ -21,3 +21,6 @@ inoremap <buffer> $<TAB> $this->
 
 " PHP INSERT NAMESPACE
 nnoremap <buffer> <LEADER>n :call Psr4NamespaceInsert()<CR>
+
+" Logging
+inoremap <buffer> log<TAB> die(var_dump())<ESC>hi

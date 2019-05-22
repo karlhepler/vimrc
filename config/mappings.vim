@@ -100,3 +100,7 @@ noremap <silent> <LEADER>sl <ESC>:source $HOME/.vim/.session.vim<CR>
 
 " SHOW RELATIVE LINES NUMBERS
 nnoremap <silent> <SPACE> :setlocal nu! rnu!<CR>
+
+" Copy relative & absolute paths to system clipboard
+nnoremap <silent> <LEADER>cf :let @+ = expand("%")<CR>
+nnoremap <silent> <LEADER>cF :let @+ = expand("%:p")<CR>
