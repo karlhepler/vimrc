@@ -1,36 +1,3 @@
-snippet in "PHP Interface Declaration"
-<?php
-
-namespace ${1:`!v Psr4NamespaceGet()`};
-
-interface ${1:`!v expand("%:t:r")`}
-{
-	$0
-}
-endsnippet
-
-snippet cl "PHP Class Declaration"
-<?php
-
-namespace ${1:`!v Psr4NamespaceGet()`};
-
-class ${1:`!v expand("%:t:r")`}
-{
-	$0
-}
-endsnippet
-
-snippet ac "PHP Abstract Class Declaration"
-<?php
-
-namespace ${1:`!v Psr4NamespaceGet()`};
-
-abstract class ${1:`!v expand("%:t:r")`}
-{
-	$0
-}
-endsnippet
-
 snippet met "PHP Public Method"
 public function ${1}()
 {

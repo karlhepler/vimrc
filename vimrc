@@ -2,7 +2,6 @@
 set nocompatible
 
 " SET THE SHELL TO ZSH.
-" NOTE: ~/.zshrc MUST BE SYMLINKED INTO ~/.zshenv
 set shell=zsh
 
 " USE RIPGREP INSTEAD OF GREP
@@ -21,7 +20,6 @@ source $HOME/.vim/config/autocmd.vim
 " No swap files or backup files
 set noswapfile
 set nobackup
-set nowritebackup
 
 " SET THE TAGS
 set tags=.tags

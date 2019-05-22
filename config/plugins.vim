@@ -6,9 +6,6 @@ let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"
 " PDV - PHP Documentor for VIM - 2
 let g:pdv_template_dir = $HOME ."/.vim/plugged/pdv/templates_snip"
 
-" NERD COMMENTER - COMMENT FUNCTIONS SO POWERFUL—NO COMMENT NECESSARY.
-let g:NERDSpaceDelims=1
-
 " VINEGAR.VIM - ENHANCED FILE BROWSING
 " Hide dot files - gh to toggle
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
@@ -111,9 +108,6 @@ endfunction
 let g:go_fmt_command = "goimports"
 " Automatically transform json tags to camelcase
 let g:go_addtags_transform = "camelcase"
-
-" VIM-EASYMOTION
-nmap s <Plug>(easymotion-s)
 
 " ALE - ASYNCHRONOUS LINT ENGINE
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'

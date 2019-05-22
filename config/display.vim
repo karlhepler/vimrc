@@ -89,3 +89,6 @@ set completeopt=longest,menuone,preview
 
 " Always show sign column
 set signcolumn=yes
+
+" Tame horizontal scroll
+set sidescroll=1

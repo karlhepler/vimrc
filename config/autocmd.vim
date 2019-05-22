@@ -16,9 +16,6 @@ augroup autocommands
 
     " FZF RG
     command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --smart-case --no-ignore --hidden --follow --color=always '.shellescape(<q-args>).' --glob "!{.git/*,.tags}"', 1, <bang>0)
-
-    " REMOVE LINE NUMBERS WHEN ENTERING INSERT MODE
-    autocmd InsertEnter * :setlocal nonu nornu
 augroup END
 
 augroup emeraldlayout
