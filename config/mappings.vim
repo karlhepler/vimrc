@@ -68,3 +68,6 @@ nnoremap <silent> <LEADER>cF :let @+ = expand("%:p")<CR>
 
 " Horizontal center to cursor position
 nnoremap <silent> zm zszH
+
+" Search with backslash
+nnoremap \ :Rg 

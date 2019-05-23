@@ -13,9 +13,6 @@ augroup autocommands
 
     " FORCE QUICKFIX TO ALWAYS OPEN FULL WIDTH
     autocmd FileType qf wincmd J
-
-    " FZF RG
-    command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --smart-case --no-ignore --hidden --follow --color=always '.shellescape(<q-args>).' --glob "!{.git/*,.tags}"', 1, <bang>0)
 augroup END
 
 augroup emeraldlayout

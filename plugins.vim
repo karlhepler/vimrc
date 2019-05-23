@@ -52,9 +52,6 @@ Plug 'itchyny/lightline.vim'
 " GO LANG
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
-" FERRET SEARCHING
-Plug 'wincent/ferret'
-
 " ALE - ASYNCHRONOUS LINT ENGINE
 Plug 'w0rp/ale'
 
