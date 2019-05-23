@@ -5,8 +5,13 @@ syntax enable
 " THIS INCLUDES SYNTAX, PLUGIN, & INDENTATION SETTINGS
 filetype plugin indent on
 
+set tabstop=4       " SHOW EXISTING WITH 4 SPACES WIDTH
+set shiftwidth=4    " WHEN INDENTING WITH '>', USE 4 SPACES WIDTH
+set expandtab       " ON PRESSING TAB, INSERT 4 SPACES
+set softtabstop=4   " WHEN PRESSING BACKSPACE, SKIP 4 SPACES
+set shiftround      " USE MULTIPLE OF SHIFT WIDTH WITH '>' & '<'
+
 set autoindent
-set smartindent
 
 " COLOR THEME
 set background=dark
