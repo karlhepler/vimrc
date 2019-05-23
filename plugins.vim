@@ -61,5 +61,8 @@ Plug 'w0rp/ale'
 " VIM-POLYGLOT - A solid language pack for Vim.
 Plug 'sheerun/vim-polyglot'
 
+" PHP MANUAL SHIFT+K OR CTRL+H
+Plug 'alvan/vim-php-manual'
+
 " Initialize the plugin system
 call plug#end()

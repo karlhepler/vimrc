@@ -7,23 +7,6 @@ inoremap jk <ESC>
 " SEARCH HIGHLIGHTING OFF
 nnoremap <silent> <LEADER><SPACE> :nohlsearch<CR>
 
-" REMAP TOP, MIDDLE, AND BOTTOM OF WINDOW
-nnoremap <C-J> J
-vnoremap <C-J> J
-nnoremap J L
-vnoremap J L
-nnoremap K H
-vnoremap K H
-
-" GOTO START/END OF LINE
-nnoremap H ^
-vnoremap H ^
-nnoremap L $
-vnoremap L $
-
-" YANK FROM CURRENT LOCATION TO END OF LINE
-nnoremap Y y$
-
 " REFRESH SCREEN & SYNTAX HIGHLIGHTING
 nnoremap <silent> <C-L> :redraw!<CR>:syntax sync fromstart<CR>
 
@@ -78,9 +61,6 @@ vnoremap <C-B> <ESC>:BTags<CR>
 noremap <silent> <LEADER>ss <ESC>:mks! /tmp/session.vim<CR>
 " LOAD SESSION
 noremap <silent> <LEADER>sl <ESC>:source /tmp/session.vim<CR>
-
-" SHOW RELATIVE LINES NUMBERS
-nnoremap <silent> <SPACE> :setlocal nu! rnu!<CR>
 
 " Copy relative & absolute paths to system clipboard
 nnoremap <silent> <LEADER>cf :let @+ = expand("%")<CR>
