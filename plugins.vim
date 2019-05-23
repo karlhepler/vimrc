@@ -1,4 +1,3 @@
-filetype off
 " Specify the directory for plugins
 " - Avoid using standard Vim directory names like 'plugin'
 " - Make sure you use single quotes!!!
@@ -64,4 +63,3 @@ Plug 'sheerun/vim-polyglot'
 
 " Initialize the plugin system
 call plug#end()
-filetype plugin indent on

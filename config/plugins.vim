@@ -46,7 +46,6 @@ let g:vdebug_options= {
 \}
 
 " EMMET FOR HTML & JSX
-imap <expr> <LEADER><TAB> emmet#expandAbbrIntelligent("\<C-Y>")
 let g:user_emmet_settings = {
 \    'javascript.jsx' : {
 \        'extends' : 'jsx',
