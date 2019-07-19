@@ -81,13 +81,6 @@ set ttimeoutlen=50
 set wildmenu
 set wildmode=longest:full,full
 
-" Hide buffers instead of closing them,
-" even if they contain unwritten changes
-set hidden
-
-" Better insert mode completions
-set completeopt=longest,menuone,preview
-
 " Always show sign column
 set signcolumn=yes
 

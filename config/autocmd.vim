@@ -15,11 +15,12 @@ augroup autocommands
     autocmd FileType qf wincmd J
 augroup END
 
-augroup emeraldlayout
+augroup eslint
   autocmd!
 
-  " RUN ESLINT ON SAVE
   autocmd BufWritePost $HOME/bronto/emerald-layout/*.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
+  autocmd BufWritePost $HOME/bronto/reporting-app/*.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
+  autocmd BufWritePost $HOME/bronto/contact-count/*.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
 augroup END
 
 augroup mailapp
@@ -27,11 +28,4 @@ augroup mailapp
 
   " SCP MAIL_APP FILES ON SAVE
   autocmd BufWritePost $HOME/bronto/mail_app/* silent! call CopyToDude()
-augroup END
-
-augroup reportingapp
-  autocmd!
-
-  " RUN ESLINT ON SAVE
-  autocmd BufWritePost $HOME/bronto/reporting-app/*.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
 augroup END

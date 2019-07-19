@@ -18,10 +18,10 @@ nnoremap ,<CR> A,<CR>
 
 " INSERT AND FIND TODO(KJH)
 inoremap <LEADER>t TODO(kjh):<SPACE>
-nnoremap <silent> <LEADER>t :Ack TODO\(kjh\)<CR>
+nnoremap <silent> <LEADER>t :Rg TODO<CR>
 
 " Highlight word without jump in normal mode
-nnoremap * :keepjumps normal! mi*`i<CR>
+nnoremap <C-W><C-W> :keepjumps normal! mi*`i<CR>
 
 " CHANGE TAG SPLIT MAPPINGS
 nnoremap <silent> <C-W>] :sp <CR>:exec("tag ".expand("<cword>"))<CR>
@@ -62,12 +62,12 @@ noremap <silent> <LEADER>ss <ESC>:mks! /tmp/session.vim<CR>
 " LOAD SESSION
 noremap <silent> <LEADER>sl <ESC>:source /tmp/session.vim<CR>
 
-" Copy relative & absolute paths to system clipboard
+" COPY RELATIVE & ABSOLUTE PATHS TO SYSTEM CLIPBOARD
 nnoremap <silent> <LEADER>cf :let @+ = expand("%")<CR>
 nnoremap <silent> <LEADER>cF :let @+ = expand("%:p")<CR>
 
-" Horizontal center to cursor position
+" HORIZONTAL CENTER TO CURSOR POSITION
 nnoremap <silent> zm zszH
 
-" Search with backslash
+" SEARCH WITH BACKSLASH
 nnoremap \ :Rg 
