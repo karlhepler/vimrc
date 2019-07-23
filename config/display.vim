@@ -86,3 +86,6 @@ set signcolumn=yes
 
 " Tame horizontal scroll
 set sidescroll=1
+
+" No double spaces after periods when joining lines
+set nojoinspaces
