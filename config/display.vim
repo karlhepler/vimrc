@@ -89,3 +89,8 @@ set sidescroll=1
 
 " No double spaces after periods when joining lines
 set nojoinspaces
+
+" Better vimdiff
+if has("patch-8.1.0360")
+    set diffopt=filler,internal,algorithm:histogram,indent-heuristic
+endif
