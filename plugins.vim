@@ -61,5 +61,8 @@ Plug 'sheerun/vim-polyglot'
 " PHP MANUAL SHIFT+K OR CTRL+H
 Plug 'alvan/vim-php-manual'
 
+" SLEUTH.VIM: HEURISTICALLY SET BUFFER OPTIONS
+Plug 'tpope/vim-sleuth'
+
 " Initialize the plugin system
 call plug#end()
