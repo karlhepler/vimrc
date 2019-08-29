@@ -64,5 +64,8 @@ Plug 'alvan/vim-php-manual'
 " SLEUTH.VIM: HEURISTICALLY SET BUFFER OPTIONS
 Plug 'tpope/vim-sleuth'
 
+" VIM PLUGIN TO IMPROVE PROJECT SEARCHING WITH TOOLS LIKE AG AND RG
+Plug 'jesseleite/vim-agriculture'
+
 " Initialize the plugin system
 call plug#end()

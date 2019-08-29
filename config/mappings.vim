@@ -70,4 +70,4 @@ nnoremap <silent> <LEADER>cF :let @+ = expand("%:p")<CR>
 nnoremap <silent> zm zszH
 
 " SEARCH WITH BACKSLASH
-nnoremap \ :Rg 
+nnoremap \ :RgRaw 
