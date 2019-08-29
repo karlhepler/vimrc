@@ -109,3 +109,6 @@ let g:fzf_action = {
 \}
 
 let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
+
+" STOP VIM-ROOTER ECHOING THE PROJECT DIRECTORY
+let g:rooter_silent_chdir = 1
