@@ -67,5 +67,8 @@ Plug 'tpope/vim-sleuth'
 " VIM PLUGIN TO IMPROVE PROJECT SEARCHING WITH TOOLS LIKE AG AND RG
 Plug 'jesseleite/vim-agriculture'
 
+" CHANGES VIM WORKING DIRECTORY TO PROJECT ROOT (IDENTIFIED BY PRESENCE OF KNOWN DIRECTORY OR FILE).
+Plug 'airblade/vim-rooter'
+
 " Initialize the plugin system
 call plug#end()
