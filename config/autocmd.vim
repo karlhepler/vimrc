@@ -15,14 +15,6 @@ augroup autocommands
     autocmd FileType qf wincmd J
 augroup END
 
-augroup eslint
-  autocmd!
-
-  autocmd BufWritePost $HOME/bronto/emerald-layout/*.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
-  autocmd BufWritePost $HOME/bronto/reporting-app/*.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
-  autocmd BufWritePost $HOME/bronto/contact-count/*.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
-augroup END
-
 augroup mailapp
   autocmd!
 
