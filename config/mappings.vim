@@ -17,8 +17,8 @@ nnoremap <silent> <LEADER>f :e!<CR>
 nnoremap ,<CR> A,<CR>
 
 " INSERT AND FIND TODO(KJH)
-inoremap <LEADER>t TODO(kjh):<SPACE>
-nnoremap <silent> <LEADER>t :Rg TODO(kjh)<CR>
+inoremap <LEADER>t TODO(kjh):<SPACE><ESC>:Commentary<CR>A
+nnoremap <silent> <LEADER>t :Rg TODO\(kjh\)<CR>
 
 " Highlight word without jump in normal mode
 nnoremap <C-W><C-W> :keepjumps normal! mi*`i<CR>
