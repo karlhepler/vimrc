@@ -68,7 +68,7 @@ endfunction
 
 function! LightlineAsyncStatus()
     if g:asyncrun_status == 'running'
-        let status = "↹'"
+        let status = "↹"
     elseif g:asyncrun_status == 'success'
         let status = "✓"
     elseif g:asyncrun_status == 'failure'
