@@ -71,3 +71,6 @@ nnoremap <silent> zm zszH
 
 " SEARCH WITH BACKSLASH
 nnoremap \ :RgRaw 
+
+" BLOCK DELETE
+nnoremap dD g_d%dd
