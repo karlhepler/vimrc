@@ -70,5 +70,8 @@ Plug 'jesseleite/vim-agriculture'
 " CHANGES VIM WORKING DIRECTORY TO PROJECT ROOT (IDENTIFIED BY PRESENCE OF KNOWN DIRECTORY OR FILE).
 Plug 'airblade/vim-rooter'
 
+" COC - Conquer of Completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Initialize the plugin system
 call plug#end()

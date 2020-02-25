@@ -16,6 +16,7 @@ source $HOME/.vim/config/plugins.vim
 source $HOME/.vim/config/display.vim
 source $HOME/.vim/config/functions.vim
 source $HOME/.vim/config/autocmd.vim
+source $HOME/.vim/config/coc.vim
 
 " No swap files or backup files
 set noswapfile
