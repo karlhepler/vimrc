@@ -23,6 +23,7 @@ let g:jsdoc_return_description=1
 
 " GUTENTAGS
 let g:gutentags_ctags_tagfile='.tags'
+let g:gutentags_exclude_filetypes=['typescript', 'typescriptcommon', 'typescriptreact']
 
 " VIM FUGITIVE - MAKE ASYNC
 command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
@@ -96,12 +97,7 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tsserver', 'tslint'],
 \}
-let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\   'typescript': ['prettier'],
-\   'scss': ['prettier'],
-\   'html': ['prettier']
-\}
+let g:ale_fixers = ['prettier']
 
 " CTRL-A CTRL-Q to select all and build quickfix list
 function! s:build_quickfix_list(lines)

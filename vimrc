@@ -21,6 +21,7 @@ source $HOME/.vim/config/coc.vim
 " No swap files or backup files
 set noswapfile
 set nobackup
+set nowritebackup
 
 " SET THE TAGS
 set tags=.tags
