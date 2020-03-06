@@ -14,16 +14,3 @@ augroup autocommands
     " FORCE QUICKFIX TO ALWAYS OPEN FULL WIDTH
     autocmd FileType qf wincmd J
 augroup END
-
-augroup mailapp
-  autocmd!
-
-  " SCP MAIL_APP FILES ON SAVE
-  autocmd BufWritePost $HOME/bronto/mail_app/* silent! call CopyToDude()
-augroup END
-
-augroup golang
-  autocmd!
-
-  autocmd BufWritePost *.go silent! call go#lint#Vet(1)
-augroup END

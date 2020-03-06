@@ -3,9 +3,6 @@ let g:UltiSnipsExpandTrigger="<TAB>"
 let g:UltiSnipsJumpForwardTrigger="<TAB>"
 let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"
 
-" PDV - PHP Documentor for VIM - 2
-let g:pdv_template_dir = $HOME ."/.vim/plugged/pdv/templates_snip"
-
 " VINEGAR.VIM - ENHANCED FILE BROWSING
 " Hide dot files - gh to toggle
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
@@ -20,10 +17,6 @@ let g:jsdoc_enable_es6=1
 let g:jsdoc_allow_input_prompt=1
 let g:jsdoc_input_description=1
 let g:jsdoc_return_description=1
-
-" GUTENTAGS
-let g:gutentags_ctags_tagfile='.tags'
-let g:gutentags_exclude_filetypes=['typescript', 'typescriptcommon', 'typescriptreact']
 
 " VIM FUGITIVE - MAKE ASYNC
 command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
@@ -80,12 +73,6 @@ function! LightlineAsyncStatus()
 
     return status
 endfunction
-
-" VIM-GO GOLANG
-" Run goimports on save
-let g:go_fmt_command = "goimports"
-" Automatically transform json tags to camelcase
-let g:go_addtags_transform = "camelcase"
 
 " ALE - ASYNCHRONOUS LINT ENGINE
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'

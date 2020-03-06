@@ -36,9 +36,6 @@ Plug 'tpope/vim-repeat'
 " GIT INSIDE VIM
 Plug 'tpope/vim-fugitive'
 
-" GUTENTAGS - REGENERATE TAG FILES AS YOU WORK WHILE STAYING COMPLETELY OUT OF YOUR WAY.
-Plug 'ludovicchabant/vim-gutentags'
-
 " ASYNCRUN - RUN SHELL COMMANDS IN BACKGROUND AND READ OUTPUT IN THE QUICKFIX WINDOW IN REALTIME
 Plug 'skywind3000/asyncrun.vim'
 
@@ -49,17 +46,11 @@ Plug 'junegunn/fzf.vim'
 " LIGHTLINE
 Plug 'itchyny/lightline.vim'
 
-" GO LANG
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-
 " ALE - ASYNCHRONOUS LINT ENGINE
 Plug 'w0rp/ale'
 
 " VIM-POLYGLOT - A solid language pack for Vim.
 Plug 'sheerun/vim-polyglot'
-
-" PHP MANUAL SHIFT+K OR CTRL+H
-Plug 'alvan/vim-php-manual'
 
 " SLEUTH.VIM: HEURISTICALLY SET BUFFER OPTIONS
 Plug 'tpope/vim-sleuth'
@@ -72,6 +63,12 @@ Plug 'airblade/vim-rooter'
 
 " COC - Conquer of Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" YAML REVEALER is a vim plugin which allows you to handle the full tree structure of a Yaml key.
+Plug 'Einenlum/yaml-revealer'
+
+" VIM-YAML-FOLDS: Very simple folding configuration for YAML, Puppet/Hiera EYAML, RAML and SaltStack SLS files
+Plug 'pedrohdz/vim-yaml-folds'
 
 " Initialize the plugin system
 call plug#end()

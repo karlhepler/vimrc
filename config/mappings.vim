@@ -74,3 +74,6 @@ nnoremap \ :RgRaw
 
 " BLOCK DELETE
 nnoremap dD g_d%dd
+
+" OPEN TERMINAL AT CURRENT BUFFER PATH
+map <C-T> <ESC>:let $BUFPATH=expand('%:p:h')<CR>:terminal<CR>cd $BUFPATH<CR>
