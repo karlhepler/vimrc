@@ -76,4 +76,4 @@ nnoremap \ :RgRaw
 nnoremap dD g_d%dd
 
 " OPEN TERMINAL AT CURRENT BUFFER PATH
-map <C-T> <ESC>:let $BUFPATH=expand('%:p:h')<CR>:terminal<CR>cd $BUFPATH<CR>
+map <C-T> <ESC>:let $BUFPATH=expand('%:p:h')<CR>:terminal<CR>cd $BUFPATH && clear<CR>

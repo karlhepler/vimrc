@@ -41,4 +41,8 @@ augroup autococ
   autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
   " Update signature help on jump placeholder.
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+  " Syntax highlighting for CocConfig
+  autocmd FileType json syntax match Comment +\/\/.\+$+
+  " Force lightline update
+  autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 augroup end

@@ -13,4 +13,7 @@ augroup autocommands
 
     " FORCE QUICKFIX TO ALWAYS OPEN FULL WIDTH
     autocmd FileType qf wincmd J
+
+    " Bazel fix on save
+    autocmd BufWritePost *.bzl,*.bazel silent !buildifier %
 augroup END

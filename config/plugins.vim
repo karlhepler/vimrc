@@ -6,8 +6,6 @@ let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"
 " VINEGAR.VIM - ENHANCED FILE BROWSING
 " Hide dot files - gh to toggle
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
-" Remove directories with stuff in them
-let g:netrw_localrmdir='rm -r'
 
 " VIM JAVASCRIPT - JAVASCRIPT BUNDLE FOR VIM, THIS BUNDLE PROVIDES SYNTAX HIGHLIGHTING AND IMPROVED INDENTATION.
 let g:javascript_plugin_jsdoc=1
@@ -43,13 +41,13 @@ let g:lightline={
 \       'right': [
 \           ['lineinfo'],
 \           ['percent'],
-\           ['async']
+\           ['coc']
 \       ]
 \   },
 \   'component_function': {
 \       'gitbranch': 'fugitive#head',
 \       'filename': 'LightlineFilename',
-\       'async': 'LightlineAsyncStatus',
+\       'cocstatus': 'coc#status',
 \   }
 \}
 
@@ -60,30 +58,12 @@ function! LightlineFilename()
     return modified . filename
 endfunction
 
-function! LightlineAsyncStatus()
-    if g:asyncrun_status == 'running'
-        let status = "↹"
-    elseif g:asyncrun_status == 'success'
-        let status = "✓"
-    elseif g:asyncrun_status == 'failure'
-        let status = "✕"
-    else
-        let status = "*"
-    endif
-
-    return status
-endfunction
-
 " ALE - ASYNCHRONOUS LINT ENGINE
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
 let g:ale_sign_warning = '.'
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'typescript': ['tsserver', 'tslint'],
-\}
 let g:ale_fixers = ['prettier']
 
 " CTRL-A CTRL-Q to select all and build quickfix list
