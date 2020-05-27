@@ -1,4 +1,4 @@
-augroup autocommands
+augroup config
     autocmd!
 
     " INSTALL PLUGINS WHEN SAVED
@@ -13,7 +13,18 @@ augroup autocommands
 
     " FORCE QUICKFIX TO ALWAYS OPEN FULL WIDTH
     autocmd FileType qf wincmd J
+augroup END
 
-    " Bazel fix on save
+augroup bazel
+    autocmd!
+
+    " Fix format on save
     autocmd BufWritePost *.bzl,*.bazel silent !buildifier %
+augroup END
+
+augroup coc_go
+    autocmd!
+
+    " Add missing imports on save
+    autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 augroup END
