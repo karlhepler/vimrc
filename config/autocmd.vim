@@ -19,7 +19,7 @@ augroup bazel
     autocmd!
 
     " Fix format on save
-    autocmd BufWritePost *.bzl,*.bazel silent !buildifier %
+    autocmd BufWritePost *.bzl,*.bazel,BUILD,WORKSPACE silent !buildifier %
 augroup END
 
 augroup coc_go
