@@ -67,8 +67,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " YAML REVEALER is a vim plugin which allows you to handle the full tree structure of a Yaml key.
 Plug 'Einenlum/yaml-revealer'
 
-" indentLine : used for displaying thin vertical lines at each indentation level
+" INDENTLINE : USED FOR DISPLAYING THIN VERTICAL LINES AT EACH INDENTATION LEVEL
 Plug 'Yggdroot/indentLine'
+
+" VIM GO
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Initialize the plugin system
 call plug#end()

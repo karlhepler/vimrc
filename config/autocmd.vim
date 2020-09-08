@@ -13,13 +13,15 @@ augroup config
 
     " FORCE QUICKFIX TO ALWAYS OPEN FULL WIDTH
     autocmd FileType qf wincmd J
+
+    " TODO(karlhepler): find a way to :mksession after every save
 augroup END
 
 augroup bazel
     autocmd!
 
     " Fix format on save
-    autocmd BufWritePost *.bzl,*.bazel,BUILD,WORKSPACE silent !buildifier %
+    autocmd BufWritePost *.bzl,*.bazel,BUILD,WORKSPACE :AsyncRun -post=checktime buildifier %
 augroup END
 
 augroup coc_go

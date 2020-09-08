@@ -41,13 +41,13 @@ let g:lightline={
 \       'right': [
 \           ['lineinfo'],
 \           ['percent'],
-\           ['coc']
+\           ['async']
 \       ]
 \   },
 \   'component_function': {
 \       'gitbranch': 'fugitive#head',
 \       'filename': 'LightlineFilename',
-\       'cocstatus': 'coc#status',
+\       'async': 'LightlineAsyncStatus',
 \   }
 \}
 
@@ -56,6 +56,20 @@ function! LightlineFilename()
     let filename = expand(cmd) !=# '' ? expand(cmd) : '[No Name]'
     let modified = &modified ? '+ ' : ''
     return modified . filename
+endfunction
+
+function! LightlineAsyncStatus()
+    if g:asyncrun_status == 'running'
+        let status = "↹"
+    elseif g:asyncrun_status == 'success'
+        let status = "✓"
+    elseif g:asyncrun_status == 'failure'
+        let status = "✕"
+    else
+        let status = "*"
+    endif
+
+    return status
 endfunction
 
 " ALE - ASYNCHRONOUS LINT ENGINE
@@ -84,3 +98,9 @@ let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
 
 " STOP VIM-ROOTER ECHOING THE PROJECT DIRECTORY
 let g:rooter_silent_chdir = 1
+
+" Prevent Markdown syntax concealing
+let g:vim_markdown_conceal = 0
+
+" Go imports on save
+let g:go_fmt_command = "goimports"
