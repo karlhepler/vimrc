@@ -78,3 +78,10 @@ nnoremap dD g_d%dd
 
 " OPEN TERMINAL AT CURRENT BUFFER PATH
 map <C-T> <ESC>:let $BUFPATH=expand('%:p:h')<CR>:terminal<CR>cd $BUFPATH && clear<CR>
+
+" EASY VIEW
+nmap <C-W>} =42>
+" HARD VIEW
+nmap <C-W>{ =42<
+" ONLY VIEW
+nmap <C-W>O onH{l

@@ -30,3 +30,10 @@ augroup coc_go
     " Add missing imports on save
     autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 augroup END
+
+augroup images
+    autocmd!
+
+    " Open images with imgcat
+    autocmd BufEnter *.png,*.jpg,*gif exec "! ~/.iterm2/imgcat ".expand("%") | :bw
+augroup END
