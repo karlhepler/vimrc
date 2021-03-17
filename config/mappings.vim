@@ -85,3 +85,6 @@ nmap <C-W>} =42>
 nmap <C-W>{ =42<
 " ONLY VIEW
 nmap <C-W>O onH{l
+
+noremap H 3H
+noremap L 3L
