@@ -44,9 +44,9 @@ nnoremap <Left> :cprevious<CR>
 nnoremap <Right> :cnext<CR>
 
 " FZF - FILES
-nnoremap <C-P> :Files<CR>
-inoremap <C-P> <ESC>:Files<CR>
-vnoremap <C-P> <ESC>:Files<CR>
+nnoremap <C-P> :GFiles<CR>
+inoremap <C-P> <ESC>:GFiles<CR>
+vnoremap <C-P> <ESC>:GFiles<CR>
 
 " FZF - BUFFERS
 nnoremap <LEADER>b :Buffers<CR>
