@@ -27,7 +27,7 @@ set nowritebackup
 " SET THE TAGS
 set tags=.tags
 
-# Allow hidden buffers
+" Allow hidden buffers
 set hidden
 
 " Use matchit
