@@ -1,6 +1,3 @@
-" TextEdit might fail if hidden is not set.
-set hidden
-
 " Give more space for displaying messages.
 set cmdheight=1
 
